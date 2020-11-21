@@ -14,7 +14,7 @@
             <Button fx:id="MainExit" layoutX="345.0" layoutY="545.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Exit" />
             <ImageView fitHeight="348.0" fitWidth="278.0" layoutX="221.0" layoutY="81.0">
                <image>
-                  <Image url="@../../../../../../../application/542914f11143b.jpeg" />
+                  <Image url=""@../main/java/com/github/tschierv/memorygame/presentation/picture/542914f11143b.jpeg"" />
                </image>
             </ImageView>
       </children>
