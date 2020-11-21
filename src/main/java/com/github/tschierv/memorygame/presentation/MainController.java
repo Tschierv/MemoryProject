@@ -11,6 +11,7 @@ public class MainController {
     }
 
     @FXML
-    private Button MainExit;
-
+    private Button MainExit;{
+    System.out.println("MainExit");
+    }
 }
