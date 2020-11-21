@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="/MemoryProject/src/main/java/com/github/tschierv/memorygame/presentation/MainController.java">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.github.tschierv.memorygame.presentation.MainController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
             <Button fx:id="MainStart" layoutX="211.0" layoutY="545.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />
             <Button fx:id="MainExit" layoutX="345.0" layoutY="545.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Exit" />
-            <ImageView fitHeight="348.0" fitWidth="278.0" layoutX="221.0" layoutY="81.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="180.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../application/542914f11143b.jpeg" />
+                  <Image url="@../main/java/com/github/tschierv/memorygame/presentation/picture/542914f11143b.jpeg" />
                </image>
             </ImageView>
       </children>
