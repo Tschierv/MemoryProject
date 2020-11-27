@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.domain.enteties;
+package com.github.tschierv.memorygame.domain.player;
 
 import java.time.LocalDate;
 import java.util.UUID;
