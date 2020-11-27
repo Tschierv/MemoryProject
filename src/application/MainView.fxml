@@ -10,9 +10,9 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="684.0" fitWidth="699.0" layoutX="-16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-99.0" AnchorPane.leftAnchor="-16.0" AnchorPane.rightAnchor="-30.9537353515625" AnchorPane.topAnchor="0.0">
+            <ImageView fitHeight="684.0" fitWidth="699.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-99.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-40.9537353515625" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="@../main/java/com/github/tschierv/memorygame/presentation/picture/542914f11143b.jpeg" />
+                  <Image url="@../main/java/com/github/tschierv/memorygame/menue/main.jpeg" />
                </image>
             </ImageView>
             <Button fx:id="MainStart" layoutX="197.0" layoutY="510.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />
