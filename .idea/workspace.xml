@@ -29,10 +29,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcd237be-e5ca-4d3b-b08e-403d02646a8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/persistence/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryProject.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +82,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +104,7 @@
       <updated>1605804059852</updated>
       <workItem from="1605804060882" duration="620000" />
       <workItem from="1605804695194" duration="1127000" />
+      <workItem from="1606205346465" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure">
       <created>1605804919917</created>
