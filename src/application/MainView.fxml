@@ -5,14 +5,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="684.0" fitWidth="699.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-99.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-40.9537353515625" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../main/java/com/github/tschierv/memorygame/menue/Main.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="MainStart" layoutX="197.0" layoutY="510.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />
-      <Button fx:id="MainExit" layoutX="320.0" layoutY="510.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Exit" />
+      <Button fx:id="MainStart" layoutX="283.0" layoutY="219.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />
+      <Button fx:id="MainExit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Exit" />
    </children>
 </AnchorPane>
