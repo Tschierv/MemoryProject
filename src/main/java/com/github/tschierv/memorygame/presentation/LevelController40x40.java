@@ -1,5 +1,0 @@
-package main.java.com.github.tschierv.memorygame.presentation;
-
-public class LevelController40x40 {
-
-}

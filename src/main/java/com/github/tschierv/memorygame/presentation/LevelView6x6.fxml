@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="988.0" prefWidth="1132.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="main.java.com.github.tschierv.memorygame.presentation.LevelController6x6">
+<AnchorPane prefHeight="988.0" prefWidth="1132.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.github.tschierv.memorygame.presentation.LevelController6x6">
    <children>
       <ImageView fitHeight="988.0" fitWidth="1244.0">
          <image>
@@ -35,8 +34,8 @@
             <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button layoutX="502.0" layoutY="818.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Exit" />
-      <Button layoutX="564.0" layoutY="818.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Help" />
+      <Button fx:id="Exit" layoutX="502.0" layoutY="818.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Exit" />
+      <Button fx:id="Help" layoutX="564.0" layoutY="818.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Help" />
       <Text fx:id="Username" layoutX="1104.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
       <Text fx:id="Counter" layoutX="1104.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
    </children>
