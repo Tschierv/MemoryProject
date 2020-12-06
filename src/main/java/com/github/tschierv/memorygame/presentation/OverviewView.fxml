@@ -19,7 +19,7 @@
       <Button fx:id="AddUser" layoutX="290.0" layoutY="418.0" mnemonicParsing="false" text="Add User" />
       <Button fx:id="Select" layoutX="290.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Select" />
       <ListView fx:id="List" layoutX="193.0" layoutY="189.0" prefHeight="171.0" prefWidth="260.0" />
-      <Text layoutX="250.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
+      <Text layoutX="261.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
          <font>
             <Font size="24.0" />
          </font>

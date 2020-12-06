@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="238.0" fitWidth="317.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../menue/NoUser.jpeg" />
+            <Image url="@../menue/Reg.jpeg" />
          </image>
       </ImageView>
       <TextField fx:id="username" layoutX="84.0" layoutY="79.0" text="Username" />
