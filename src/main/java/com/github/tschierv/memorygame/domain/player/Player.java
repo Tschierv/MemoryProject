@@ -8,13 +8,17 @@ public class Player {
     public String AccountName;
     public UUID AccountId;
     public UUID AccountAvatar;
-    public Integer Score;
-    public Integer PlayedGames;
+    public Integer Score = 0;
+    public Integer PlayedGames = 0;
 
     public Player(String AccountName, UUID AccountId, UUID AccountAvatar) {
         this.AccountName = AccountName;
         this.AccountId = UUID.randomUUID();
         this.AccountAvatar = AccountAvatar;
+    }
+
+    public Player() {
+
     }
 
     public String getAccountName (){
