@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.domain.enteties;
+package com.github.tschierv.memorygame.domain.card;
 
 import java.util.UUID;
 
