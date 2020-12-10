@@ -31,3 +31,10 @@ Button:pressed
   	-fx-background-color:rgb(135,206,235);
 	-fx-text-fill:rgb(34,139,34);
 }
+
+#Title
+{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
