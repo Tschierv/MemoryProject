@@ -1,1 +1,31 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+Label {
+	-fx-alignment: center;
+	-fx-font:20 "Courier";
+	
+}
+
+Button
+{
+	-fx-alignment: center;
+	-fx-font:20 "Courier";
+	
+}
+
+Button:hover
+{
+	-fx-alignment: center;
+	-fx-font:23 "Courier";
+  	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+
+Button:pressed
+{
+	-fx-alignment: center;
+	-fx-font:24 "Courier";
+  	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
+
