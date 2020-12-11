@@ -1,5 +1,5 @@
-package application;
-	
+package com.github.tschierv.memorygame.application;
+
 import java.net.URL;
 import java.nio.file.Paths;
 
@@ -28,7 +28,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

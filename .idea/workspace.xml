@@ -29,16 +29,132 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcd237be-e5ca-4d3b-b08e-403d02646a8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/enteties/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/DeleteConfView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/DeleteConfView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelController4x4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelView10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView10x10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelView6x6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView6x6.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/OverviewView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/RegView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/RegView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/Gazelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/Gazelle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/adlerrochen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/adlerrochen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/afrikanischer elefant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/afrikanischer elefant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/alligator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/alligator.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/braunmantel-scherenschnabel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/braunmantel-scherenschnabel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/chimpanzee.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/chimpanzee.1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/chimpanzee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/chimpanzee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/delfin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/delfin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/gnu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/gnu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/gorilla.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/gorilla.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/hai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/hai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/hammerhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/hammerhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/helmperlhuehner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/helmperlhuehner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/hornvogel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/hornvogel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/kaiser-schwalbenschwanz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/kaiser-schwalbenschwanz.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/karakal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/karakal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/kleiner monarch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/kleiner monarch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/koboldmakis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/koboldmakis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/krokodil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/krokodil.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/leopard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/leopard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/leopardenhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/leopardenhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/löwe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/löwe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/malachit eisvogel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/malachit eisvogel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/manta rochen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/manta rochen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/narwal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/narwal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/nasenaffe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/nasenaffe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/nashorn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/nashorn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/nilgaense.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/nilgaense.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/nilpferd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/nilpferd.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/northern giraffe.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/northern giraffe.2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/octopus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/octopus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/orangutan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/orangutan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/orca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/orca.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/risenkalmar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/risenkalmar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/robbe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/robbe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/roter panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/roter panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/schildkröte.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/schildkröte.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/schmalschnabellöffler.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/schmalschnabellöffler.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/schreikranich.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/schreikranich.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/seekuh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/seekuh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/seelöwe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/seelöwe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/sunda gavial krokodil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/sunda gavial krokodil.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/tige.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/tige.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/wahl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/wahl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/wahlhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/wahlhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/warzenschwein.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/warzenschwein.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/weissbrust kormorane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/weissbrust kormorane.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/weisswal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/weisswal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture/zwergenflamingos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/zwergenflamingos.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/adlerrochen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/adlerrochen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/afrikanischer elefant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/afrikanischer elefant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/alligator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/alligator.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/braunmantel-scherenschnabel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/braunmantel-scherenschnabel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/chimpanzee.1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/chimpanzee.1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/chimpanzee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/chimpanzee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/delfin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/delfin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/gazelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/gazelle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/gnu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/gnu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/gorilla.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/gorilla.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/hai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/hai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/hammerhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/hammerhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/helmperlhuehner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/helmperlhuehner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/hornvogel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/hornvogel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/kaiser-schwalbenschwanz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/kaiser-schwalbenschwanz.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/karakal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/karakal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/kleiner monarch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/kleiner monarch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/koboldmakis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/koboldmakis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/krokodil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/krokodil.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/leopard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/leopard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/leopardenhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/leopardenhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/löwe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/löwe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/malachit eisvogel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/malachit eisvogel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/manta rochen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/manta rochen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/narwal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/narwal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/nasenaffe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/nasenaffe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/nashorn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/nashorn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/nilgaense.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/nilgaense.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/nilpferd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/nilpferd.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/northern giraffe.2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/northern giraffe.2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/octopus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/octopus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/orangutan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/orangutan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/orca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/orca.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/risenkalmar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/risenkalmar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/robbe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/robbe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/roter panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/roter panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/schildkröte.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/schildkröte.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/schmalschnabellöffler.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/schmalschnabellöffler.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/schreikranich.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/schreikranich.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/seekuh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/seekuh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/seelöwe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/seelöwe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/sunda gavial krokodil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/sunda gavial krokodil.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/tige.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/tige.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/wahl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/wahl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/wahlhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/wahlhai.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/warzenschwein.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/warzenschwein.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/weissbrust kormorane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/weissbrust kormorane.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/weisswal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/weisswal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/picture10/zwergenflamingos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture10/zwergenflamingos.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,10 +167,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="jhipster-ms-test/api-pro-eu-west-1-openshift-com:443/m.bachmann@united.ch" />
+    <option name="namespace" value="jhipster-ms-test" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
         <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -70,25 +190,32 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main\java" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main\java" />
       <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame" />
+      <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main\java" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +232,7 @@
       <workItem from="1605804060882" duration="620000" />
       <workItem from="1605804695194" duration="1127000" />
       <workItem from="1606205346465" duration="168000" />
+      <workItem from="1607705247709" duration="862000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure">
       <created>1605804919917</created>
@@ -120,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605805492785</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add gitignore">
+      <created>1607705383080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607705383080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +287,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial structure" />
+    <MESSAGE value="add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2644" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605805460579">
@@ -163,13 +299,23 @@
       <screen x="1920" y="7" width="1920" height="1040" />
     </state>
     <state x="2534" y="451" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/1920.7.1920.1040@1920.7.1920.1040" timestamp="1605805640534" />
-    <state x="2381" y="172" key="SettingsEditor" timestamp="1605804671337">
-      <screen x="1920" y="7" width="1920" height="1040" />
+    <state x="4011" y="243" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607705836853">
+      <screen x="3440" y="23" width="1792" height="1097" />
+    </state>
+    <state x="4011" y="243" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.3440.1365/3440.23.1792.1097@3440.23.1792.1097" timestamp="1607705836853" />
+    <state x="1527" y="187" key="CommitChangelistDialog2" timestamp="1607705382898">
+      <screen x="0" y="23" width="3440" height="1365" />
+    </state>
+    <state x="1527" y="187" key="CommitChangelistDialog2/0.23.3440.1365/3440.23.1792.1097@0.23.3440.1365" timestamp="1607705382898" />
+    <state x="3870" y="79" key="SettingsEditor" timestamp="1607705931788">
+      <screen x="3440" y="23" width="1792" height="1097" />
     </state>
     <state x="2381" y="172" key="SettingsEditor/0.0.1536.824/1920.7.1920.1040@1920.7.1920.1040" timestamp="1605804671337" />
-    <state x="2472" y="260" key="Vcs.Push.Dialog.v2" timestamp="1605805502255">
-      <screen x="1920" y="7" width="1920" height="1040" />
+    <state x="3870" y="79" key="SettingsEditor/0.23.3440.1365/3440.23.1792.1097@3440.23.1792.1097" timestamp="1607705931788" />
+    <state x="1772" y="348" key="Vcs.Push.Dialog.v2" timestamp="1607705508849">
+      <screen x="0" y="23" width="3440" height="1365" />
     </state>
     <state x="2472" y="260" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.7.1920.1040@1920.7.1920.1040" timestamp="1605805502255" />
+    <state x="1772" y="348" key="Vcs.Push.Dialog.v2/0.23.3440.1365/3440.23.1792.1097@0.23.3440.1365" timestamp="1607705508849" />
   </component>
 </project>

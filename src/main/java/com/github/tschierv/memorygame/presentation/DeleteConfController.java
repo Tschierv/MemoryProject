@@ -1,4 +1,4 @@
-package main.java.com.github.tschierv.memorygame.presentation;
+package com.github.tschierv.memorygame.presentation;
 
 public class DeleteConfController {
 
