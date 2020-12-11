@@ -11,7 +11,7 @@ public class GameController {
     private BoardController boardController;
 
     public GameController(PlayerController playerController){
-        playerController = playerController;
+        this.playerController = playerController;
         boardController = new BoardController();
     }
     public Game createGameforPlayer16(String player_name){
