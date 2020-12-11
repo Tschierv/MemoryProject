@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../main/java/com/github/tschierv/memorygame/menue/Main.jpeg" />
+            <Image url="/main/java/com/github/tschierv/memorygame/menue/Main.jpeg" />
          </image>
       </ImageView>
       <Button fx:id="Start" layoutX="283.0" layoutY="220.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />

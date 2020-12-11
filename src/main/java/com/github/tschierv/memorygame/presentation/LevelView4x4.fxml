@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1489.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../menue/Level4x4.jpeg" />
+            <Image url="/menue/Level4x4.jpeg" />
          </image>
       </ImageView>
       <GridPane layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">

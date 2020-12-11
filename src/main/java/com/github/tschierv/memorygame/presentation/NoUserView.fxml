@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="209.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../menue/NoUser.jpeg" />
+            <Image url="/menue/NoUser.jpeg" />
          </image>
       </ImageView>
       <Text layoutX="87.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" wrappingWidth="192.13671875" />

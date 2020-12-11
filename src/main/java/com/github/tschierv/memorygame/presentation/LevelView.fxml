@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="310.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../menue/Level.jpeg" />
+            <Image url="/menue/Level.jpeg" />
          </image>
       </ImageView>
       <Text layoutX="177.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="48.00000226870179" />

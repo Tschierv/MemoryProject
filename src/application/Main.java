@@ -17,9 +17,9 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 		//BorderPane root = new BorderPane();
-		Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/main/java/com/github/tschierv/memorygame/presentation/MainView.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/main/java/com/github/tschierv/memorygame/presentation/application.css").toExternalForm());
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle ("Animal Memory");
