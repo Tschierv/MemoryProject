@@ -1,24 +1,25 @@
 package com.github.tschierv.memorygame.domain.player;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 public class Player {
 
     public String AccountName;
-    public UUID AccountId;
+    private final UUID AccountId;
     public UUID AccountAvatar;
     public Integer Score = 0;
     public Integer PlayedGames = 0;
 
-    public Player(String AccountName, UUID AccountId, UUID AccountAvatar) {
+    public Player(String AccountName, UUID AccountAvatar) {
         this.AccountName = AccountName;
         this.AccountId = UUID.randomUUID();
         this.AccountAvatar = AccountAvatar;
     }
 
-    public Player() {
-
+    public Player(String AccountName, UUID AccountId, UUID AccountAvatar) {
+        this.AccountName = AccountName;
+        this.AccountId = AccountId;
+        this.AccountAvatar = AccountAvatar;
     }
 
     public String getAccountName (){
