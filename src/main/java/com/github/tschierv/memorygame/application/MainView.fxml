@@ -13,8 +13,8 @@
             <Image url="@../menue/main.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="Start" layoutX="283.0" layoutY="220.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Start" />
-      <Button fx:id="Exit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" text="Exit" />
-      <Text fx:id="Title" layoutX="252.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory" wrappingWidth="197.52473831176758" />
+      <Button fx:id="MainbuttonStart" layoutX="283.0" layoutY="220.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Start" />
+      <Button fx:id="MainbuttonExit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Exit" />
+      <Text fx:id="MaintextTitle" layoutX="252.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory" wrappingWidth="197.52473831176758" />
    </children>
 </AnchorPane>

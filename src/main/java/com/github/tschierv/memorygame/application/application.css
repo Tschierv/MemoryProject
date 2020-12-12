@@ -1,19 +1,29 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-Label {
-	-fx-alignment: center;
-	-fx-font:20 "Courier";
-	
-}
 
-Button
+/*Main
+ * 
+ * 
+ * 
+ */
+ 
+ 
+ 
+ #MaintextTitle
+{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+ 
+.Mainbutton
 {
 	-fx-alignment: center;
 	-fx-font:20 "Courier";
 	
 }
 
-Button:hover
+.Mainbutton:hover
 {
 	-fx-alignment: center;
 	-fx-font:23 "Courier";
@@ -23,7 +33,7 @@ Button:hover
 }
 
 
-Button:pressed
+.Mainbutton:pressed
 {
 	-fx-alignment: center;
 	-fx-font:24 "Courier";
@@ -32,9 +42,43 @@ Button:pressed
 	-fx-text-fill:rgb(34,139,34);
 }
 
-#Title
-{
+
+
+/*Overview*/
+
+#OverviewtextTitle{
 	-fx-alignment: center;
 	-fx-font:25 "Courier";
 	-fx-font-style: italic;
 }
+
+
+.Overviewbutton
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier"
+		
+}
+
+
+
+
+
+
+/*NoUser */
+
+#NoUsertextTitle
+{
+	-fx-alignment: center;
+	-fx-font:20 "Courier";
+	-fx-font-style: italic;
+}
+
+.NoUserbutton
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier"
+		
+}
+
+

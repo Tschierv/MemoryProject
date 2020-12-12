@@ -15,11 +15,11 @@
             <Image url="@../menue/Overview.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="Remove" layoutX="290.0" layoutY="487.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Remove" />
-      <Button fx:id="AddUser" layoutX="290.0" layoutY="418.0" mnemonicParsing="false" text="Add User" />
-      <Button fx:id="Select" layoutX="290.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Select" />
-      <ListView fx:id="List" layoutX="193.0" layoutY="189.0" prefHeight="171.0" prefWidth="260.0" />
-      <Text layoutX="261.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
+      <Button fx:id="OverviewbuttonRemove" layoutX="290.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" styleClass="Overviewbutton" text="Remove" />
+      <Button fx:id="OverviewbuttonAddUser" layoutX="290.0" layoutY="375.0" mnemonicParsing="false" styleClass="Overviewbutton" text="Add User" />
+      <Button fx:id="OverviewbuttonSelect" layoutX="290.0" layoutY="413.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" styleClass="Overviewbutton" text="Select" />
+      <ListView fx:id="OverviewList" layoutX="193.0" layoutY="189.0" prefHeight="171.0" prefWidth="260.0" />
+      <Text fx:id="OverviewtextTitle" layoutX="261.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
          <font>
             <Font size="24.0" />
          </font>

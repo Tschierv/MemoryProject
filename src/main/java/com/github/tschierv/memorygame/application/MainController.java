@@ -7,12 +7,12 @@ import javafx.scene.text.Text;
 public class MainController {
 
     @FXML
-    private Button Start;
+    private Button MainbuttonStart;
 
     @FXML
-    private Button Exit;
+    private Button MainbuttonExit;
 
     @FXML
-    private Text Title;
+    private Text MaintextTitle;
 
 }
