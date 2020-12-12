@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.presentation;
+package com.github.tschierv.memorygame.application;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

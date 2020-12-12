@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="main.java.com.github.tschierv.memorygame.presentation.NoUserController">
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.tschierv.memorygame.application.NoUserController">
    <children>
       <ImageView fitHeight="209.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/menue/NoUser.jpeg" />
+            <Image url="@../menue/NoUser.jpeg" />
          </image>
       </ImageView>
       <Text layoutX="87.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" wrappingWidth="192.13671875" />

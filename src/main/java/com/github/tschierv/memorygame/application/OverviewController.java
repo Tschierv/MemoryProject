@@ -1,13 +1,10 @@
-package main.java.com.github.tschierv.memorygame.presentation;
+package com.github.tschierv.memorygame.application;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
+import javafx.scene.control.ListView;
 
 public class OverviewController {
-
-    @FXML
-    private Text OverviewList;
 
     @FXML
     private Button Remove;
@@ -17,5 +14,8 @@ public class OverviewController {
 
     @FXML
     private Button Select;
+
+    @FXML
+    private ListView<?> List;
 
 }
