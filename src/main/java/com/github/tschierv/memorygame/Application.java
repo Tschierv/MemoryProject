@@ -32,11 +32,6 @@ public class Application {
         GameController gameController = new GameController(player_controller);
         Game game = gameController.createGameforPlayer16("Root");
         Card card_one = game.board.getCardDeck().get(1);
-        System.out.println("All images: " + image_repo.getAllImages());
-        System.out.println(game);
-        System.out.println(game.getPlayer());
-        System.out.println("There are " + game.board.getCardSlots() +" slots in this board");
-        System.out.println(game.board.getCardDeck().size());
         for (int i = 0; i < game.board.getCardDeck().size(); i++) {
             System.out.println("card image is: " + game.board.getCardDeck().get(i).getCardImage());
         }
