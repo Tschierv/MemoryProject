@@ -2,16 +2,20 @@ package com.github.tschierv.memorygame.application;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 public class LevelController {
 
     @FXML
-    private Button Easy;
+    private Text Leveltext;
 
     @FXML
-    private Button Normal;
+    private Button LevelbuttonEasy;
 
     @FXML
-    private Button Hard;
+    private Button LevelbuttonNormal;
+
+    @FXML
+    private Button LevelbuttonHard;
 
 }

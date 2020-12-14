@@ -13,9 +13,9 @@
             <Image url="@../menue/Level.jpeg" />
          </image>
       </ImageView>
-      <Text layoutX="177.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="48.00000226870179" />
-      <Button fx:id="Easy" layoutX="113.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="Easy" />
-      <Button fx:id="Normal" layoutX="172.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Normal" />
-      <Button fx:id="Hard" layoutX="241.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Hard" />
+      <Text fx:id="Leveltext" layoutX="177.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="48.00000226870179" />
+      <Button fx:id="LevelbuttonEasy" layoutX="113.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="Levelbutton" text="Easy" />
+      <Button fx:id="LevelbuttonNormal" layoutX="172.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" styleClass="Levelbutton" text="Normal" />
+      <Button fx:id="LevelbuttonHard" layoutX="241.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" styleClass="Levelbutton" text="Hard" />
    </children>
 </AnchorPane>

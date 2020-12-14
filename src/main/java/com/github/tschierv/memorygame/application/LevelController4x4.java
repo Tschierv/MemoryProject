@@ -21,9 +21,9 @@ public class LevelController4x4 {
     private Text Counter;
 
     @FXML
-    private Button Exit;
+    private Button Level14x4buttonExit;
 
     @FXML
-    private Button Help;
+    private Button Level14x4buttonHelp;
 
 }

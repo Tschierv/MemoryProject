@@ -42,7 +42,7 @@
             <RowConstraints maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button fx:id="Exit" layoutX="365.0" layoutY="900.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Exit" />
+      <Button fx:id="Level10x10buttonExit" layoutX="373.0" layoutY="904.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level10x10button" text="Exit" />
       <Text fx:id="Username" layoutX="677.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
       <Text fx:id="Counter" layoutX="871.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
    </children>

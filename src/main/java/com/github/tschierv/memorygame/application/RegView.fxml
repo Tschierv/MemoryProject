@@ -13,8 +13,8 @@
             <Image url="@../menue/Reg.jpeg" />
          </image>
       </ImageView>
-      <TextField fx:id="username" layoutX="84.0" layoutY="79.0" text="Username" />
-      <Button fx:id="cancel" layoutX="159.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Cancel" />
-      <Button fx:id="add" layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Add" />
+      <TextField fx:id="RegtextUsername" layoutX="84.0" layoutY="79.0" text="Username" />
+      <Button fx:id="RegbuttonCancel" layoutX="159.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="Regbutton" text="Cancel" />
+      <Button fx:id="RegbuttonAdd" layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" styleClass="Regbutton" text="Add" />
    </children>
 </AnchorPane>
