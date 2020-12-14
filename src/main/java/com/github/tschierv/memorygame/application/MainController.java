@@ -25,8 +25,9 @@ public class MainController {
 
     @FXML public void MainbuttonStartPushed(ActionEvent event) throws IOException, PlayerAlreadyExistException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LevelView4x4.fxml"));
-        fxmlLoader.setController(new LevelController4x4(this.createPlayerController()));
-
+        LevelController4x4 levelController4x4 = new LevelController4x4(this.createPlayerController());
+        levelController4x4.setUsername();
+        fxmlLoader.setController(levelController4x4);
         Parent MainViewParent = (Parent)fxmlLoader.load();
         Scene LevelView4x4Scene = new Scene(MainViewParent);
 
