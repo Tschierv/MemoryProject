@@ -30,6 +30,7 @@ public class MainController {
         fxmlLoader.setController(levelController4x4);
         Parent MainViewParent = (Parent)fxmlLoader.load();
         Scene LevelView4x4Scene = new Scene(MainViewParent);
+        LevelView4x4Scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
         // Get stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

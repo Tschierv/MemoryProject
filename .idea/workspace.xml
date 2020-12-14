@@ -30,8 +30,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fcd237be-e5ca-4d3b-b08e-403d02646a8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView4x4.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,15 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +172,8 @@
       <workItem from="1607781485689" duration="308000" />
       <workItem from="1607781827575" duration="1098000" />
       <workItem from="1607875208064" duration="554000" />
-      <workItem from="1607877341195" duration="17805000" />
+      <workItem from="1607877341195" duration="17933000" />
+      <workItem from="1607983302975" duration="5691000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure">
       <created>1605804919917</created>
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607931953955</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Feature: Retrieving user infromation from domain code works!">
+      <created>1607934020086</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607934020086</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +273,8 @@
     <MESSAGE value="Initial structure" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it" />
+    <MESSAGE value="Feature: Retrieving user infromation from domain code works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Retrieving user infromation from domain code works!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
