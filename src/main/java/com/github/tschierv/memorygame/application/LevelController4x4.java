@@ -17,6 +17,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -53,8 +54,17 @@ public class LevelController4x4 implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.Username.setText(this.game.getPlayer());
         this.Counter.setText("0");
-        this.LevelGridPane = new GridPane();
-
+        LevelGridPane.setVgap(5);
+        LevelGridPane.setHgap(5);
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                Rectangle card = new Rectangle();
+                card.setFill(Color.BLUE);
+                card.setHeight(115.0);
+                card.setWidth(100.0);
+                LevelGridPane.add(card, i, j);
+            }
+        }
     }
 
     public void setUsername(){
