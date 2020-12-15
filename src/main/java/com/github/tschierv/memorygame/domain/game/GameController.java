@@ -28,6 +28,17 @@ public class GameController {
         }
         return new Game(board, player);
     }
+    public Game createGameforPlayer100(String player_name){
+        Board board = boardController.createBoard(100);
+        this.cardController = new CardController(new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture10"));
+        Player player = null;
+        try {
+            player = playerController.getPlayerbyName(player_name);
+        } catch (PlayerNotExistException e) {
+            e.printStackTrace();
+        }
+        return new Game(board, player);
+    }
     public Game createGameforPlayer(String player_name, Integer card_slots){
         Board board = boardController.createBoard(16);
         Player player = null;

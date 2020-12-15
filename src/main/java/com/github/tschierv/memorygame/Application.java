@@ -13,7 +13,6 @@ import java.util.UUID;
 
 public class Application {
     public static void main(String[] args) throws PlayerAlreadyExistException {
-        System.out.println("Create PlayerRepository");
         Player player_a = new Player("Alf", UUID.randomUUID());
         Player player_b = new Player("Rolf", UUID.randomUUID());
         Player player_c = new Player("Gandalf", UUID.randomUUID());
@@ -27,19 +26,11 @@ public class Application {
         player_controller.createPlayer(player_c);
         player_controller.createPlayer(player_d);
 
-        ImageRepository image_repo = new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture");
-
         GameController gameController = new GameController(player_controller);
         Game game = gameController.createGameforPlayer16("Root");
-        Card card_one = game.board.getCardDeck().get(1);
-        System.out.println("All images: " + image_repo.getAllImages());
-        System.out.println(game);
-        System.out.println(game.getPlayer());
-        System.out.println("There are " + game.board.getCardSlots() +" slots in this board");
-        System.out.println(game.board.getCardDeck().size());
-        for (int i = 0; i < game.board.getCardDeck().size(); i++) {
-            System.out.println("card image is: " + game.board.getCardDeck().get(i).getCardImage());
-        }
+        Game game1 = gameController.createGameforPlayer100("Gandalf");
+
+        System.out.println(game1.board.getCardDeck().size());
     }
 }
 

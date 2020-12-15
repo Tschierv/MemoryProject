@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="209.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../menue/DeleteConf.jpeg" />
+            <Image url="@../../../../../../java/com/github/tschierv/memorygame/menue/DeleteConf.jpeg" />
          </image>
       </ImageView>
       <Text fx:id="DeleteConftext" layoutX="113.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sure ?" wrappingWidth="48.00000226870179" />
