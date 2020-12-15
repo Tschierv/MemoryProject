@@ -1,14 +1,8 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 
-/*Main
- * 
- * 
- * 
- */
- 
- 
- 
+/*Main*/
+  
  #MaintextTitle
 {
 	-fx-alignment: center;
@@ -61,24 +55,87 @@
 }
 
 
-
-
-
-
 /*NoUser */
 
 #NoUsertextTitle
 {
 	-fx-alignment: center;
-	-fx-font:20 "Courier";
+	-fx-font:15 "Courier";
 	-fx-font-style: italic;
 }
 
 .NoUserbutton
 {
 	-fx-alignment: center;
-	-fx-font:15 "Courier"
+	-fx-font:10 "Courier"
 		
 }
 
+/*DeleteCon*/
 
+
+#DeleteConftext
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier";
+	-fx-font-style: italic;
+}
+
+.DeleteConfbutton
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier"		
+}
+
+
+/*Reg*/
+
+.Regbutton
+{
+	-fx-alignment: center;
+	-fx-font:10 "Courier"		
+}
+
+
+/*Level*/
+
+#Leveltext
+{
+	-fx-alignment: center;
+	-fx-font:21 "Courier";
+	-fx-font-style: italic;
+}
+
+.Levelbutton
+{
+	-fx-alignment: center;
+	-fx-font:10 "Courier"		
+}
+
+
+/*Level4x4*/
+
+.Level4x4button
+{
+	-fx-alignment: center;
+	-fx-font:12 "Courier"		
+}
+
+
+
+/*Level6x6*/
+
+.Level6x6button
+{
+	-fx-alignment: center;
+	-fx-font:12 "Courier"		
+}
+
+
+/*Level10x10 */
+
+.Level10x10button
+{
+	-fx-alignment: center;
+	-fx-font:16 "Courier"		
+}

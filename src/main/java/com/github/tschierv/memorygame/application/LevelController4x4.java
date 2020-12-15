@@ -33,8 +33,8 @@ public class LevelController4x4 implements Initializable {
     @FXML private GridPane LevelGridPane;
     @FXML private Text Username = new Text();
     @FXML private Text Counter = new Text("0");
-    @FXML private Button Exit;
-    @FXML private Button Help;
+    @FXML private Button Level14x4buttonExit;
+    @FXML private Button Level14x4buttonHelp;
     private GameController gameController;
     private Game game;
 
@@ -45,6 +45,7 @@ public class LevelController4x4 implements Initializable {
         window.setScene(tableViewScene);
         window.show();
     }
+
 
     public LevelController4x4(PlayerController playerController){
         this.gameController = new GameController(playerController);

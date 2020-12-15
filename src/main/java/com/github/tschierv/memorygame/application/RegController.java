@@ -7,12 +7,12 @@ import javafx.scene.control.TextField;
 public class RegController {
 
     @FXML
-    private TextField username;
+    private TextField RegtextUsername;
 
     @FXML
-    private Button cancel;
+    private Button RegbuttonCancel;
 
     @FXML
-    private Button add;
+    private Button RegbuttonAdd;
 
 }

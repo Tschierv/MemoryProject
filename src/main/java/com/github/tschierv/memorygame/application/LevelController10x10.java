@@ -15,7 +15,7 @@ public class LevelController10x10 {
     private RowConstraints Grid10x10Row;
 
     @FXML
-    private Button Exit;
+    private Button Level10x10buttonExit;
 
     @FXML
     private Text Username;

@@ -15,10 +15,10 @@ public class LevelController6x6 {
     private RowConstraints Grid6x6Row;
 
     @FXML
-    private Button Exit;
+    private Button Level6x6buttonExit;
 
     @FXML
-    private Button Help;
+    private Button Level6x6buttonHelp;
 
     @FXML
     private Text Username;
