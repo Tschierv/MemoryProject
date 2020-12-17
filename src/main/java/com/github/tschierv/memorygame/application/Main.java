@@ -1,32 +1,51 @@
 package com.github.tschierv.memorygame.application;
 
-import java.net.URL;
-import java.nio.file.Paths;
+import java.io.IOException;
+import java.util.UUID;
 
+import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.domain.player.Player;
+import com.github.tschierv.memorygame.domain.player.PlayerController;
+import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
+import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
 
 
 public class Main extends Application {
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
+		PlayerController playerController = this.createPlayerController();
+		GameController gameController = this.createGameController(playerController);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainView.fxml"));
+		MainController mainController = new MainController(gameController);
+		fxmlLoader.setController(mainController);
+		Parent MainViewParent = null;
 		try {
-		//BorderPane root = new BorderPane();
-			Parent root = FXMLLoader.load(getClass().getResource("RegView.fxml"));
-			Scene scene = new Scene(root);
-		    scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setResizable(false);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle ("Animal Memory");
-			primaryStage.show();
-		} catch(Exception e) {
+			MainViewParent = (Parent)fxmlLoader.load();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		Scene MainViewScene = new Scene(MainViewParent);
+	    primaryStage.setResizable(false);
+	    primaryStage.setScene(MainViewScene);
+	    primaryStage.setTitle ("Animal Memory");
+		primaryStage.show();
+	}
+	private PlayerController createPlayerController() throws PlayerAlreadyExistException {
+		Player player_d = new Player("Root", UUID.randomUUID());
+		PlayerRepository player_repo = new PlayerRepository();
+		PlayerController playerController = new PlayerController(player_repo);
+		playerController.createPlayer(player_d);
+		return playerController;
+	}
+
+	private GameController createGameController(PlayerController playerController) {
+	    return new GameController(playerController);
 	}
 
 	public static void main(String[] args) {

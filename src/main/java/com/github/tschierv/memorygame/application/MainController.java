@@ -1,50 +1,39 @@
 package com.github.tschierv.memorygame.application;
 
-import com.github.tschierv.memorygame.domain.player.Player;
-import com.github.tschierv.memorygame.domain.player.PlayerController;
-import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
-import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
+import com.github.tschierv.memorygame.domain.game.GameController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.UUID;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainController {
+public class MainController implements Initializable {
 
     @FXML private Button MainbuttonStart;
     @FXML private Button MainbuttonExit;
     @FXML private Text MaintextTitle;
+    private SceneController sceneController;
+    private GameController gameController;
 
-    @FXML public void MainbuttonStartPushed(ActionEvent event) throws IOException, PlayerAlreadyExistException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LevelView4x4.fxml"));
-        LevelController4x4 levelController4x4 = new LevelController4x4(this.createPlayerController());
-        //levelController4x4.setUsername();
-        fxmlLoader.setController(levelController4x4);
-        Parent MainViewParent = (Parent)fxmlLoader.load();
-        Scene LevelView4x4Scene = new Scene(MainViewParent);
-        LevelView4x4Scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+    public MainController(GameController gameController){
+        this.gameController = gameController;
+        System.out.println("MainController is called");
+    }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
 
-        // Get stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(LevelView4x4Scene);
-        window.show();
+    @FXML public void MainbuttonStartPushed(ActionEvent event) throws IOException {
+        System.out.println("MainbuttonStartPushed");
+        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        sceneController = new SceneController(scene);
+        sceneController.displayLevelScene(gameController, event);
     }
 
-    private PlayerController createPlayerController() throws PlayerAlreadyExistException {
-        Player player_d = new Player("Root", UUID.randomUUID());
-        PlayerRepository player_repo = new PlayerRepository();
-        PlayerController player_controller = new PlayerController(player_repo);
-        player_controller.createPlayer(player_d);
-        return player_controller;
-    }
     @FXML public void MainbuttonExitPushed(){
         System.exit(1);
     }
