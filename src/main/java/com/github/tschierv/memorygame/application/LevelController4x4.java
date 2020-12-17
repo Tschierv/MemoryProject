@@ -55,7 +55,7 @@ public class LevelController4x4 implements Initializable {
                 Rectangle card = new Rectangle();
                 card.setFill(Color.BLUE);
                 card.setHeight(115.0);
-                card.setWidth(100.0);
+                card.setWidth(115.0);
                 LevelGridPane.add(card, i, j);
             }
         }

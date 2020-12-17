@@ -18,16 +18,28 @@
         </ImageView>
         <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid10x10Column" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column1" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column2" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column3" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column4" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column5" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column6" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column7" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column8" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column9" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid10x10Column10" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid10x10Row" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row1" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row2" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row3" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row4" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row5" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row6" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row7" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row8" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row9" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid10x10Row10" maxHeight="77.0" minHeight="77.0" prefHeight="77.0" vgrow="SOMETIMES" />
             </rowConstraints>
         </GridPane>
         <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />

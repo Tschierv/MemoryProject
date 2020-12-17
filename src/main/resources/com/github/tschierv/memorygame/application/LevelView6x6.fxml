@@ -18,16 +18,20 @@
         </ImageView>
         <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column1" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column2" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column3" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column4" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column5" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="Grid6x6Column6" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row1" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row2" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row3" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row4" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row5" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="Grid6x6Row6" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
             </rowConstraints>
         </GridPane>
         <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
