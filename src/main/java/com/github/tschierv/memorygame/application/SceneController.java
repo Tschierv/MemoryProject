@@ -69,7 +69,14 @@ public class SceneController {
         MainController mainController = new MainController(gameController);
         return this.getScene(fxmlLoader, gameController);
     }
-
+    public void displayOverviewScene(GameController gameController, Event event) {
+        FXMLLoader fxmlLoader = this.getfxmlLoader("OverviewView.fxml");
+        OverviewController overviewController = new OverviewController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader, overviewController);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(levelScene);
+        window.show();
+    }
     public void displayLevelScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("LevelView.fxml");
         LevelController levelController = new LevelController(gameController);
@@ -78,6 +85,15 @@ public class SceneController {
         window.setScene(levelScene);
         window.show();
     }
+    public void displayRegScene(GameController gameController, Event event) {
+        FXMLLoader fxmlLoader = this.getfxmlLoader("RegView.fxml");
+        LevelController levelController = new LevelController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader, levelController);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(levelScene);
+        window.show();
+    }
+
 
     public void displayLevel4x4Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("LevelView4x4.fxml");

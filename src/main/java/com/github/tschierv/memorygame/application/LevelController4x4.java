@@ -42,7 +42,7 @@ public class LevelController4x4 implements Initializable {
 
     public LevelController4x4(GameController gameController){
         this.gameController = gameController;
-        this.game = gameController.createGameforPlayer16("Root");
+        this.game = gameController.createGameforPlayer16(this.gameController.getCurrentPlayer().getAccountName());
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

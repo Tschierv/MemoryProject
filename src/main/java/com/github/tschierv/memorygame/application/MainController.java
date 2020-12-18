@@ -31,7 +31,7 @@ public class MainController implements Initializable {
         System.out.println("MainbuttonStartPushed");
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         sceneController = new SceneController(scene);
-        sceneController.displayLevelScene(gameController, event);
+        sceneController.displayOverviewScene(gameController, event);
     }
 
     @FXML public void MainbuttonExitPushed(){

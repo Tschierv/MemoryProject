@@ -38,9 +38,11 @@ public class Main extends Application {
 	}
 	private PlayerController createPlayerController() throws PlayerAlreadyExistException {
 		Player player_d = new Player("Root", UUID.randomUUID());
+		Player player_b = new Player("Rolf", UUID.randomUUID());
 		PlayerRepository player_repo = new PlayerRepository();
 		PlayerController playerController = new PlayerController(player_repo);
 		playerController.createPlayer(player_d);
+		playerController.createPlayer(player_b);
 		return playerController;
 	}
 
