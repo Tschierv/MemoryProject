@@ -12,12 +12,14 @@ public class PlayerController {
     private GetPlayer getPlayer;
     private GetAllPlayers getAllPlayers;
     private GetAllPlayerNames getAllPlayerNames;
+    private RemovePlayer removePlayer;
 
     public PlayerController(PlayerRepository playerRepository) {
         createPlayer = new CreatePlayer(playerRepository);
         getPlayer = new GetPlayerImp(playerRepository);
         getAllPlayers = new GetAllPlayers(playerRepository);
         getAllPlayerNames = new GetAllPlayerNames(playerRepository);
+        removePlayer = new RemovePlayer(playerRepository);
     }
     public void createPlayer(Player player) throws PlayerAlreadyExistException{
         createPlayer.execute(player);
@@ -31,6 +33,14 @@ public class PlayerController {
     }
 
     public List<String> getAllPlayerNames(){
+
         return getAllPlayerNames.execute();
+    }
+    public void removePlayer(String player_name){
+        try {
+            removePlayer.execute(player_name);
+        } catch (PlayerNotExistException e) {
+            e.printStackTrace();
+        }
     }
 }

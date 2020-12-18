@@ -7,4 +7,5 @@ public interface PlayerRepositoryService {
     void savePlayer(Player player);
     Player getPlayer(String player_name);
     Boolean doesPlayerNameExists(String player_name);
+    void removePlayer(String player_name);
 }

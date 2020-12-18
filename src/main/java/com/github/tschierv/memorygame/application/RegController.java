@@ -1,18 +1,41 @@
 package com.github.tschierv.memorygame.application;
 
+import com.github.tschierv.memorygame.domain.game.GameController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class RegController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML
-    private TextField RegtextUsername;
+public class RegController implements Initializable {
 
-    @FXML
-    private Button RegbuttonCancel;
+    @FXML private TextField RegtextUsername;
+    @FXML private Button RegbuttonCancel;
+    @FXML private Button RegbuttonAdd;
+    private GameController gameController;
 
-    @FXML
-    private Button RegbuttonAdd;
+    public RegController(GameController gameController){
+        this.gameController = gameController;
+    }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) { }
+
+    @FXML public void RegbuttonAddPushed(ActionEvent event) throws IOException {
+        this.gameController.addPlayer(RegtextUsername.getText());
+        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        SceneController sceneController = new SceneController(scene);
+        sceneController.displayOverviewScene(this.gameController, event);
+    }
+    @FXML public void RegbuttonCancelPushed(ActionEvent event) throws IOException {
+        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        SceneController sceneController = new SceneController(scene);
+        sceneController.displayOverviewScene(this.gameController, event);
+    }
 }

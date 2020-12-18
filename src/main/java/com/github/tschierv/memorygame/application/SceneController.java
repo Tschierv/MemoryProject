@@ -40,8 +40,7 @@ public class SceneController {
     }
 
     private FXMLLoader getfxmlLoader(String fxmlFile) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
-        return fxmlLoader;
+        return new FXMLLoader(getClass().getResource(fxmlFile));
     }
 
     private Scene getScene(FXMLLoader fxmlLoader, Object controllerCls) {
@@ -64,11 +63,6 @@ public class SceneController {
         window.setScene(mainScene);
         window.show();
     }
-    public Scene getMainScene(GameController gameController) {
-        FXMLLoader fxmlLoader = this.getfxmlLoader("MainView.fxml");
-        MainController mainController = new MainController(gameController);
-        return this.getScene(fxmlLoader, gameController);
-    }
     public void displayOverviewScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("OverviewView.fxml");
         OverviewController overviewController = new OverviewController(gameController);
@@ -87,8 +81,26 @@ public class SceneController {
     }
     public void displayRegScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("RegView.fxml");
-        LevelController levelController = new LevelController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, levelController);
+        RegController regController = new RegController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader, regController);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(levelScene);
+        window.show();
+    }
+
+    public void displayDeleteConfScene(GameController gameController, Event event) {
+        FXMLLoader fxmlLoader = this.getfxmlLoader("DeleteConfView.fxml");
+        DeleteConfController deleteConfController = new DeleteConfController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader,deleteConfController);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(levelScene);
+        window.show();
+    }
+
+    public void displayNoUserScene(GameController gameController, Event event) {
+        FXMLLoader fxmlLoader = this.getfxmlLoader("NoUserView.fxml");
+        NoUserController noUserController = new NoUserController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader, noUserController);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(levelScene);
         window.show();

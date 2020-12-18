@@ -28,4 +28,8 @@ public class PlayerRepository implements PlayerRepositoryService {
     public Boolean doesPlayerNameExists(String player_name) {
         return this.players.containsKey(player_name);
     }
+    @Override
+    public void removePlayer(String player_name){
+        this.players.remove(player_name);
+    }
 }

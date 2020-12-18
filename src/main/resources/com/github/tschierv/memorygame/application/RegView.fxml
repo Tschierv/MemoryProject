@@ -6,15 +6,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="202.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.tschierv.memorygame.application.RegController">
+<AnchorPane prefHeight="202.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <ImageView fitHeight="238.0" fitWidth="317.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../java/com/github/tschierv/memorygame/menue/Reg.jpeg" />
+            <Image url="/com/github/tschierv/memorygame/menue/Reg.jpeg" />
          </image>
       </ImageView>
       <TextField fx:id="RegtextUsername" layoutX="84.0" layoutY="79.0" text="Username" />
-      <Button fx:id="RegbuttonCancel" layoutX="159.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="Regbutton" text="Cancel" />
-      <Button fx:id="RegbuttonAdd" layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" styleClass="Regbutton" text="Add" />
+      <Button fx:id="RegbuttonCancel" onAction="#RegbuttonCancelPushed" layoutX="159.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="Regbutton" text="Cancel" />
+      <Button fx:id="RegbuttonAdd" onAction="#RegbuttonAddPushed" layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" styleClass="Regbutton" text="Add" />
    </children>
 </AnchorPane>
