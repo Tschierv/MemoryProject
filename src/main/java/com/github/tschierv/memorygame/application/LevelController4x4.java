@@ -1,5 +1,6 @@
 package com.github.tschierv.memorygame.application;
 
+import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.Game;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
@@ -9,6 +10,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -16,8 +19,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class LevelController4x4 implements Initializable {
@@ -50,13 +55,16 @@ public class LevelController4x4 implements Initializable {
         this.Counter.setText("0");
         LevelGridPane.setVgap(5);
         LevelGridPane.setHgap(5);
+        List<Card> currentCarddeck = this.game.board.getCardDeck();
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                Rectangle card = new Rectangle();
-                card.setFill(Color.BLUE);
-                card.setHeight(115.0);
-                card.setWidth(115.0);
-                LevelGridPane.add(card, i, j);
+                Card card = currentCarddeck.get(0);
+                Image cardImage = new Image(card.CardImage.toString());
+                ImageView cardImageView = new ImageView(cardImage);
+                cardImageView.setFitHeight(115.0);
+                cardImageView.setFitWidth(115.0);
+                currentCarddeck.remove(0);
+                LevelGridPane.add(cardImageView, i, j);
             }
         }
     }
