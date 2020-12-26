@@ -1,10 +1,7 @@
 package com.github.tschierv.memorygame.application;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
-import com.github.tschierv.memorygame.domain.player.Player;
-import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

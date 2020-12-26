@@ -3,129 +3,55 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcd237be-e5ca-4d3b-b08e-403d02646a8b" name="Default Changelist" comment="">
+    <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/menue/leaves_background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController10x10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController10x10.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController6x6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController6x6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView10x10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView4x4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView6x6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/LevelView6x6.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="New_Game_Controller" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
-  <component name="KubernetesApiPersistence">
-    <option name="context" value="jhipster-ms-test/api-pro-eu-west-1-openshift-com:443/m.bachmann@united.ch" />
-    <option name="namespace" value="jhipster-ms-test" />
-  </component>
-  <component name="ProjectId" id="1kW6ZzlujiUub1dwwOjyys6cK0O" />
+  <component name="ProjectId" id="1mBpNHJ23Vjt6X16Ly4bIYgfJrS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.31839082" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\application" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame" />
-      <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main\java" />
-      <recent name="C:\Users\new_taahopa6\IdeaProjects\MemoryProject\src\main" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\application" />
-      <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\g" />
-      <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.tschierv.memorygame.domain.player.usecase" />
+      <recent name="com.github.tschierv.memorygame.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.github.tschierv.memorygame.application.Main" />
-      <module name="MemoryProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.github.tschierv.memorygame.application.Main" />
-      <module name="MemoryProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.github.tschierv.memorygame.application.Main" />
-      <module name="MemoryProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.tschierv.memorygame.application.Main" />
       <module name="MemoryProject" />
@@ -139,15 +65,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,126 +79,19 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fcd237be-e5ca-4d3b-b08e-403d02646a8b" name="Default Changelist" comment="" />
-      <created>1605804059852</created>
+      <changelist id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="" />
+      <created>1608976802309</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605804059852</updated>
-      <workItem from="1605804060882" duration="620000" />
-      <workItem from="1605804695194" duration="1127000" />
-      <workItem from="1606205346465" duration="168000" />
-      <workItem from="1607705247709" duration="862000" />
-      <workItem from="1607781485689" duration="308000" />
-      <workItem from="1607781827575" duration="1098000" />
-      <workItem from="1607875208064" duration="554000" />
-      <workItem from="1607877341195" duration="17933000" />
-      <workItem from="1607983302975" duration="7025000" />
-      <workItem from="1608231521412" duration="604000" />
-      <workItem from="1608233077622" duration="25332000" />
-      <workItem from="1608590372064" duration="2491000" />
+      <updated>1608976802309</updated>
+      <workItem from="1608976810961" duration="8440000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial structure">
-      <created>1605804919917</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1605804919917</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial structure">
-      <created>1605805492785</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1605805492785</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add gitignore">
-      <created>1607705383080</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1607705383080</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it">
-      <created>1607931834082</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1607931834082</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it">
-      <created>1607931862295</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1607931862295</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it">
-      <created>1607931953955</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1607931953955</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Feature: Retrieving user infromation from domain code works!">
-      <created>1607934020086</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1607934020086</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Feature: Going back to main Screen when game is exited.">
-      <created>1608018179635</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1608018179635</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Merge changes from master into New_Game_Controller">
-      <created>1608068342756</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1608068342756</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fix: Fix some missing *Constraints in fxml files">
-      <created>1608305504401</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1608305504401</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Feature: Overview View now display different users">
-      <created>1608478562836</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1608478562836</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Feature: Overview View now display different users and allows user selection">
-      <created>1608479461789</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1608479461789</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Feature: Adding and removing Players is now working">
-      <created>1608482619025</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1608482619025</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,52 +102,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="New_Game_Controller" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial structure" />
-    <MESSAGE value="add gitignore" />
-    <MESSAGE value="Feature: First Controller are working&#10;   * Starting a game is now possible&#10;   * The MainController creates the requirements for the LevelController4x4 and calls it" />
-    <MESSAGE value="Feature: Retrieving user infromation from domain code works!" />
-    <MESSAGE value="Feature: Going back to main Screen when game is exited." />
-    <MESSAGE value="Merge changes from master into New_Game_Controller" />
-    <MESSAGE value="Feature: Working Navigation for all 3 different levels" />
-    <MESSAGE value="Fix: Fix some missing *Constraints in fxml files" />
-    <MESSAGE value="Feature: Overview View now display different users" />
-    <MESSAGE value="Feature: Overview View now display different users and allows user selection" />
-    <MESSAGE value="Feature: Adding and removing Players is now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Adding and removing Players is now working" />
   </component>
 </project>

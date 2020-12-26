@@ -33,6 +33,16 @@ public class GameController {
         }
         return new Game(board, player);
     }
+    public Game createGameforPlayer36(String player_name){
+        Board board = boardController.createBoard(36);
+        Player player = null;
+        try {
+            player = playerController.getPlayerbyName(player_name);
+        } catch (PlayerNotExistException e) {
+            e.printStackTrace();
+        }
+        return new Game(board, player);
+    }
     public Game createGameforPlayer100(String player_name){
         Board board = boardController.createBoard(100);
         this.cardController = new CardController(new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture10"));

@@ -1,42 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="988.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
-    <children>
-        <ImageView fitHeight="988.0" fitWidth="1489.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="/com/github/tschierv/memorygame/menue/Level6x6.jpeg" />
-            </image>
-        </ImageView>
-        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
-            <columnConstraints>
-                <ColumnConstraints fx:id="Grid6x6Column1" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column2" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column3" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column4" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column5" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints fx:id="Grid6x6Column6" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints fx:id="Grid6x6Row1" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row2" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row3" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row4" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row5" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints fx:id="Grid6x6Row6" maxHeight="115.0" minHeight="115.0" prefHeight="115.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-        </GridPane>
-        <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-        <Text fx:id="Counter" layoutX="1094.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-        <Button fx:id="Level6x6buttonExit" layoutX="492.0" layoutY="808.0" onAction="#Level6x6buttonExitPushed" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level6x6button" text="Exit" />
-        <Button fx:id="Level6x6buttonHelp" layoutX="554.0" layoutY="808.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level6x6button" text="Help" />
-    </children>
+<children>
+    <ImageView fitHeight="988.0" fitWidth="1489.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="/com/github/tschierv/memorygame/menue/Level6x6.jpeg" />
+        </image>
+    </ImageView>
+    <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
+    </GridPane>
+    <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+    <Text fx:id="Counter" layoutX="1094.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+    <Button fx:id="Level6x6buttonExit" layoutX="492.0" layoutY="808.0" onAction="#Level6x6buttonExitPushed" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level6x6button" text="Exit" />
+    <Button fx:id="Level6x6buttonHelp" layoutX="554.0" layoutY="808.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level6x6button" text="Help" />
+</children>
 </AnchorPane>

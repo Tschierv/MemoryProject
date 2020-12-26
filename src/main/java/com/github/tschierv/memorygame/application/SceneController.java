@@ -119,9 +119,9 @@ public class SceneController {
     public void displayLevel6x6Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("LevelView6x6.fxml");
         LevelController6x6 levelController6x6 = new LevelController6x6(gameController);
-        Scene levelnormalScene = this.getScene(fxmlLoader, levelController6x6);
+        Scene leveleasyScene = this.getScene(fxmlLoader, levelController6x6);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelnormalScene);
+        window.setScene(leveleasyScene);
         window.show();
     }
 

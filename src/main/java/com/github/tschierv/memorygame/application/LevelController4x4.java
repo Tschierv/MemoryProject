@@ -4,7 +4,9 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.Game;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
+import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -12,23 +14,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class LevelController4x4 implements Initializable {
 
-    @FXML private ColumnConstraints Grid4x4Column;
-    @FXML private RowConstraints Grid4x4Row;
+    @FXML private Double Grid4x4Size;
     @FXML private GridPane LevelGridPane;
     @FXML private Text Username = new Text();
     @FXML private Text Counter = new Text("0");
@@ -47,6 +48,7 @@ public class LevelController4x4 implements Initializable {
 
     public LevelController4x4(GameController gameController){
         this.gameController = gameController;
+        this.Grid4x4Size = 115.0;
         this.game = gameController.createGameforPlayer16(this.gameController.getCurrentPlayer().getAccountName());
     }
     @Override
@@ -56,21 +58,16 @@ public class LevelController4x4 implements Initializable {
         LevelGridPane.setVgap(5);
         LevelGridPane.setHgap(5);
         List<Card> currentCarddeck = this.game.board.getCardDeck();
+        Collections.shuffle(currentCarddeck);
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
                 Card card = currentCarddeck.get(0);
-                Image cardImage = new Image(card.CardImage.toString());
-                ImageView cardImageView = new ImageView(cardImage);
-                cardImageView.setFitHeight(115.0);
-                cardImageView.setFitWidth(115.0);
+                CardViewModel cardViewModel = new CardViewModel(card);
+                cardViewModel.setCardImageSize(this.Grid4x4Size);
                 currentCarddeck.remove(0);
-                LevelGridPane.add(cardImageView, i, j);
+                StackPane cardPane = cardViewModel.getCards();
+                LevelGridPane.add(cardPane, i, j);
             }
         }
-    }
-
-    public void setUsername(){
-        System.out.println("username is: " + this.game.getPlayer());
-        this.Username.setText(this.game.getPlayer());
     }
 }
