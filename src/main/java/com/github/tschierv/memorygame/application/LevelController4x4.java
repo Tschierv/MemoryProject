@@ -5,19 +5,16 @@ import com.github.tschierv.memorygame.domain.game.Game;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import com.github.tschierv.memorygame.presentation.game.GameViewModel;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
@@ -31,13 +28,15 @@ public class LevelController4x4 implements Initializable {
 
     @FXML private Double Grid4x4Size;
     @FXML private GridPane LevelGridPane;
-    @FXML private Text Username = new Text();
-    @FXML private Text Counter = new Text("0");
+    @FXML private Text  Username = new Text();
+    @FXML private Text Counter = new Text();
     @FXML private Button Level4x4buttonExit;
     @FXML private Button Level4x4buttonHelp;
+
     private GameController gameController;
     private Game game;
     private SceneController sceneController;
+    private GameViewModel gameViewModel;
 
     public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
@@ -49,16 +48,12 @@ public class LevelController4x4 implements Initializable {
     public LevelController4x4(GameController gameController){
         this.gameController = gameController;
         this.Grid4x4Size = 115.0;
-        this.game = gameController.createGameforPlayer16(this.gameController.getCurrentPlayer().getAccountName());
+        this.game = gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
+        this.gameViewModel = new GameViewModel(game);
+        this.Counter.textProperty().bind(gameViewModel.counter);
     }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        this.Username.setText(this.game.getPlayer());
-        this.Counter.setText("0");
-        LevelGridPane.setVgap(5);
-        LevelGridPane.setHgap(5);
-        List<Card> currentCarddeck = this.game.board.getCardDeck();
-        Collections.shuffle(currentCarddeck);
+
+    public void createGrid(List<Card> currentCarddeck){
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
                 Card card = currentCarddeck.get(0);
@@ -66,8 +61,26 @@ public class LevelController4x4 implements Initializable {
                 cardViewModel.setCardImageSize(this.Grid4x4Size);
                 currentCarddeck.remove(0);
                 StackPane cardPane = cardViewModel.getCards();
+                cardPane.addEventHandler(MouseEvent.MOUSE_CLICKED, gameViewModel.selectedCardEventHandler(card, cardPane));
                 LevelGridPane.add(cardPane, i, j);
             }
         }
     }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        this.Username.setText(this.game.getPlayer());
+        this.Counter.textProperty().bind(this.gameViewModel.counter);
+        LevelGridPane.setVgap(5);
+        LevelGridPane.setHgap(5);
+        List<Card> currentCarddeck = this.game.board.getCardDeck();
+        Collections.shuffle(currentCarddeck);
+        this.createGrid(currentCarddeck);
+    }
+    public Text getCounter() {
+        return Counter;
+    }
+    public void setCounter(Text counter) {
+        Counter = counter;
+    }
+
 }

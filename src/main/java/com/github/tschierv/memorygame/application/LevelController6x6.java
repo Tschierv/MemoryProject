@@ -42,7 +42,7 @@ public class LevelController6x6 implements Initializable {
     public LevelController6x6(GameController gameController){
         this.gameController = gameController;
         this.grid6x6Size = 115.0;
-        this.game = gameController.createGameforPlayer36(this.gameController.getCurrentPlayer().getAccountName());
+        this.game = gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 36);
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,9 +54,6 @@ public class LevelController6x6 implements Initializable {
         Collections.shuffle(currentCarddeck);
         for(int i=0;i<6;i++){
             for(int j=0;j<6;j++){
-                System.out.println("carddeck : " + currentCarddeck);
-                System.out.println(currentCarddeck.size());
-                System.out.println(currentCarddeck.get(0));
                 Card card = currentCarddeck.get(0);
                 CardViewModel cardViewModel = new CardViewModel(card);
                 cardViewModel.setCardImageSize(this.grid6x6Size);

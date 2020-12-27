@@ -42,7 +42,7 @@ public class LevelController10x10 implements Initializable {
     public LevelController10x10(GameController gameController){
         this.gameController = gameController;
         this.Grid10x10Size = 115.0;
-        this.game = gameController.createGameforPlayer100("Root");
+        this.game = gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 100);
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
