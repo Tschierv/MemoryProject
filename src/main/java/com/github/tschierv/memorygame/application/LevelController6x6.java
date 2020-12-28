@@ -1,7 +1,6 @@
-package com.github.tschierv.memorygame.application;
+/*package com.github.tschierv.memorygame.application;
 
 import com.github.tschierv.memorygame.domain.card.Card;
-import com.github.tschierv.memorygame.domain.game.Game;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
@@ -32,7 +31,6 @@ public class LevelController6x6 implements Initializable {
         @FXML private Button Level6x6buttonHelp;
 
         private GameController gameController;
-        private Game game;
         private SceneController sceneController;
         private GameViewModel gameViewModel;
         private Map<Card, StackPane> cardStackPaneMap = new HashMap<>();
@@ -48,7 +46,6 @@ public class LevelController6x6 implements Initializable {
                 this.gameController = gameController;
                 this.Grid6x6Size = 115.0;
                 this.gameViewModel = new GameViewModel(this.gameController);
-                this.Counter.textProperty().bind(gameViewModel.counter);
         }
 
         public void createGrid(List<Card> currentCarddeck){
@@ -58,8 +55,7 @@ public class LevelController6x6 implements Initializable {
                                 Card card = currentCarddeck.get(cardIndex);
                                 CardViewModel cardViewModel = new CardViewModel(card);
                                 cardViewModel.setCardImageSize(this.Grid6x6Size);
-                                StackPane cardPane = cardViewModel.getCards();
-                                System.out.println("Create grid loop  i: " + i + "j : " + j + " index: " + cardIndex);
+                                StackPane cardPane = cardViewModel.getStackPaneCards();
                                 cardStackPaneMap.put(currentCarddeck.get(cardIndex), cardPane);
                                 cardPane.addEventHandler(MouseEvent.MOUSE_CLICKED, selectedCardEventHandler(card, cardPane));
                                 LevelGridPane.add(cardPane, i, j);
@@ -70,8 +66,8 @@ public class LevelController6x6 implements Initializable {
         @Override
         public void initialize(URL location, ResourceBundle resources) {
                 this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 36);
-                this.Username.setText(this.game.getPlayer());
-                this.Counter.textProperty().bind(this.gameViewModel.counter);
+                this.Username.setText(this.gameController.getCurrentPlayer().getAccountName());
+                this.Counter.textProperty().bind(this.gameViewModel.getCounter());
                 LevelGridPane.setVgap(5);
                 LevelGridPane.setHgap(5);
                 this.createGrid(this.gameController.getallCards());
@@ -86,15 +82,13 @@ public class LevelController6x6 implements Initializable {
         public EventHandler selectedCardEventHandler(Card selectedCard, StackPane cardPane) {
                 EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
                         public void handle(MouseEvent event){
-                                game.selectCard(selectedCard);
-                                System.out.println("selected cards : " + game.getSelectedCards().size());
+                                gameController.selectCard(selectedCard);
                                 new Thread(() ->
                                 {
                                         cardPane.getChildren().get(1).setVisible(false);
-                                        if(game.getSelectedCards().isEmpty()){
+                                        if(gameController.getCurrentGame().getSelectedCards().isEmpty()){
                                                 LevelGridPane.setDisable(true);
                                                 try {
-                                                        System.out.println("sleeping");
                                                         Thread.sleep(600);
 
                                                 } catch (InterruptedException e){
@@ -102,8 +96,7 @@ public class LevelController6x6 implements Initializable {
                                                 }
                                                 for (Card cardinMap : cardStackPaneMap.keySet())
                                                         if(!cardinMap.isCardFaceSideUp()) {
-                                                                System.out.println(cardinMap.CardFaceSideUp);
-                                                                System.out.println("card is not faceup" + cardinMap);
+                                                                System.out.println("card is not face up" + cardinMap);
                                                                 cardStackPaneMap.get(cardinMap).getChildren().get(1).setVisible(true);
                                                         }
                                                 LevelGridPane.setDisable(false);
@@ -112,10 +105,8 @@ public class LevelController6x6 implements Initializable {
                                 }).start();
                         }
                 };
-                System.out.println("map: ");
-                cardStackPaneMap.keySet().stream().forEach( x -> System.out.println(x.getCardId() +" " + x.CardFaceSideUp));
-                System.out.println("map end: ");
                 return eventHandler;
         }
 
 }
+*/

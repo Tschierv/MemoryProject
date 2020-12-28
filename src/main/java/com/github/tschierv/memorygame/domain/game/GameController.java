@@ -5,6 +5,7 @@ import com.github.tschierv.memorygame.domain.Board.BoardController;
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.card.CardController;
 import com.github.tschierv.memorygame.domain.card.IImageRepositoryService;
+import com.github.tschierv.memorygame.domain.card.usecase.CompairCardPair;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
@@ -70,10 +71,6 @@ public class GameController {
         this.playerController.removePlayer(playerName);
     }
 
-    public List<Card> getallCards(){
-        return this.currentGame.getCards();
-    }
-
     public Integer getcurrentCounter(){
         System.out.println("get counter : " + this.currentGame.getCounter());
         return this.currentGame.getCounter();
@@ -82,4 +79,41 @@ public class GameController {
     public Game getCurrentGame(){
         return this.currentGame;
     }
+
+    public boolean ismatchingCardPair(List<Card> selectedCards){
+        if(selectedCards.isEmpty()){
+            return false;
+        }
+        CompairCardPair compairCardPair =  new CompairCardPair();
+        Card firstCard = selectedCards.get(0);
+        Card secondCard = selectedCards.get(1);
+        return compairCardPair.execute(firstCard, secondCard);
+    }
+
+    /*public void selectCard(Card selectedCard) {
+        // Already face up
+        if (selectedCard.isCardFaceSideUp()) {
+            return;
+        }
+        // Not allow selecting card twice
+        if (this.getCurrentGame().getSelectedCards().stream().anyMatch(x -> x.cardObjectId.equals(selectedCard.cardObjectId))) {
+            return;
+        }
+
+        this.getCurrentGame().setSelectedCard(selectedCard);
+        // Selected pair is not correct
+        if (this.getCurrentGame().getSelectedCards().size() == 2 && !ismatchingCardPair()) {
+            this.getCurrentGame().incrementCounterbyOne();
+            this.getCurrentGame().clearSelectedCards();
+        }
+        if (this.getCurrentGame().getSelectedCards().size() == 2 && ismatchingCardPair()) {
+            this.getCurrentGame().clearSelectedCards();
+            selectedCard.setCardFaceSideUp(true);
+            this.getCurrentGame().getCards().stream().filter(x -> x.getCardId().equals(selectedCard.getCardId())).forEach(x -> x.setCardFaceSideUp(true));
+        }
+
+    }*/
+        private boolean isGameCompleted(){
+            return this.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true);
+        }
 }
