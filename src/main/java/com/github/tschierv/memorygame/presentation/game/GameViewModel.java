@@ -37,7 +37,7 @@ public class GameViewModel {
             public void handle(MouseEvent event){
                 System.out.println(event);
                 System.out.println("this card is selected: " + selectedCard);
-                game.setSelectedCards(selectedCard);
+                game.selectCard(selectedCard);
                 if (event.getClickCount() >= 0){
                     cardPane.getChildren().get(1).setVisible(false);
                 }

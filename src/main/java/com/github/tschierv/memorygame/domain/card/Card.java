@@ -13,6 +13,8 @@ public class Card {
         this.CardImage = CardImage;
         this.CardFaceSideUp = false;
     }
+
+
     public Card(URL CardImage, UUID CardID){
         this.CardId = UUID.randomUUID();
         this.CardImage = CardImage;
@@ -29,5 +31,14 @@ public class Card {
     public void setCardFaceSideUp(boolean cardFaceSideUp) {
         this.CardFaceSideUp = cardFaceSideUp;
     }
+
+    public UUID getCardId() {
+        return CardId;
+    }
+
+    public void setCardId(UUID cardId) {
+        CardId = cardId;
+    }
+
 }
 
