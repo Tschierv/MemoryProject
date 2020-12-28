@@ -48,40 +48,8 @@ public class Game {
     public List<Card> getCards(){
         return this.board.getCardDeck();
     }
-
-    public boolean ismatchingCardPair(){
-        if(getSelectedCards().isEmpty()) {
-            return false;
-        }
-        UUID firstId = getSelectedCards().get(0).getCardId();
-        UUID secondId = getSelectedCards().get(1).getCardId();
-        return firstId.equals(secondId);
+    public void clearSelectedCards(){
+        this.selectedCards.clear();
     }
 
-    public void selectCard(Card selectedCard) {
-        // Already face up
-        if(selectedCard.isCardFaceSideUp()) {
-            System.out.println("already face up : " + selectedCard.getCardId() + " " + selectedCard.isCardFaceSideUp());
-            return;
-        }
-        // Not allow selecting card twice
-        if(getSelectedCards().stream().anyMatch(x ->x.cardObjectId.equals(selectedCard.cardObjectId))) {
-            return;
-        }
-
-        setSelectedCard(selectedCard);
-
-        // Selected pair is not correct
-        if(getSelectedCards().size() == 2 && !ismatchingCardPair()){
-            System.out.println("not correct pair : " + getSelectedCards());
-            incrementCounterbyOne();
-            this.selectedCards.clear();
-        }
-        if(getSelectedCards().size() == 2 && ismatchingCardPair()){
-            System.out.println("correct pair : " + getSelectedCards());
-            selectedCard.setCardFaceSideUp(true);
-            this.board.getCardDeck().stream().filter(x -> x.getCardId().equals(selectedCard.getCardId())).forEach(x -> x.setCardFaceSideUp(true));
-            selectedCards.clear();
-        }
-    }
 }

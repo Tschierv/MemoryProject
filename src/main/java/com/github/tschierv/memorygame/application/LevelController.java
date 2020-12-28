@@ -37,12 +37,14 @@ public class LevelController implements Initializable {
     @FXML public void LevelbuttonNormalPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        sceneController.displayLevel6x6Scene(this.gameController, event);
+        sceneController.displayLevel4x4Scene(this.gameController, event);
+        //sceneController.displayLevel6x6Scene(this.gameController, event);
     }
 
     @FXML public void LevelbuttonHardPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        sceneController.displayLevel10x10Scene(this.gameController, event);
+        sceneController.displayLevel4x4Scene(this.gameController, event);
+        //sceneController.displayLevel10x10Scene(this.gameController, event);
     }
 }

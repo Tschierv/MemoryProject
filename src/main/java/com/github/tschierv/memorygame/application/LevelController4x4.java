@@ -1,7 +1,6 @@
 package com.github.tschierv.memorygame.application;
 
 import com.github.tschierv.memorygame.domain.card.Card;
-import com.github.tschierv.memorygame.domain.game.Game;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
@@ -13,9 +12,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -26,15 +25,15 @@ public class LevelController4x4 implements Initializable {
 
     @FXML private Double Grid4x4Size;
     @FXML private GridPane LevelGridPane;
-    @FXML private Text  Username = new Text();
-    @FXML private Text Counter = new Text();
+    @FXML private Text  Username;
+    @FXML private Text Counter;
     @FXML private Button Level4x4buttonExit;
     @FXML private Button Level4x4buttonHelp;
 
     private GameController gameController;
     private SceneController sceneController;
     private GameViewModel gameViewModel;
-    private Map<Card, StackPane> cardStackPaneMap = new HashMap<>();
+    private Map<Card, ImageView> cardStackPaneMap = new HashMap<>();
 
     public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
@@ -56,11 +55,9 @@ public class LevelController4x4 implements Initializable {
                 Card card = currentCarddeck.get(cardIndex);
                 CardViewModel cardViewModel = new CardViewModel(card);
                 cardViewModel.setCardImageSize(this.Grid4x4Size);
-                StackPane cardPane = cardViewModel.getCards();
-                System.out.println("Create grid loop  i: " + i + "j : " + j + " index: " + cardIndex);
-                cardStackPaneMap.put(currentCarddeck.get(cardIndex), cardPane);
-                cardPane.addEventHandler(MouseEvent.MOUSE_CLICKED, selectedCardEventHandler(card, cardPane));
-                LevelGridPane.add(cardPane, i, j);
+                cardStackPaneMap.put(card, cardViewModel.getCardImageView());
+                cardViewModel.getCardImageView().addEventHandler(MouseEvent.MOUSE_CLICKED, selectedCardEventHandler(card, cardViewModel));
+                this.LevelGridPane.add(cardViewModel.getCardImageView(), i, j);
                 cardIndex++;
             }
         }
@@ -81,13 +78,14 @@ public class LevelController4x4 implements Initializable {
         Counter = counter;
     }
 
-    public EventHandler selectedCardEventHandler(Card selectedCard, StackPane cardPane) {
+    public EventHandler selectedCardEventHandler(Card selectedCard, CardViewModel cardImageView) {
         EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event){
-                gameController.getCurrentGame().selectCard(selectedCard);
+                gameController.selectCard(selectedCard);
                 new Thread(() ->
                 {
-                   cardPane.getChildren().get(1).setVisible(false);
+                    cardImageView.setCardfaceup();
+
                 if(gameController.getCurrentGame().getSelectedCards().isEmpty()){
                     LevelGridPane.setDisable(true);
                     try {
@@ -98,8 +96,8 @@ public class LevelController4x4 implements Initializable {
                     }
                     for (Card cardinMap : cardStackPaneMap.keySet())
                         if(!cardinMap.isCardFaceSideUp()) {
-                            System.out.println("card is not faceup" + cardinMap);
-                            cardStackPaneMap.get(cardinMap).getChildren().get(1).setVisible(true);
+                            cardImageView.setCardbackup();
+                            cardStackPaneMap.get(cardinMap).setImage(cardImageView.getCardImageView().getImage());
                         }
                     LevelGridPane.setDisable(false);
                 }
@@ -107,7 +105,6 @@ public class LevelController4x4 implements Initializable {
             }).start();
             }
         };
-        cardStackPaneMap.keySet().stream().forEach( x -> System.out.println(x.getCardId() +" " + x.CardFaceSideUp));
         return eventHandler;
     }
 
