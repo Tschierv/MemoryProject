@@ -12,8 +12,6 @@ public class Game {
     public Board board;
     private Player player;
     public Integer counter;
-    private long startTime = 0L;
-    private long endTime = 0L;
     private List<Card> selectedCards;
 
     public Game(Board board, Player player) {
@@ -26,20 +24,7 @@ public class Game {
     public String getPlayer() {
         return this.player.getAccountName();
     }
-    public void setStartTime(){
-        this.startTime = System.currentTimeMillis();
-    }
 
-    public void setEndTime() {
-        this.endTime = System.currentTimeMillis();
-    }
-    public long getStarTime(){
-        return this.startTime;
-    }
-
-    public long getEndTime(){
-        return this.endTime;
-    }
     public Integer getCounter(){
         return this.counter;
     }
@@ -59,28 +44,44 @@ public class Game {
     public void setSelectedCard(Card selectedCards) {
         this.selectedCards.add(selectedCards);
     }
-    public boolean ismatchingCardPair(){
-        if(selectedCards.isEmpty())
-            return false;
-        UUID firstId = getSelectedCards().get(0).getCardId();
-        System.out.println("firstId is : "+ firstId);
-        System.out.println("second id is : "+ getSelectedCards().stream().allMatch(x -> x.getCardId() == firstId));
-        return getSelectedCards().stream().allMatch(x -> x.getCardId() == firstId);
+
+    public List<Card> getCards(){
+        return this.board.getCardDeck();
     }
-    public void selectCard(Card selectedCard) {
-        if(getSelectedCards().stream().anyMatch(x -> x.getCardId().equals(selectedCard.getCardId())))
-            return;
-        System.out.println("currently selected : " + getSelectedCards().size());
-        System.out.println("You selected : " + selectedCard);
-        setSelectedCard(selectedCard);
-        System.out.println("now selected : " + getSelectedCards().size());
-        if(getSelectedCards().size() == 2 && !ismatchingCardPair()){
-            System.out.println("counter befor: " + getCounter());
-            incrementCounterbyOne();
-            System.out.println("counter after: " + getCounter());
-            selectedCards.clear();
-            System.out.println("cleared selectedCards " + selectedCards.size());
+
+    public boolean ismatchingCardPair(){
+        if(getSelectedCards().isEmpty()) {
+            return false;
         }
-        System.out.println("counter : " + getCounter());
+        UUID firstId = getSelectedCards().get(0).getCardId();
+        UUID secondId = getSelectedCards().get(1).getCardId();
+        return firstId.equals(secondId);
+    }
+
+    public void selectCard(Card selectedCard) {
+        // Already face up
+        if(selectedCard.isCardFaceSideUp()) {
+            System.out.println("already face up : " + selectedCard.getCardId() + " " + selectedCard.isCardFaceSideUp());
+            return;
+        }
+        // Not allow selecting card twice
+        if(getSelectedCards().stream().anyMatch(x ->x.cardObjectId.equals(selectedCard.cardObjectId))) {
+            return;
+        }
+
+        setSelectedCard(selectedCard);
+
+        // Selected pair is not correct
+        if(getSelectedCards().size() == 2 && !ismatchingCardPair()){
+            System.out.println("not correct pair : " + getSelectedCards());
+            incrementCounterbyOne();
+            this.selectedCards.clear();
+        }
+        if(getSelectedCards().size() == 2 && ismatchingCardPair()){
+            System.out.println("correct pair : " + getSelectedCards());
+            selectedCard.setCardFaceSideUp(true);
+            this.board.getCardDeck().stream().filter(x -> x.getCardId().equals(selectedCard.getCardId())).forEach(x -> x.setCardFaceSideUp(true));
+            selectedCards.clear();
+        }
     }
 }

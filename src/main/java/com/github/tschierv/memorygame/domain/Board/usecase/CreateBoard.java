@@ -5,6 +5,8 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.card.CardController;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CreateBoard implements  ICreateBoard {
     private CardController cardController;
@@ -24,6 +26,7 @@ public class CreateBoard implements  ICreateBoard {
             card_deck.addAll(pair);
 
         }
+        Collections.shuffle(card_deck);
         return new Board(card_slots, card_deck);
     }
 }

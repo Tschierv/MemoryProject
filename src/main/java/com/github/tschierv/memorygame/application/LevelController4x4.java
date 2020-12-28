@@ -7,7 +7,7 @@ import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import com.github.tschierv.memorygame.presentation.game.GameViewModel;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -20,9 +20,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collections;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class LevelController4x4 implements Initializable {
 
@@ -34,9 +32,9 @@ public class LevelController4x4 implements Initializable {
     @FXML private Button Level4x4buttonHelp;
 
     private GameController gameController;
-    private Game game;
     private SceneController sceneController;
     private GameViewModel gameViewModel;
+    private Map<Card, StackPane> cardStackPaneMap = new HashMap<>();
 
     public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
@@ -48,39 +46,69 @@ public class LevelController4x4 implements Initializable {
     public LevelController4x4(GameController gameController){
         this.gameController = gameController;
         this.Grid4x4Size = 115.0;
-        this.game = gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
-        this.gameViewModel = new GameViewModel(game);
-        this.Counter.textProperty().bind(gameViewModel.counter);
+        this.gameViewModel = new GameViewModel(this.gameController);
     }
 
     public void createGrid(List<Card> currentCarddeck){
+        Integer cardIndex = 0;
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                Card card = currentCarddeck.get(0);
+                Card card = currentCarddeck.get(cardIndex);
                 CardViewModel cardViewModel = new CardViewModel(card);
                 cardViewModel.setCardImageSize(this.Grid4x4Size);
-                currentCarddeck.remove(0);
                 StackPane cardPane = cardViewModel.getCards();
-                cardPane.addEventHandler(MouseEvent.MOUSE_CLICKED, gameViewModel.selectedCardEventHandler(card, cardPane));
+                System.out.println("Create grid loop  i: " + i + "j : " + j + " index: " + cardIndex);
+                cardStackPaneMap.put(currentCarddeck.get(cardIndex), cardPane);
+                cardPane.addEventHandler(MouseEvent.MOUSE_CLICKED, selectedCardEventHandler(card, cardPane));
                 LevelGridPane.add(cardPane, i, j);
+                cardIndex++;
             }
         }
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.Username.setText(this.game.getPlayer());
-        this.Counter.textProperty().bind(this.gameViewModel.counter);
+        this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
+        this.Username.setText(this.gameController.getCurrentPlayer().getAccountName());
+        this.Counter.textProperty().bind(this.gameViewModel.getCounter());
         LevelGridPane.setVgap(5);
         LevelGridPane.setHgap(5);
-        List<Card> currentCarddeck = this.game.board.getCardDeck();
-        Collections.shuffle(currentCarddeck);
-        this.createGrid(currentCarddeck);
+        this.createGrid(this.gameController.getallCards());
     }
     public Text getCounter() {
         return Counter;
     }
     public void setCounter(Text counter) {
         Counter = counter;
+    }
+
+    public EventHandler selectedCardEventHandler(Card selectedCard, StackPane cardPane) {
+        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event){
+                gameController.getCurrentGame().selectCard(selectedCard);
+                new Thread(() ->
+                {
+                   cardPane.getChildren().get(1).setVisible(false);
+                if(gameController.getCurrentGame().getSelectedCards().isEmpty()){
+                    LevelGridPane.setDisable(true);
+                    try {
+                        Thread.sleep(600);
+
+                    } catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                    for (Card cardinMap : cardStackPaneMap.keySet())
+                        if(!cardinMap.isCardFaceSideUp()) {
+                            System.out.println("card is not faceup" + cardinMap);
+                            cardStackPaneMap.get(cardinMap).getChildren().get(1).setVisible(true);
+                        }
+                    LevelGridPane.setDisable(false);
+                }
+
+            }).start();
+            }
+        };
+        cardStackPaneMap.keySet().stream().forEach( x -> System.out.println(x.getCardId() +" " + x.CardFaceSideUp));
+        return eventHandler;
     }
 
 }

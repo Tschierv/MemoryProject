@@ -5,10 +5,11 @@ import java.util.UUID;
 
 public class Card {
     public UUID CardId;
+    public UUID cardObjectId;
     public URL CardImage;
     public boolean CardFaceSideUp;
 
-    public Card(URL CardImage) {
+    public Card(URL CardImage ) {
         this.CardId = UUID.randomUUID();
         this.CardImage = CardImage;
         this.CardFaceSideUp = false;
@@ -16,7 +17,8 @@ public class Card {
 
 
     public Card(URL CardImage, UUID CardID){
-        this.CardId = UUID.randomUUID();
+        this.CardId = CardID;
+        this.cardObjectId = UUID.randomUUID();
         this.CardImage = CardImage;
         this.CardFaceSideUp = false;
     }
@@ -33,12 +35,15 @@ public class Card {
     }
 
     public UUID getCardId() {
-        return CardId;
+        return this.CardId;
     }
 
     public void setCardId(UUID cardId) {
         CardId = cardId;
     }
 
+    public boolean isequalCard(Card selectedCard){
+        return this.getCardId().equals(selectedCard.getCardId());
+    }
 }
 

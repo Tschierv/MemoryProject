@@ -38,19 +38,4 @@ public class CardViewModel {
         return cardPane;
     }
 
-    public StackPane addOnMousclicked(StackPane cardPane, GameViewModel gameViewModel) {
-        cardPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println(event);
-                if (event.getClickCount() >= 0) {
-                    System.out.println(event.getSource().toString());
-                    Object source_var = event.getSource();
-                    System.out.println(source_var);
-                    cardPane.getChildren().get(1).setVisible(false);
-                }
-            }
-        });
-        return cardPane;
-    }
 }

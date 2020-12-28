@@ -2,6 +2,7 @@ package com.github.tschierv.memorygame.domain.game;
 
 import com.github.tschierv.memorygame.domain.Board.Board;
 import com.github.tschierv.memorygame.domain.Board.BoardController;
+import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.card.CardController;
 import com.github.tschierv.memorygame.domain.card.IImageRepositoryService;
 import com.github.tschierv.memorygame.domain.player.Player;
@@ -14,17 +15,17 @@ import java.util.List;
 import java.util.UUID;
 
 public class GameController {
-    private PlayerController playerController;
-    private BoardController boardController;
+    private final PlayerController playerController;
+    private final BoardController boardController;
     private Player selectedPlayer = null;
-    private CardController cardController= new CardController(new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture"));
+    private Game currentGame;
 
-    public GameController(PlayerController playerController){
+    public GameController(PlayerController playerController, BoardController boardController){
         this.playerController = playerController;
-        boardController = new BoardController(this.cardController);
+        this.boardController = boardController;
 
     }
-    public Game createGameforPlayer(String player_name, Integer GameSize){
+    public void createGameforPlayer(String player_name, Integer GameSize){
         Board board = boardController.createBoard(GameSize);
         Player player = null;
         try {
@@ -32,7 +33,7 @@ public class GameController {
         } catch (PlayerNotExistException e) {
             e.printStackTrace();
         }
-        return new Game(board, player);
+        this.currentGame = new Game(board, player);
     }
 
     public List<Player> getAllPlayers(){
@@ -69,5 +70,16 @@ public class GameController {
         this.playerController.removePlayer(playerName);
     }
 
+    public List<Card> getallCards(){
+        return this.currentGame.getCards();
+    }
 
+    public Integer getcurrentCounter(){
+        System.out.println("get counter : " + this.currentGame.getCounter());
+        return this.currentGame.getCounter();
+    }
+
+    public Game getCurrentGame(){
+        return this.currentGame;
+    }
 }

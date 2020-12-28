@@ -1,57 +1,64 @@
 package com.github.tschierv.memorygame.application;
 
-import java.io.IOException;
-import java.util.UUID;
-
+import com.github.tschierv.memorygame.domain.Board.BoardController;
+import com.github.tschierv.memorygame.domain.card.CardController;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
+import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.UUID;
 
 
 public class Main extends Application {
+	public static void main(String[] args) {
+		launch(args);
+	}
+
 	@Override
 	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
-		PlayerController playerController = this.createPlayerController();
-		GameController gameController = this.createGameController(playerController);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainView.fxml"));
-		MainController mainController = new MainController(gameController);
+		MainController mainController = new MainController(this.createGameController());
 		fxmlLoader.setController(mainController);
 		Parent MainViewParent = null;
 		try {
-			MainViewParent = (Parent)fxmlLoader.load();
+			MainViewParent = fxmlLoader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		Scene MainViewScene = new Scene(MainViewParent);
-	    primaryStage.setResizable(false);
-	    primaryStage.setScene(MainViewScene);
-	    primaryStage.setTitle ("Animal Memory");
+		primaryStage.setResizable(false);
+		primaryStage.setScene(MainViewScene);
+		primaryStage.setTitle("Animal Memory");
 		primaryStage.show();
 	}
-	private PlayerController createPlayerController() throws PlayerAlreadyExistException {
+    private GameController createGameController(){
+		PlayerController playerController = this.createPlayerController();
+		CardController cardController = new CardController(new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture"));
+		BoardController boardController = new BoardController(cardController);
+		return new GameController(playerController, boardController);
+	}
+	private PlayerController createPlayerController()  {
 		Player player_d = new Player("Root", UUID.randomUUID());
 		Player player_b = new Player("Rolf", UUID.randomUUID());
 		PlayerRepository player_repo = new PlayerRepository();
 		PlayerController playerController = new PlayerController(player_repo);
-		playerController.createPlayer(player_d);
-		playerController.createPlayer(player_b);
+		try {
+			playerController.createPlayer(player_d);
+			playerController.createPlayer(player_b);
+		} catch (PlayerAlreadyExistException e) {
+			e.printStackTrace();
+		}
 		return playerController;
 	}
 
-	private GameController createGameController(PlayerController playerController) {
-	    return new GameController(playerController);
-	}
-
-	public static void main(String[] args) {
-		launch(args);
-	}
 }
 
