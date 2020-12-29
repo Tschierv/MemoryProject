@@ -79,7 +79,9 @@ public class GameController {
     public Game getCurrentGame(){
         return this.currentGame;
     }
-
+    public void setCurrentCounter(){
+        this.getCurrentGame().incrementCounterbyOne();
+    }
     public boolean ismatchingCardPair(List<Card> selectedCards){
         if(selectedCards.isEmpty()){
             return false;

@@ -33,7 +33,7 @@ public class LevelController4x4 implements Initializable {
     private GameViewModel gameViewModel;
 
     public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        Scene scene = ((Node)event.getSource()).getScene();
         sceneController = new SceneController(scene);
         sceneController.displayMainScene(this.gameController, event);
     }
@@ -62,33 +62,26 @@ public class LevelController4x4 implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
         this.Username.setText(this.gameController.getCurrentPlayer().getAccountName());
-        this.Counter.textProperty().bindBidirectional(this.gameViewModel.getCounter());
+        this.Counter.textProperty().bind(this.gameViewModel.getCounter().textProperty());
         LevelGridPane.setVgap(5);
         LevelGridPane.setHgap(5);
         this.createGrid(this.gameController.getCurrentGame().getCards());
     }
 
     public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
-        if (cardViewModel.isCardfaceup())
-            return;
-        System.out.println("start  size: " + this.gameViewModel.getSelectedCards().size());
         if (this.gameViewModel.getSelectedCards().size() == 0) {
             this.gameViewModel.setSelectedCard(cardViewModel);
-            System.out.println("handle called  size: " + this.gameViewModel.getSelectedCards().size());
             cardViewModel.setCardfaceup(() -> {});
-            System.out.println("finish if");
         } else {
-            System.out.println("handle else called : "  + " size: " + this.gameViewModel.getSelectedCards().size());
             this.gameViewModel.setSelectedCard(cardViewModel);
-            System.out.println("handle else called2 : "  + " size: " + this.gameViewModel.getSelectedCards().size());
             cardViewModel.setCardfaceup(() -> {
-                if (!gameViewModel.isMatchedPair()){
-                    System.out.println("no match :( ");
+                if (!gameViewModel.isMatchedPair()) {
                     this.gameViewModel.getSelectedCards().get(0).setCardbackup();
                     this.gameViewModel.getSelectedCards().get(1).setCardbackup();
-                    this.gameViewModel.clearSelectedCards();
+                    this.gameViewModel.increaseCounter();
                 }
+                this.gameViewModel.clearSelectedCards();
             });
         }
     }
-  }
+}

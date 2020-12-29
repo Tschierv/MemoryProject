@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/application/LevelController4x4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608976802309</updated>
-      <workItem from="1608976810961" duration="87092000" />
+      <workItem from="1608976810961" duration="89254000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -120,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609399344367</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="WIP: current state">
+      <created>1609420943948</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609420943948</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +148,9 @@
     <MESSAGE value="Feature: Implements working try counter" />
     <MESSAGE value="Improvment: Moving different components (mainly controllers) around to make cleaner code" />
     <MESSAGE value="WIP: current state" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: current state" />
+    <MESSAGE value="Feature: Implementing working counter and card matching :)" />
+    <MESSAGE value="Feature: Implementing working counter and card matching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Implementing working counter and card matching" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

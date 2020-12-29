@@ -4,13 +4,15 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GameViewModel {
     private GameController gameController;
-    public SimpleStringProperty counter;
+    public Text counter = new Text();
     public int clickCount = 0;
 
     public List<CardViewModel> getSelectedCards() {
@@ -33,18 +35,18 @@ public class GameViewModel {
 
     public GameViewModel(GameController gameController){
         this.gameController = gameController;
-        this.counter = new SimpleStringProperty();
     }
 
-    public SimpleStringProperty getCounter(){
-        return new SimpleStringProperty(this.gameController.getcurrentCounter().toString());
+    public Text getCounter(){
+        return this.counter;
     }
 
+    public void increaseCounter(){
+        this.gameController.setCurrentCounter();
+        this.counter.setText(this.gameController.getcurrentCounter().toString());
+    }
     public Boolean isMatchedPair(){
         List<Card> checkMatching = new ArrayList<>();
-        System.out.println("isMatchedPair selectedCards: " + getSelectedCards());
-        System.out.println(this.getSelectedCards().get(0));
-        System.out.println(this.getSelectedCards().get(0).getCard());
         checkMatching.add(this.getSelectedCards().get(0).getCard());
         checkMatching.add(this.getSelectedCards().get(1).getCard());
         return this.gameController.ismatchingCardPair(checkMatching);
