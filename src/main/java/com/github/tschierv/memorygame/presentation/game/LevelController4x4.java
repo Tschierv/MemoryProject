@@ -1,10 +1,8 @@
 package com.github.tschierv.memorygame.presentation.game;
 
-import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
 import com.github.tschierv.memorygame.presentation.SceneController;
-import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -27,13 +24,12 @@ public class LevelController4x4 implements Initializable {
     @FXML private Button Level4x4buttonExit;
     @FXML private Button Level4x4buttonHelp;
 
-    private GameController gameController;
-    private SceneController sceneController;
-    private GameViewModel gameViewModel;
+    private final GameController gameController;
+    private final GameViewModel gameViewModel;
 
     public void Level4x4buttonExitPushed(ActionEvent event) {
         Scene scene = ((Node)event.getSource()).getScene();
-        sceneController = new SceneController(scene);
+        SceneController sceneController = new SceneController(scene);
         sceneController.displayMainScene(this.gameController, event);
     }
 

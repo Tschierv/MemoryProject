@@ -25,7 +25,7 @@ public class OverviewController implements Initializable {
     @FXML private ListView<String> OverviewList;
     @FXML private Text OverviewtextTitle;
 
-    private GameController gameController;
+    private final GameController gameController;
     private ObservableList<String> playerObservableList = FXCollections.observableArrayList();
 
 

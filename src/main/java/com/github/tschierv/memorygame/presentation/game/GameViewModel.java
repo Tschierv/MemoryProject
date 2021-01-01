@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameViewModel {
-    private GameController gameController;
+    private final GameController gameController;
     public Text counter = new Text();
     public int remainingClickCount = 2;
 
@@ -77,7 +77,7 @@ public class GameViewModel {
 
     public GridPane createGrid(Double gridSize ){
         List<Card> currentCarddeck = this.gameController.getCurrentGame().getCards();
-        Integer cardIndex = 0;
+        int cardIndex = 0;
         GridPane gameGrid = new GridPane();
         for(int i=0;i<Math.sqrt(currentCarddeck.size());i++){
             for(int j=0;j<Math.sqrt(currentCarddeck.size());j++){

@@ -19,7 +19,7 @@ public class LevelController implements Initializable {
     @FXML private Button LevelbuttonEasy;
     @FXML private Button LevelbuttonNormal;
     @FXML private Button LevelbuttonHard;
-    private GameController gameController;
+    private final GameController gameController;
 
     public LevelController(GameController gameController){
         this.gameController = gameController;

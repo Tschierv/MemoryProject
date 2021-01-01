@@ -18,7 +18,7 @@ public class DeleteConfController implements Initializable {
     @FXML private Text DeleteConftext;
     @FXML private Button DeleteConfbuttonYes;
     @FXML private Button DeleteConfbuttonNo;
-    private GameController gameController;
+    private final GameController gameController;
 
     public DeleteConfController(GameController gameController){
         this.gameController = gameController;

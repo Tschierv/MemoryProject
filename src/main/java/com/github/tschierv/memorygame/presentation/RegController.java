@@ -18,7 +18,7 @@ public class RegController implements Initializable {
     @FXML private TextField RegtextUsername;
     @FXML private Button RegbuttonCancel;
     @FXML private Button RegbuttonAdd;
-    private GameController gameController;
+    private final GameController gameController;
 
     public RegController(GameController gameController){
         this.gameController = gameController;

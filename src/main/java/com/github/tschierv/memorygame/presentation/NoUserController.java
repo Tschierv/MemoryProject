@@ -13,7 +13,7 @@ public class NoUserController implements Initializable {
 
     @FXML private Text NoUsertextTitle;
     @FXML private Button NoUserbuttonOk;
-    private GameController gameController;
+    private final GameController gameController;
 
     public NoUserController(GameController gameController){
         this.gameController = gameController;

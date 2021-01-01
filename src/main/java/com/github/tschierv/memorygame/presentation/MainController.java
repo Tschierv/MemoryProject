@@ -18,7 +18,7 @@ public class MainController implements Initializable {
     @FXML private Button MainbuttonExit;
     @FXML private Text MaintextTitle;
     private SceneController sceneController;
-    private GameController gameController;
+    private final GameController gameController;
 
     public MainController(GameController gameController){
         this.gameController = gameController;
