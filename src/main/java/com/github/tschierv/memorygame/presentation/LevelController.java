@@ -1,7 +1,6 @@
-package com.github.tschierv.memorygame.application;
+package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
-import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

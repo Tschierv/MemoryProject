@@ -5,7 +5,6 @@ import org.apache.commons.io.FilenameUtils;
 import javafx.animation.FadeTransition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -19,7 +18,7 @@ public class CardViewModel extends StackPane {
 
     public CardViewModel(Card card)  {
         Image cardImage = new Image(card.CardImage.toString());
-        Image cardBack = new Image("/com/github/tschierv/memorygame/menue/leaves_background.jpg");
+        Image cardBack = new Image("/com/github/tschierv/memorygame/presentation/menue/leaves_background.jpg");
         this.cardBackView = new ImageView(cardBack);
         this.cardImageView = new ImageView(cardImage);
         this.card = card;

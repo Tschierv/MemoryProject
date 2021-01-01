@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="310.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/com/github/tschierv/memorygame/menue/Level.jpeg" />
+            <Image url="/com/github/tschierv/memorygame/presentation/menue/Level.jpeg" />
          </image>
       </ImageView>
       <Text fx:id="Leveltext" layoutX="177.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="48.00000226870179" />

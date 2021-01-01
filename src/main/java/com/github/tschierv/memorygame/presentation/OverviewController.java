@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.application;
+package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
 import javafx.collections.FXCollections;

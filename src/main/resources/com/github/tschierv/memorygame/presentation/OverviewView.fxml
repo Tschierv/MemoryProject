@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="606.0" fitWidth="669.0" layoutX="-12.0" layoutY="-8.0">
          <image>
-            <Image url="/com/github/tschierv/memorygame/menue/Overview.jpeg" />
+            <Image url="/com/github/tschierv/memorygame/presentation/menue/Overview.jpeg" />
          </image>
       </ImageView>
       <Button fx:id="OverviewbuttonRemove" onAction="#OverviewbuttonRemovePushed" layoutX="290.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" styleClass="Overviewbutton" text="Remove" />

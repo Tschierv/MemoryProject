@@ -8,6 +8,7 @@ import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
+import com.github.tschierv.memorygame.presentation.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,7 +26,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainView.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../presentation/MainView.fxml"));
 		MainController mainController = new MainController(this.createGameController());
 		fxmlLoader.setController(mainController);
 		Parent MainViewParent = null;
