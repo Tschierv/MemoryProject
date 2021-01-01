@@ -3,6 +3,8 @@ package com.github.tschierv.memorygame.presentation.game;
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -48,6 +50,46 @@ public class GameViewModel {
         checkMatching.add(this.getSelectedCards().get(0).getCard());
         checkMatching.add(this.getSelectedCards().get(1).getCard());
         return this.gameController.ismatchingCardPair(checkMatching);
+    }
+
+    public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
+        if (this.remainingClickCount == 0)
+            return;
+
+        this.remainingClickCount--;
+
+        if (this.getSelectedCards().size() == 0) {
+            this.setSelectedCard(cardViewModel);
+            cardViewModel.setCardfaceup(() -> {});
+        } else {
+            this.setSelectedCard(cardViewModel);
+            cardViewModel.setCardfaceup(() -> {
+                if (!this.isMatchedPair()) {
+                    this.getSelectedCards().get(0).setCardbackup();
+                    this.getSelectedCards().get(1).setCardbackup();
+                    this.increaseCounter();
+                }
+                this.clearSelectedCards();
+                this.remainingClickCount = 2;
+            });
+        }
+    }
+
+    public GridPane createGrid(Double gridSize ){
+        List<Card> currentCarddeck = this.gameController.getCurrentGame().getCards();
+        Integer cardIndex = 0;
+        GridPane gameGrid = new GridPane();
+        for(int i=0;i<Math.sqrt(currentCarddeck.size());i++){
+            for(int j=0;j<Math.sqrt(currentCarddeck.size());j++){
+                Card card = currentCarddeck.get(cardIndex);
+                CardViewModel cardViewModel = new CardViewModel(card);
+                cardViewModel.setCardImageSize(gridSize);
+                cardViewModel.setOnMouseClicked(event -> this.handleMouseSelection(event, cardViewModel));
+                gameGrid.add(cardViewModel, i, j);
+                cardIndex++;
+            }
+        }
+        return gameGrid;
     }
 
 }

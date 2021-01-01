@@ -11,7 +11,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
@@ -32,7 +31,7 @@ public class LevelController4x4 implements Initializable {
     private SceneController sceneController;
     private GameViewModel gameViewModel;
 
-    public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
+    public void Level4x4buttonExitPushed(ActionEvent event) {
         Scene scene = ((Node)event.getSource()).getScene();
         sceneController = new SceneController(scene);
         sceneController.displayMainScene(this.gameController, event);
@@ -45,19 +44,6 @@ public class LevelController4x4 implements Initializable {
         this.gameViewModel = new GameViewModel(this.gameController);
     }
 
-    public void createGrid(List<Card> currentCarddeck){
-        Integer cardIndex = 0;
-        for(int i=0;i<4;i++){
-            for(int j=0;j<4;j++){
-                Card card = currentCarddeck.get(cardIndex);
-                CardViewModel cardViewModel = new CardViewModel(card);
-                cardViewModel.setCardImageSize(this.Grid4x4Size);
-                cardViewModel.setOnMouseClicked(event -> this.handleMouseSelection(event, cardViewModel));
-                this.LevelGridPane.add(cardViewModel, i, j);
-                cardIndex++;
-            }
-        }
-    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
@@ -65,29 +51,8 @@ public class LevelController4x4 implements Initializable {
         this.Counter.textProperty().bind(this.gameViewModel.getCounter().textProperty());
         LevelGridPane.setVgap(5);
         LevelGridPane.setHgap(5);
-        this.createGrid(this.gameController.getCurrentGame().getCards());
+        LevelGridPane.getChildren().addAll(this.gameViewModel.createGrid(this.Grid4x4Size).getChildren());
     }
 
-    public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
-        if (this.gameViewModel.remainingClickCount == 0)
-            return;
 
-        this.gameViewModel.remainingClickCount--;
-
-        if (this.gameViewModel.getSelectedCards().size() == 0) {
-            this.gameViewModel.setSelectedCard(cardViewModel);
-            cardViewModel.setCardfaceup(() -> {});
-        } else {
-            this.gameViewModel.setSelectedCard(cardViewModel);
-            cardViewModel.setCardfaceup(() -> {
-                if (!gameViewModel.isMatchedPair()) {
-                    this.gameViewModel.getSelectedCards().get(0).setCardbackup();
-                    this.gameViewModel.getSelectedCards().get(1).setCardbackup();
-                    this.gameViewModel.increaseCounter();
-                }
-                this.gameViewModel.clearSelectedCards();
-                this.gameViewModel.remainingClickCount = 2;
-            });
-        }
-    }
 }
