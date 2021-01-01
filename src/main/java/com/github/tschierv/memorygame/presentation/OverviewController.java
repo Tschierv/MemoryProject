@@ -1,6 +1,7 @@
 package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.domain.player.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,9 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -22,11 +22,11 @@ public class OverviewController implements Initializable {
     @FXML private Button OverviewbuttonRemove;
     @FXML private Button OverviewbuttonAddUser;
     @FXML private Button OverviewbuttonSelect;
-    @FXML private ListView<String> OverviewList;
+    @FXML private TableView playerOverviewTable;
     @FXML private Text OverviewtextTitle;
 
     private final GameController gameController;
-    private ObservableList<String> playerObservableList = FXCollections.observableArrayList();
+    private ObservableList<Player> playerObservableList = FXCollections.observableArrayList();
 
 
     public OverviewController(GameController gameController){
@@ -36,14 +36,16 @@ public class OverviewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.initializeData();
-        System.out.println("initialize: " + this.OverviewList.getItems());
     }
 
     public void initializeData(){
-        playerObservableList.removeAll(this.playerObservableList);
         playerObservableList.addAll(this.gameController.getAllPlayersName());
-        OverviewList.getItems().addAll(playerObservableList);
-        OverviewList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        TableColumn<Player, String> playerName = new TableColumn<>("Player");
+        TableColumn<Player, Integer> playerScore = new TableColumn<>("Score");
+        playerName.setCellValueFactory(new PropertyValueFactory<>("AccountName"));
+        playerScore.setCellValueFactory(new PropertyValueFactory<>("Score"));
+        playerOverviewTable.getColumns().addAll(playerName, playerScore);
+        playerOverviewTable.setItems(playerObservableList);
     }
     @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
@@ -54,16 +56,16 @@ public class OverviewController implements Initializable {
     @FXML public void OverviewbuttonRemovePushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        String playerName = OverviewList.getSelectionModel().getSelectedItem();
+        String playerName = playerOverviewTable.getSelectionModel().getSelectedItem().toString();
         this.gameController.setCurrentPlayer(playerName);
         sceneController.displayDeleteConfScene(this.gameController, event);
     }
     @FXML public void OverviewbuttonSelectPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
-        String playerName = OverviewList.getSelectionModel().getSelectedItem();
+        Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
         SceneController sceneController = new SceneController(scene);
         if (playerName != null) {
-            this.gameController.setCurrentPlayer(playerName);
+            this.gameController.setCurrentPlayer(playerName.getAccountName());
             sceneController.displayLevelScene(this.gameController, event);
         } else {
             this.gameController.unsetCurrentPlayer();

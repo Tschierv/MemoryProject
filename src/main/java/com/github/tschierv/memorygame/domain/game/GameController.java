@@ -57,10 +57,8 @@ public class GameController {
         this.selectedPlayer = null;
     }
 
-    public List<String> getAllPlayersName(){
-        List<String> players = new ArrayList<>();
-        this.playerController.getAllPlayerwithScores().stream().forEach(x -> players.add(x.getAccountName() + "      " + x.getScore()));
-        return players;
+    public List<Player> getAllPlayersName(){
+        return this.playerController.getAllPlayerwithScores();
     }
 
     public void addPlayer(String playerName){
