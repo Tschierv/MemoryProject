@@ -2,7 +2,10 @@ package com.github.tschierv.memorygame.presentation.game;
 
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -72,6 +75,17 @@ public class GameViewModel {
                 this.clearSelectedCards();
                 this.remainingClickCount = 2;
             });
+        }
+
+        if (this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)){
+            System.out.println("You won the game !!!");
+            Integer currentScore = this.gameController.getCurrentPlayer().getScore();
+            System.out.println("You won the game your current score is : " + currentScore);
+            this.gameController.getCurrentPlayer().setScore(currentScore+10);
+            System.out.println("Your new score is : " + this.gameController.getCurrentPlayer().getScore());
+            Scene scene = ((Node)event.getSource()).getScene();
+            SceneController sceneController = new SceneController(scene);
+            sceneController.displayOverviewScene(this.gameController, event);
         }
     }
 
