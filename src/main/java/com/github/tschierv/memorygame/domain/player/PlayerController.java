@@ -36,6 +36,11 @@ public class PlayerController {
 
         return getAllPlayerNames.execute();
     }
+
+    public List<Player> getAllPlayerwithScores(){
+        return getAllPlayers.execute();
+    }
+
     public void removePlayer(String player_name){
         try {
             removePlayer.execute(player_name);

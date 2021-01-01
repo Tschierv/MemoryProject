@@ -12,6 +12,7 @@ import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExist
 import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistException;
 import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -57,7 +58,9 @@ public class GameController {
     }
 
     public List<String> getAllPlayersName(){
-        return this.playerController.getAllPlayerNames();
+        List<String> players = new ArrayList<>();
+        this.playerController.getAllPlayerwithScores().stream().forEach(x -> players.add(x.getAccountName() + "      " + x.getScore()));
+        return players;
     }
 
     public void addPlayer(String playerName){
