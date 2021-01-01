@@ -3,8 +3,6 @@ package com.github.tschierv.memorygame.presentation.game;
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -13,7 +11,7 @@ import java.util.List;
 public class GameViewModel {
     private GameController gameController;
     public Text counter = new Text();
-    public int clickCount = 0;
+    public int remainingClickCount = 2;
 
     public List<CardViewModel> getSelectedCards() {
         return selectedCards;

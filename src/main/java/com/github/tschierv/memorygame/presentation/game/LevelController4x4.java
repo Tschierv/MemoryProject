@@ -5,7 +5,6 @@ import com.github.tschierv.memorygame.domain.game.GameController;
 
 import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
-import com.github.tschierv.memorygame.presentation.game.GameViewModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -70,6 +69,11 @@ public class LevelController4x4 implements Initializable {
     }
 
     public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
+        if (this.gameViewModel.remainingClickCount == 0)
+            return;
+
+        this.gameViewModel.remainingClickCount--;
+
         if (this.gameViewModel.getSelectedCards().size() == 0) {
             this.gameViewModel.setSelectedCard(cardViewModel);
             cardViewModel.setCardfaceup(() -> {});
@@ -82,6 +86,7 @@ public class LevelController4x4 implements Initializable {
                     this.gameViewModel.increaseCounter();
                 }
                 this.gameViewModel.clearSelectedCards();
+                this.gameViewModel.remainingClickCount = 2;
             });
         }
     }
