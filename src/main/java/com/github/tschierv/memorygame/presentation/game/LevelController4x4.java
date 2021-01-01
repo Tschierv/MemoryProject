@@ -1,8 +1,9 @@
-package com.github.tschierv.memorygame.presentation;
+package com.github.tschierv.memorygame.presentation.game;
 
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 
+import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import com.github.tschierv.memorygame.presentation.game.GameViewModel;
 import javafx.event.ActionEvent;
@@ -19,39 +20,39 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class LevelController6x6 implements Initializable {
+public class LevelController4x4 implements Initializable {
 
-    @FXML private Double Grid6x6Size;
+    @FXML private Double Grid4x4Size;
     @FXML private GridPane LevelGridPane;
     @FXML private Text  Username;
     @FXML private Text Counter;
-    @FXML private Button Level6x6buttonExit;
-    @FXML private Button Level6x6buttonHelp;
+    @FXML private Button Level4x4buttonExit;
+    @FXML private Button Level4x4buttonHelp;
 
     private GameController gameController;
     private SceneController sceneController;
     private GameViewModel gameViewModel;
 
-    public void Level6x6buttonExitPushed(ActionEvent event) throws IOException {
+    public void Level4x4buttonExitPushed(ActionEvent event) throws IOException {
         Scene scene = ((Node)event.getSource()).getScene();
         sceneController = new SceneController(scene);
         sceneController.displayMainScene(this.gameController, event);
     }
 
 
-    public LevelController6x6(GameController gameController){
+    public LevelController4x4(GameController gameController){
         this.gameController = gameController;
-        this.Grid6x6Size = 115.0;
+        this.Grid4x4Size = 115.0;
         this.gameViewModel = new GameViewModel(this.gameController);
     }
 
     public void createGrid(List<Card> currentCarddeck){
         Integer cardIndex = 0;
-        for(int i=0;i<6;i++){
-            for(int j=0;j<6;j++){
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
                 Card card = currentCarddeck.get(cardIndex);
                 CardViewModel cardViewModel = new CardViewModel(card);
-                cardViewModel.setCardImageSize(this.Grid6x6Size);
+                cardViewModel.setCardImageSize(this.Grid4x4Size);
                 cardViewModel.setOnMouseClicked(event -> this.handleMouseSelection(event, cardViewModel));
                 this.LevelGridPane.add(cardViewModel, i, j);
                 cardIndex++;
@@ -60,7 +61,7 @@ public class LevelController6x6 implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 36);
+        this.gameController.createGameforPlayer(this.gameController.getCurrentPlayer().getAccountName(), 16);
         this.Username.setText(this.gameController.getCurrentPlayer().getAccountName());
         this.Counter.textProperty().bind(this.gameViewModel.getCounter().textProperty());
         LevelGridPane.setVgap(5);

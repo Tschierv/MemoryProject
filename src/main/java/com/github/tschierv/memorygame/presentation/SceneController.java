@@ -1,6 +1,9 @@
 package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.presentation.game.LevelController10x10;
+import com.github.tschierv.memorygame.presentation.game.LevelController4x4;
+import com.github.tschierv.memorygame.presentation.game.LevelController6x6;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
