@@ -5,8 +5,10 @@ import com.github.tschierv.memorygame.domain.card.CardController;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
+import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
+import com.github.tschierv.memorygame.persistence.repositories.PlayerJSONRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 import com.github.tschierv.memorygame.presentation.MainController;
 import javafx.application.Application;
@@ -50,7 +52,7 @@ public class Main extends Application {
 	private PlayerController createPlayerController()  {
 		Player player_d = new Player("Root", UUID.randomUUID());
 		Player player_b = new Player("Rolf", UUID.randomUUID());
-		PlayerRepository player_repo = new PlayerRepository();
+		PlayerRepositoryService player_repo = new PlayerJSONRepository();
 		PlayerController playerController = new PlayerController(player_repo);
 		try {
 			playerController.createPlayer(player_d);

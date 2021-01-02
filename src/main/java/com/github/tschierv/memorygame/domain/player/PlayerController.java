@@ -14,7 +14,7 @@ public class PlayerController {
     private GetAllPlayerNames getAllPlayerNames;
     private RemovePlayer removePlayer;
 
-    public PlayerController(PlayerRepository playerRepository) {
+    public PlayerController(PlayerRepositoryService playerRepository) {
         createPlayer = new CreatePlayer(playerRepository);
         getPlayer = new GetPlayerImp(playerRepository);
         getAllPlayers = new GetAllPlayers(playerRepository);
