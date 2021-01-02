@@ -14,7 +14,7 @@ public class GetPlayerImp implements GetPlayer {
 
     @Override
     public Player execute(String player_name) throws PlayerNotExistException {
-        System.out.println("Player getplayer: "+ this.playerRepositoryService.getAllPlayers());
+        System.out.println("getplayerimp : " + player_name);
         if (!playerRepositoryService.doesPlayerNameExists(player_name)) {
             throw new PlayerNotExistException("Player : " + player_name + " not found");
         }

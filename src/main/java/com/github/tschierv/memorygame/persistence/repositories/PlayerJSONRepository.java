@@ -37,14 +37,13 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
 
     @Override
     public void savePlayer(Player player) {
-        Map<String, Player> players = new HashMap<>();
+        Map<String, Player> players = this.getAllPlayers();
         ObjectMapper jsonMapper = new ObjectMapper();
         jsonMapper.writer(new DefaultPrettyPrinter());
         jsonMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
         jsonMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         players.put(player.getAccountName(), player);
         try {
-            System.out.println(Paths.get("player.json").toFile());
             jsonMapper.writeValue(Paths.get("player.json").toFile(), players);
             players.clear();
         } catch (IOException e) {
@@ -55,26 +54,30 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
 
     @Override
     public Player getPlayer(String player_name) {
-        ObjectMapper objectreaderMapper = new ObjectMapper();
-        Player player = null;
-        File jsonFile = new File("./player.json");
-        try {
-            player = objectreaderMapper.readValue(jsonFile, Player.class);
-            System.out.println("this was read from file: " + player);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return player;
+        Map<String, Player> players = this.getAllPlayers();
+        return players.get(player_name);
     }
 
     @Override
     public Boolean doesPlayerNameExists(String player_name) {
-        Map<String, Player> players = new HashMap<>();
+        Map<String, Player> players = this.getAllPlayers();
         return players.containsKey(player_name);
     }
     @Override
     public void removePlayer(String player_name){
-        Map<String, Player> players = new HashMap<>();
+        Map<String, Player> players = this.getAllPlayers();
+        ObjectMapper jsonMapper = new ObjectMapper();
+        jsonMapper.writer(new DefaultPrettyPrinter());
+        jsonMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
+        jsonMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         players.remove(player_name);
+        try {
+            jsonMapper.writeValue(Paths.get("player.json").toFile(), players);
+            players.clear();
+        } catch (IOException e) {
+            players.clear();
+            e.printStackTrace();
+        }
+
     }
 }
