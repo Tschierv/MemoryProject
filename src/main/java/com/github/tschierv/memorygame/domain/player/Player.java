@@ -51,7 +51,7 @@ public class Player {
     }
 
     public void setScore(Integer Score) {
-        Score = Score;
+        this.score = Score;
     }
 
     public void setPlayedGames(Integer playedGames) {

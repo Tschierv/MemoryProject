@@ -8,4 +8,6 @@ public interface PlayerRepositoryService {
     Player getPlayer(String player_name);
     Boolean doesPlayerNameExists(String player_name);
     void removePlayer(String player_name);
+    void setScore(String player_name, Integer score);
+    Integer getScore(String player_name);
 }

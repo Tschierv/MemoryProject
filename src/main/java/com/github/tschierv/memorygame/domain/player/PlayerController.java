@@ -3,16 +3,16 @@ package com.github.tschierv.memorygame.domain.player;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistException;
 import com.github.tschierv.memorygame.domain.player.usecase.*;
-import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 
 import java.util.List;
 
 public class PlayerController {
-    private CreatePlayer createPlayer ;
-    private GetPlayer getPlayer;
+    private final CreatePlayer createPlayer;
+    private final IGetPlayer getPlayer;
     private GetAllPlayers getAllPlayers;
     private GetAllPlayerNames getAllPlayerNames;
     private RemovePlayer removePlayer;
+    private SetScore setScore;
 
     public PlayerController(PlayerRepositoryService playerRepository) {
         createPlayer = new CreatePlayer(playerRepository);
@@ -20,6 +20,7 @@ public class PlayerController {
         getAllPlayers = new GetAllPlayers(playerRepository);
         getAllPlayerNames = new GetAllPlayerNames(playerRepository);
         removePlayer = new RemovePlayer(playerRepository);
+        setScore = new SetScore(playerRepository);
     }
     public void createPlayer(Player player) throws PlayerAlreadyExistException{
         createPlayer.execute(player);
@@ -39,6 +40,10 @@ public class PlayerController {
 
     public List<Player> getAllPlayerwithScores(){
         return getAllPlayers.execute();
+    }
+
+    public void setPlayerScore(String player_name, Integer score){
+        this.setScore.execute(player_name, score);
     }
 
     public void removePlayer(String player_name){

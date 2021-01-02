@@ -78,11 +78,13 @@ public class GameViewModel {
         }
 
         if (this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)){
-            System.out.println("You won the game !!!");
             Integer currentScore = this.gameController.getCurrentPlayer().getScore();
-            System.out.println("You won the game your current score is : " + currentScore);
-            this.gameController.getCurrentPlayer().setScore(currentScore+10);
-            System.out.println("Your new score is : " + this.gameController.getCurrentPlayer().getScore());
+            Integer tries = this.gameController.getCurrentGame().getCounter();
+            Integer score = ((this.gameController.getCurrentGame().getCards().size() / 2) * 20 ) - (tries * 10);
+            if (score <= 0){
+                score = 10;
+            }
+            this.gameController.getPlayerController().setPlayerScore(this.gameController.getCurrentPlayer().getAccountName(), currentScore+score);
             Scene scene = ((Node)event.getSource()).getScene();
             SceneController sceneController = new SceneController(scene);
             sceneController.displayOverviewScene(this.gameController, event);

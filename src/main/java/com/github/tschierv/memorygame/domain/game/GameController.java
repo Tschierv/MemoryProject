@@ -92,6 +92,9 @@ public class GameController {
         Card secondCard = selectedCards.get(1);
         return compairCardPair.execute(firstCard, secondCard);
     }
+    public PlayerController getPlayerController(){
+        return this.playerController;
+    }
 
     /*public void selectCard(Card selectedCard) {
         // Already face up

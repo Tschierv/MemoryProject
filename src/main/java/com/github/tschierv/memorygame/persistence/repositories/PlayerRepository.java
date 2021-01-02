@@ -20,6 +20,16 @@ public class PlayerRepository implements PlayerRepositoryService {
     }
 
     @Override
+    public void setScore(String player_name, Integer score){
+        this.players.get(player_name).setScore(score);
+    }
+
+    @Override
+    public Integer getScore(String player_name){
+        return this.players.get(player_name).getScore();
+    }
+
+    @Override
     public Player getPlayer(String player_name) {
         return this.players.get(player_name);
     }
