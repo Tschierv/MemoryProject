@@ -56,8 +56,8 @@ public class OverviewController implements Initializable {
     @FXML public void OverviewbuttonRemovePushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        String playerName = playerOverviewTable.getSelectionModel().getSelectedItem().toString();
-        this.gameController.setCurrentPlayer(playerName);
+        Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
+        this.gameController.setCurrentPlayer(playerName.getAccountName());
         sceneController.displayDeleteConfScene(this.gameController, event);
     }
     @FXML public void OverviewbuttonSelectPushed(ActionEvent event) throws IOException {
@@ -68,7 +68,6 @@ public class OverviewController implements Initializable {
             this.gameController.setCurrentPlayer(playerName.getAccountName());
             sceneController.displayLevelScene(this.gameController, event);
         } else {
-            this.gameController.unsetCurrentPlayer();
             sceneController.displayNoUserScene(this.gameController, event);
         }
     }

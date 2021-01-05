@@ -3,16 +3,12 @@ package com.github.tschierv.memorygame.domain.game;
 import com.github.tschierv.memorygame.domain.Board.Board;
 import com.github.tschierv.memorygame.domain.Board.BoardController;
 import com.github.tschierv.memorygame.domain.card.Card;
-import com.github.tschierv.memorygame.domain.card.CardController;
-import com.github.tschierv.memorygame.domain.card.IImageRepositoryService;
 import com.github.tschierv.memorygame.domain.card.usecase.CompairCardPair;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistException;
-import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 

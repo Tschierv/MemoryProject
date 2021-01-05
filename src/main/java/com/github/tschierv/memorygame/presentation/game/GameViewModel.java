@@ -6,10 +6,11 @@ import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-
+import org.apache.commons.io.FilenameUtils;
 import java.util.ArrayList;
 import java.util.List;
 

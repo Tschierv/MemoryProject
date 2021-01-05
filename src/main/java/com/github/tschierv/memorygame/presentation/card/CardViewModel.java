@@ -1,6 +1,7 @@
 package com.github.tschierv.memorygame.presentation.card;
 
 import com.github.tschierv.memorygame.domain.card.Card;
+import javafx.scene.control.Label;
 import org.apache.commons.io.FilenameUtils;
 import javafx.animation.FadeTransition;
 import javafx.scene.image.Image;
@@ -35,8 +36,16 @@ public class CardViewModel extends StackPane {
         this.cardBackView.setFitWidth(cardImageSize);
     }
 
+    public Label getAnimalName() {
+        Label animalName = new Label();
+        animalName.setWrapText(true);
+        animalName.setText(FilenameUtils.getBaseName(this.card.getCardImage().toString()));
+        animalName.setPrefSize(this.cardImageView.getFitWidth(), this.cardBackView.getFitHeight());
+        return animalName;
+    }
+
     public void setCardfaceup(Runnable action){
-        FadeTransition fadetran = new FadeTransition(Duration.seconds(1), cardImageView);
+        FadeTransition fadetran = new FadeTransition(Duration.seconds(1.5), cardImageView);
         fadetran.setToValue(1);
         fadetran.setOnFinished(e -> action.run());
         fadetran.play();
