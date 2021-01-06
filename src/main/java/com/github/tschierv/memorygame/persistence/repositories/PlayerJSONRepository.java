@@ -9,8 +9,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
+import org.json.simple.JSONObject;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -21,7 +24,12 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
     public Map<String, Player> getAllPlayers() {
         ObjectMapper objectreaderMapper = new ObjectMapper();
         Map<String, Player> players = null;
-        File jsonFile = new File("./player.json");
+        File jsonFile = new File("player.json");
+        if (!jsonFile.exists()) {
+            System.out.println("creating file");
+            this.createNewFile(jsonFile);
+        }
+
         try {
             HashMap<String, Player> map = new HashMap<String, Player>();
             players = objectreaderMapper.readValue(jsonFile, new TypeReference<Map<String, Player>>(){});
@@ -37,6 +45,19 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
         jsonMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         try {
             jsonMapper.writeValue(Paths.get("player.json").toFile(), players);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void createNewFile(File jsonFile){
+        FileWriter fileWriter = null;
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonFile.createNewFile();
+            ObjectMapper jsonMapper = new ObjectMapper();
+            jsonMapper.writer(new DefaultPrettyPrinter());
+            jsonMapper.writeValue(Paths.get("player.json").toFile(), jsonObject);
         } catch (IOException e) {
             e.printStackTrace();
         }
