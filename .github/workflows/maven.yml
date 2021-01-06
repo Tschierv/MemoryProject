@@ -22,7 +22,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+    - run: mkdir staging && cp target/MemoryProject-1.0-SNAPSHOT.jar staging
     - uses: actions/upload-artifact@v1
       with:
           name: Package
