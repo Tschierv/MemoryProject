@@ -44,8 +44,10 @@ public class OverviewController implements Initializable {
         TableColumn<Player, Integer> playerScore = new TableColumn<>("Score");
         playerName.setCellValueFactory(new PropertyValueFactory<>("AccountName"));
         playerScore.setCellValueFactory(new PropertyValueFactory<>("Score"));
+        playerScore.setSortType(TableColumn.SortType.DESCENDING);
         playerOverviewTable.getColumns().addAll(playerName, playerScore);
         playerOverviewTable.setItems(playerObservableList);
+        playerOverviewTable.getSortOrder().addAll(playerScore, playerName);
     }
     @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
