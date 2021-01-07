@@ -38,6 +38,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		Scene MainViewScene = new Scene(MainViewParent);
+		MainViewScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 		primaryStage.setResizable(false);
 		primaryStage.setScene(MainViewScene);
 		primaryStage.setTitle("Animal Memory");
