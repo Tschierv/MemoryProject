@@ -19,7 +19,7 @@
     <Text fx:id="Username" layoutX="1000.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
     <Text fx:id="Counter" layoutX="1000.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
     <Button fx:id="Level6x6buttonExit" layoutX="518.0" layoutY="833.0" mnemonicParsing="false" onAction="#Level6x6buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level6x6button" text="Exit" />
-    <Button fx:id="Level6x6buttonHelp" layoutX="627.0" layoutY="833.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level6x6button" text="Help" />
+    <Button fx:id="Level6x6buttonHelp" layoutX="627.0" layoutY="833.0" mnemonicParsing="false" onAction="#Level6x6buttonHelpPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level6x6button" text="Help" />
       <Text fx:id="Level6x6textTitle" layoutX="488.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory Normal" wrappingWidth="295.5247383117676" />
       <Text layoutX="998.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Username" wrappingWidth="139.1367062838981" />
       <Text fx:id="tries" layoutX="1000.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Tries" wrappingWidth="51.732421875" />

@@ -32,7 +32,9 @@ public class LevelController6x6 implements Initializable {
         SceneController sceneController = new SceneController(scene);
         sceneController.displayMainScene(this.gameController, event);
     }
-
+    @FXML public void Level6x6buttonHelpPushed(ActionEvent event){
+        this.gameViewModel.flipAllCardsForHelp(LevelGridPane);
+    }
 
     public LevelController6x6(GameController gameController){
         this.gameController = gameController;
