@@ -78,18 +78,13 @@ public class GameViewModel {
             });
         }
 
-        if (this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)){
-            Integer currentScore = this.gameController.getCurrentPlayer().getScore();
-            Integer tries = this.gameController.getCurrentGame().getCounter();
-            Integer score = ((this.gameController.getCurrentGame().getCards().size() / 2) * 20 ) - (tries * 10);
-            if (score <= 0){
-                score = 10;
-            }
-            this.gameController.getPlayerController().setPlayerScore(this.gameController.getCurrentPlayer().getAccountName(), currentScore+score);
-            Scene scene = ((Node)event.getSource()).getScene();
-            SceneController sceneController = new SceneController(scene);
-            sceneController.displayOverviewScene(this.gameController, event);
+        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)) {
+            return;
         }
+        this.gameController.setNewPlayerScore();
+        Scene scene = ((Node)event.getSource()).getScene();
+        SceneController sceneController = new SceneController(scene);
+        sceneController.displayOverviewScene(this.gameController, event);
     }
 
     public GridPane createGrid(Double gridSize ){

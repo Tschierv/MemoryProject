@@ -52,4 +52,13 @@ public class Game {
         this.selectedCards.clear();
     }
 
+    public Integer calculateScoreIncrement() {
+        Integer tries = this.getCounter();
+        Integer score = ((this.getCards().size() / 2) * 20 ) - (tries * 10);
+        if (score <= 0){
+            score = 10;
+        }
+        return score;
+    }
+
 }

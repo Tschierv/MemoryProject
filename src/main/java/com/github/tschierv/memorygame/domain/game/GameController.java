@@ -92,6 +92,16 @@ public class GameController {
         return this.playerController;
     }
 
+    public Integer getScoreIncrementby(){
+       return this.currentGame.calculateScoreIncrement();
+    }
+
+    public void setNewPlayerScore(){
+        Integer currentPlayerScore = this.getCurrentPlayer().getScore();
+        Integer incrementScoreBy = this.getScoreIncrementby();
+        playerController.setPlayerScore(this.getCurrentPlayer().getAccountName(), currentPlayerScore+incrementScoreBy);
+    }
+
     /*public void selectCard(Card selectedCard) {
         // Already face up
         if (selectedCard.isCardFaceSideUp()) {
