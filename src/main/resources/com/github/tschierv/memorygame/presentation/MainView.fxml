@@ -6,14 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="/com/github/tschierv/memorygame/presentation/menue/main.jpeg"/>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <ImageView fitHeight="489.0" fitWidth="698.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Image url="@menue/main.jpeg" />
    </ImageView>
-   <Button fx:id="MainbuttonStart" layoutX="283.0" layoutY="220.0" mnemonicParsing="false"
-           onAction="#MainbuttonStartPushed" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Start"/>
-   <Button fx:id="MainbuttonExit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" prefHeight="47.0"
-           onAction="#MainbuttonExitPushed" prefWidth="98.0" styleClass="Mainbutton" text="Exit"/>
-   <Text fx:id="MaintextTitle" layoutX="252.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0"
-         text="Animal Memory" wrappingWidth="197.52473831176758"/>
+   <Button fx:id="MainbuttonStart" layoutX="283.0" layoutY="220.0" mnemonicParsing="false" onAction="#MainbuttonStartPushed" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Start" />
+   <Button fx:id="MainbuttonExit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" onAction="#MainbuttonExitPushed" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Exit" />
+   <Text fx:id="MaintextTitle" layoutX="252.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory" wrappingWidth="197.52473831176758" />
 </AnchorPane>

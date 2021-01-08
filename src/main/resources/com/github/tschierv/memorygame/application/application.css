@@ -53,7 +53,24 @@
 	-fx-font:15 "Courier"
 		
 }
+.Overviewbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
 
+
+.Overviewbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
 
 /*NoUser */
 
@@ -73,63 +90,188 @@
 
 /*DeleteCon*/
 
-
-#DeleteConftext
-{
+#DeleteConftext{
 	-fx-alignment: center;
-	-fx-font:15 "Courier";
+	-fx-font:25 "Courier";
 	-fx-font-style: italic;
 }
+
 
 .DeleteConfbutton
 {
 	-fx-alignment: center;
-	-fx-font:15 "Courier"		
+	-fx-font:15 "Courier"
+
+}
+.DeleteConfbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+
+.DeleteConfbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
 }
 
 
 /*Reg*/
 
+#RegtextTitle{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+
+
 .Regbutton
 {
 	-fx-alignment: center;
-	-fx-font:10 "Courier"		
+	-fx-font:15 "Courier"
+
 }
-
-
-/*Level*/
-
-#Leveltext
+.Regbutton:hover
 {
 	-fx-alignment: center;
-	-fx-font:21 "Courier";
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+
+.Regbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
+
+/*Level*/
+#Leveltext{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
 	-fx-font-style: italic;
 }
+
 
 .Levelbutton
 {
 	-fx-alignment: center;
-	-fx-font:10 "Courier"		
+	-fx-font:15 "Courier"
+
+}
+.Levelbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
 }
 
 
+.Levelbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
+
 /*Level4x4*/
+
+#Level4x4textTitle{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+
+.Level4x4text{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+}
+
 
 .Level4x4button
 {
 	-fx-alignment: center;
-	-fx-font:12 "Courier"		
+	-fx-font:15 "Courier"
+
+}
+.Level4x4button:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
 }
 
+
+.Level4x4button:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
 
 
 /*Level6x6*/
 
+
+#Level6x6textTitle{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+
+.Level6x6text{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+}
+
+
 .Level6x6button
 {
 	-fx-alignment: center;
-	-fx-font:12 "Courier"		
+	-fx-font:15 "Courier"
+
 }
+.Level6x6button:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+
+.Level6x6button:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
+
 
 
 /*Level10x10 */

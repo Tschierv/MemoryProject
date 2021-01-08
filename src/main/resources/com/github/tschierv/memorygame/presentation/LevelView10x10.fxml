@@ -7,18 +7,21 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="942.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fitHeight="950.0" fitWidth="1244.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="966.0" fitWidth="1771.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="/com/github/tschierv/memorygame/presentation/menue/Level10x10.jpeg" />
+                <Image url="@menue/Level10x10.jpeg" />
             </image>
         </ImageView>
-        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
+        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="135.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="672.0">
         </GridPane>
-        <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-        <Text fx:id="Counter" layoutX="1094.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-        <Button fx:id="Level10x10buttonExit" layoutX="492.0" layoutY="808.0" onAction="#Level10x10buttonExitPushed" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level10x10button" text="Exit" />
-        <Button fx:id="Level10x10buttonHelp" layoutX="554.0" layoutY="808.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level10x10button" text="Help" />
+        <Text fx:id="Username" layoutX="1018.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" wrappingWidth="139.13671875" />
+        <Text fx:id="Counter" layoutX="1018.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" wrappingWidth="139.13671875" />
+        <Button fx:id="Level10x10buttonExit" layoutX="444.0" layoutY="844.0" mnemonicParsing="false" onAction="#Level10x10buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Exit" />
+        <Button fx:id="Level10x10buttonHelp" layoutX="560.0" layoutY="844.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Help" />
+      <Text fx:id="Level6x6textTitle" layoutX="400.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Animal Memory Hard" wrappingWidth="295.5247383117676" />
+      <Text layoutX="1018.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Username" wrappingWidth="139.1367062838981" />
+      <Text fx:id="tries" layoutX="1018.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Tries" wrappingWidth="51.732421875" />
     </children>
 </AnchorPane>

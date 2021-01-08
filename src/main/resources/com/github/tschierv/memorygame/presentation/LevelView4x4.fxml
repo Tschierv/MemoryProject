@@ -7,18 +7,21 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <ImageView fitHeight="900.0" fitWidth="1489.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="/com/github/tschierv/memorygame/presentation/menue/Level4x4.jpeg" />
+                <Image url="@menue/Level4x4.jpeg" />
             </image>
         </ImageView>
-        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="308.0" layoutY="228.0" prefHeight="467.0" prefWidth="672.0">
+        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="408.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="487.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="408.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="230.0">
         </GridPane>
         <Text fx:id="Username" layoutX="1094.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
         <Text fx:id="Counter" layoutX="1094.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-        <Button fx:id="Level4x4buttonExit" layoutX="492.0" layoutY="808.0" onAction="#Level4x4buttonExitPushed" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level4x4button" text="Exit" />
-        <Button fx:id="Level4x4buttonHelp" layoutX="554.0" layoutY="808.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" styleClass="Level4x4button" text="Help" />
+        <Button fx:id="Level4x4buttonExit" layoutX="445.0" layoutY="808.0" mnemonicParsing="false" onAction="#Level4x4buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level4x4button" text="Exit" />
+        <Button fx:id="Level4x4buttonHelp" layoutX="561.0" layoutY="808.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level4x4button" text="Help" />
+      <Text fx:id="Level4x4textTitle" layoutX="505.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory Easy" wrappingWidth="295.5247383117676" />
+      <Text layoutX="1094.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level4x4text" text="Username" wrappingWidth="139.1367062838981" />
+      <Text fx:id="tries" layoutX="1094.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level4x4text" text="Tries" wrappingWidth="51.732421875" />
     </children>
 </AnchorPane>

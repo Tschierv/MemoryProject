@@ -40,8 +40,8 @@ public class OverviewController implements Initializable {
 
     public void initializeData(){
         playerObservableList.addAll(this.gameController.getAllPlayersName());
-        TableColumn<Player, String> playerName = new TableColumn<>("Player");
-        TableColumn<Player, Integer> playerScore = new TableColumn<>("Score");
+        TableColumn<Player, String> playerName = new TableColumn<>("Player ");
+        TableColumn<Player, Integer> playerScore = new TableColumn<>("Score ");
         playerName.setCellValueFactory(new PropertyValueFactory<>("AccountName"));
         playerScore.setCellValueFactory(new PropertyValueFactory<>("Score"));
         playerScore.setSortType(TableColumn.SortType.DESCENDING);

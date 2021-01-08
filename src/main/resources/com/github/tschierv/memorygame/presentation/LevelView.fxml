@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="209.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="310.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/com/github/tschierv/memorygame/presentation/menue/Level.jpeg" />
+            <Image url="@menue/Level.jpeg" />
          </image>
       </ImageView>
-      <Text fx:id="Leveltext" layoutX="177.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="48.00000226870179" />
-      <Button fx:id="LevelbuttonEasy" layoutX="113.0" layoutY="159.0" onAction="#LevelbuttonEasyPushed" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="Levelbutton" text="Easy" />
-      <Button fx:id="LevelbuttonNormal" layoutX="172.0" layoutY="159.0" onAction="#LevelbuttonNormalPushed" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" styleClass="Levelbutton" text="Normal" />
-      <Button fx:id="LevelbuttonHard" layoutX="241.0" layoutY="159.0" onAction="#LevelbuttonHardPushed" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" styleClass="Levelbutton" text="Hard" />
+      <Text fx:id="Leveltext" layoutX="287.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="140.0000022687018" />
+      <Button fx:id="LevelbuttonEasy" layoutX="205.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonEasyPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Easy" />
+      <Button fx:id="LevelbuttonNormal" layoutX="306.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonNormalPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Normal" />
+      <Button fx:id="LevelbuttonHard" layoutX="407.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonHardPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Hard" />
    </children>
 </AnchorPane>

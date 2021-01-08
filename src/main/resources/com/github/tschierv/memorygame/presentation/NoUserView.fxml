@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.tschierv.memorygame.presentation.NoUserController">
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.tschierv.memorygame.presentation.NoUserController">
    <children>
-      <ImageView fitHeight="209.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../java/com/github/tschierv/memorygame/menue/NoUser.jpeg" />
+            <Image url="@menue/NoUser.jpeg" />
          </image>
       </ImageView>
-      <Text fx:id="NoUsertextTitle" layoutX="87.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" wrappingWidth="192.13671875" />
-      <Button fx:id="NoUserbuttonOk" layoutX="113.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
+      <Text fx:id="NoUsertextTitle" layoutX="264.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" wrappingWidth="192.13671875" />
+      <Button fx:id="NoUserbuttonOk" layoutX="294.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
    </children>
 </AnchorPane>

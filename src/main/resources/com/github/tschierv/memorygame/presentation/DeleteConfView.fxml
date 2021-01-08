@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="209.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/com/github/tschierv/memorygame/presentation/menue/DeleteConf.jpeg" />
+            <Image url="@menue/DeleteConf.jpeg" />
          </image>
       </ImageView>
-      <Text fx:id="DeleteConftext" layoutX="113.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sure ?" wrappingWidth="48.00000226870179" />
-      <Button fx:id="DeleteConfbuttonYes" onAction="#DeleteConfbuttonYesPushed" layoutX="82.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="DeleteConfbutton" text="Yes" />
-      <Button fx:id="DeleteConfbuttonNo" onAction="#DeleteConfbuttonNoPushed" layoutX="147.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="DeleteConfbutton" text="No" />
+      <Text fx:id="DeleteConftext" layoutX="304.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sure ?" wrappingWidth="89.00000226870179" />
+      <Button fx:id="DeleteConfbuttonYes" layoutX="254.0" layoutY="268.0" mnemonicParsing="false" onAction="#DeleteConfbuttonYesPushed" prefHeight="25.0" prefWidth="60.0" styleClass="DeleteConfbutton" text="Yes" />
+      <Button fx:id="DeleteConfbuttonNo" layoutX="361.0" layoutY="268.0" mnemonicParsing="false" onAction="#DeleteConfbuttonNoPushed" prefHeight="25.0" prefWidth="60.0" styleClass="DeleteConfbutton" text="No" />
    </children>
 </AnchorPane>
