@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.TableView?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="606.0" fitWidth="669.0" layoutX="-12.0" layoutY="-8.0">
+      <ImageView fitHeight="489.0" fitWidth="683.0" layoutX="-6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="/com/github/tschierv/memorygame/presentation/menue/Overview.jpeg" />
+            <Image url="@menue/Overview.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="OverviewbuttonRemove" onAction="#OverviewbuttonRemovePushed" layoutX="290.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" styleClass="Overviewbutton" text="Remove" />
-      <Button fx:id="OverviewbuttonAddUser" onAction="#OverviewbuttonAddUserPushed" layoutX="290.0" layoutY="375.0" mnemonicParsing="false" styleClass="Overviewbutton" text="Add User" />
-      <Button fx:id="OverviewbuttonSelect" onAction="#OverviewbuttonSelectPushed" layoutX="290.0" layoutY="413.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" styleClass="Overviewbutton" text="Select" />
-      <TableView fx:id="playerOverviewTable" layoutX="193.0" layoutY="189.0" prefHeight="171.0" prefWidth="260.0" />
-      <Text fx:id="OverviewtextTitle" layoutX="261.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
+      <Button fx:id="OverviewbuttonRemove" layoutX="403.0" layoutY="331.0" mnemonicParsing="false" onAction="#OverviewbuttonRemovePushed" prefHeight="25.0" prefWidth="90.0" styleClass="Overviewbutton" text="Remove" />
+      <Button fx:id="OverviewbuttonAddUser" layoutX="193.0" layoutY="331.0" mnemonicParsing="false" onAction="#OverviewbuttonAddUserPushed" prefHeight="25.0" prefWidth="100.0" styleClass="Overviewbutton" text="Add User" />
+      <Button fx:id="OverviewbuttonSelect" layoutX="300.0" layoutY="331.0" mnemonicParsing="false" onAction="#OverviewbuttonSelectPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Overviewbutton" text="Select" />
+      <TableView fx:id="playerOverviewTable" layoutX="193.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="301.0" />
+      <Text fx:id="OverviewtextTitle" layoutX="273.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview" wrappingWidth="104.13671875">
          <font>
             <Font size="24.0" />
          </font>

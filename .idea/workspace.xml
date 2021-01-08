@@ -3,13 +3,35 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/menue/leaves_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/menue/leaves_background.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +50,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1mBpNHJ23Vjt6X16Ly4bIYgfJrS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,32 +70,37 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.tschierv.memorygame.domain.game" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation\menue" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.github.tschierv.memorygame" />
       <recent name="com.github.tschierv.memorygame.presentation.game" />
       <recent name="com.github.tschierv.memorygame.presentation" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.github.tschierv.memorygame.domain.game" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.tschierv.memorygame.domain.player.usecase" />
       <recent name="com.github.tschierv.memorygame.persistence.repositories" />
       <recent name="com.github.tschierv.memorygame.domain.card.usecase" />
       <recent name="com.github.tschierv.memorygame.application" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
@@ -134,6 +168,9 @@
       <workItem from="1609927783782" duration="154000" />
       <workItem from="1609927952474" duration="4195000" />
       <workItem from="1610092164601" duration="3998000" />
+      <workItem from="1610100640816" duration="20041000" />
+      <workItem from="1610190595876" duration="31000" />
+      <workItem from="1610190674393" duration="6134000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -303,28 +340,7 @@
       <option name="project" value="LOCAL" />
       <updated>1610093950476</updated>
     </task>
-    <task id="LOCAL-00025" summary="Improvement: Moving calculation of new Score for a Player to the domain">
-      <created>1610191299326</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1610191299326</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Improvement: Extracting Tableview creation into it's own methode">
-      <created>1610191953032</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1610191953032</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Improvement: Remove unused definitions throws IO error">
-      <created>1610192038239</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1610192038239</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +351,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -343,6 +371,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature: Add card switching for all levels" />
+    <MESSAGE value="Feature: Implements new Eventhandler for mouse clicks" />
     <MESSAGE value="Feature: Implements working try counter" />
     <MESSAGE value="Improvment: Moving different components (mainly controllers) around to make cleaner code" />
     <MESSAGE value="WIP: current state" />
@@ -365,10 +395,49 @@
     <MESSAGE value="Improvement: First try on building jar" />
     <MESSAGE value="Improvement: Use maven-assembly-plugin" />
     <MESSAGE value="Improvement: implementing score sorting" />
-    <MESSAGE value="Improvement: Moving calculation of new Score for a Player to the domain" />
-    <MESSAGE value="Improvement: Extracting Tableview creation into it's own methode" />
-    <MESSAGE value="Improvement: Remove unused definitions throws IO error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Remove unused definitions throws IO error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: implementing score sorting" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="712" y="329" key="#Images" timestamp="1610117541592">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="712" y="329" key="#Images/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610117541592" />
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610183277724">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183277724" />
+    <state x="718" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610196728229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="718" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610196728229" />
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1610190752661">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610190752661" />
+    <state width="1860" height="155" key="GridCell.Tab.0.bottom" timestamp="1610197811862">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="155" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610197195429" />
+    <state width="1860" height="155" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610197811862" />
+    <state width="1860" height="155" key="GridCell.Tab.0.center" timestamp="1610197811862">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="155" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610197195428" />
+    <state width="1860" height="155" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610197811862" />
+    <state width="1860" height="155" key="GridCell.Tab.0.left" timestamp="1610197811862">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="155" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610197195428" />
+    <state width="1860" height="155" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610197811862" />
+    <state width="1860" height="155" key="GridCell.Tab.0.right" timestamp="1610197811862">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="155" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610197195429" />
+    <state width="1860" height="155" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610197811862" />
+    <state x="1920" y="0" width="1191" height="844" key="dock-window-1" timestamp="1610100505631">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1191" height="844" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610100505631" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

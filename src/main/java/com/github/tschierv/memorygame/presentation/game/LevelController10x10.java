@@ -36,7 +36,7 @@ public class LevelController10x10 implements Initializable {
 
     public LevelController10x10(GameController gameController){
         this.gameController = gameController;
-        this.Grid10x10Size = 115.0;
+        this.Grid10x10Size = 70.0;
         this.gameViewModel = new GameViewModel(this.gameController);
     }
 

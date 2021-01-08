@@ -5,16 +5,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="202.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="238.0" fitWidth="317.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="742.0" fitWidth="683.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/com/github/tschierv/memorygame/presentation/menue/Reg.jpeg" />
+            <Image url="@menue/Reg.jpeg" />
          </image>
       </ImageView>
-      <TextField fx:id="RegtextUsername" layoutX="84.0" layoutY="79.0" text="Username" />
-      <Button fx:id="RegbuttonCancel" onAction="#RegbuttonCancelPushed" layoutX="159.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="Regbutton" text="Cancel" />
-      <Button fx:id="RegbuttonAdd" onAction="#RegbuttonAddPushed" layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" styleClass="Regbutton" text="Add" />
+      <TextField fx:id="RegtextUsername" layoutX="260.0" layoutY="217.0" prefHeight="25.0" prefWidth="185.0" text="Username" />
+      <Button fx:id="RegbuttonCancel" layoutX="357.0" layoutY="271.0" mnemonicParsing="false" onAction="#RegbuttonCancelPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Regbutton" text="Cancel" />
+      <Button fx:id="RegbuttonAdd" layoutX="261.0" layoutY="271.0" mnemonicParsing="false" onAction="#RegbuttonAddPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Regbutton" text="Add" />
+      <Text fx:id="RegtextTitle" layoutX="292.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add User" wrappingWidth="148.999995008111" />
    </children>
 </AnchorPane>
