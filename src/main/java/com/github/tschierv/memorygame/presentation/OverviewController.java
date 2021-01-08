@@ -36,18 +36,22 @@ public class OverviewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.initializeData();
+        this.createTableViewfromObservableList();
     }
 
     public void initializeData(){
-        playerObservableList.addAll(this.gameController.getAllPlayersName());
+        this.playerObservableList.addAll(this.gameController.getAllPlayersName());
+    }
+
+    public void createTableViewfromObservableList(){
         TableColumn<Player, String> playerName = new TableColumn<>("Player");
         TableColumn<Player, Integer> playerScore = new TableColumn<>("Score");
         playerName.setCellValueFactory(new PropertyValueFactory<>("AccountName"));
         playerScore.setCellValueFactory(new PropertyValueFactory<>("Score"));
         playerScore.setSortType(TableColumn.SortType.DESCENDING);
-        playerOverviewTable.getColumns().addAll(playerName, playerScore);
-        playerOverviewTable.setItems(playerObservableList);
-        playerOverviewTable.getSortOrder().addAll(playerScore, playerName);
+        this.playerOverviewTable.getColumns().addAll(playerName, playerScore);
+        this.playerOverviewTable.setItems(playerObservableList);
+        this.playerOverviewTable.getSortOrder().addAll(playerScore, playerName);
     }
     @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) throws IOException {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();

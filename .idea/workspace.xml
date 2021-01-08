@@ -302,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610093950476</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Improvement: Moving calculation of new Score for a Player to the domain">
+      <created>1610191299326</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1610191299326</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +352,8 @@
     <MESSAGE value="Improvement: First try on building jar" />
     <MESSAGE value="Improvement: Use maven-assembly-plugin" />
     <MESSAGE value="Improvement: implementing score sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvement: implementing score sorting" />
+    <MESSAGE value="Improvement: Moving calculation of new Score for a Player to the domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Moving calculation of new Score for a Player to the domain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
