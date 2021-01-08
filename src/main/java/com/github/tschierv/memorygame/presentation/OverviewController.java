@@ -53,20 +53,20 @@ public class OverviewController implements Initializable {
         this.playerOverviewTable.setItems(playerObservableList);
         this.playerOverviewTable.getSortOrder().addAll(playerScore, playerName);
     }
-    @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) throws IOException {
+    @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayRegScene(this.gameController, event);
     }
 
-    @FXML public void OverviewbuttonRemovePushed(ActionEvent event) throws IOException {
+    @FXML public void OverviewbuttonRemovePushed(ActionEvent event) {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
         this.gameController.setCurrentPlayer(playerName.getAccountName());
         sceneController.displayDeleteConfScene(this.gameController, event);
     }
-    @FXML public void OverviewbuttonSelectPushed(ActionEvent event) throws IOException {
+    @FXML public void OverviewbuttonSelectPushed(ActionEvent event) {
         Scene scene = (Scene) ((Node)event.getSource()).getScene();
         Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
         SceneController sceneController = new SceneController(scene);
