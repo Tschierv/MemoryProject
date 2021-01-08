@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610191299326</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Improvement: Extracting Tableview creation into it's own methode">
+      <created>1610191953032</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1610191953032</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Improvement: Remove unused definitions throws IO error">
+      <created>1610192038239</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1610192038239</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,8 +343,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: Add card switching for all levels" />
-    <MESSAGE value="Feature: Implements new Eventhandler for mouse clicks" />
     <MESSAGE value="Feature: Implements working try counter" />
     <MESSAGE value="Improvment: Moving different components (mainly controllers) around to make cleaner code" />
     <MESSAGE value="WIP: current state" />
@@ -353,7 +366,9 @@
     <MESSAGE value="Improvement: Use maven-assembly-plugin" />
     <MESSAGE value="Improvement: implementing score sorting" />
     <MESSAGE value="Improvement: Moving calculation of new Score for a Player to the domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Moving calculation of new Score for a Player to the domain" />
+    <MESSAGE value="Improvement: Extracting Tableview creation into it's own methode" />
+    <MESSAGE value="Improvement: Remove unused definitions throws IO error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Remove unused definitions throws IO error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

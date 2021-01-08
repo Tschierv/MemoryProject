@@ -4,13 +4,12 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import org.apache.commons.io.FilenameUtils;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,13 +63,13 @@ public class GameViewModel {
 
         if (this.getSelectedCards().size() == 0) {
             this.setSelectedCard(cardViewModel);
-            cardViewModel.setCardfaceup(() -> {});
+            cardViewModel.setCardToFaceUp(() -> {});
         } else {
             this.setSelectedCard(cardViewModel);
-            cardViewModel.setCardfaceup(() -> {
+            cardViewModel.setCardToFaceUp(() -> {
                 if (!this.isMatchedPair()) {
-                    this.getSelectedCards().get(0).setCardbackup();
-                    this.getSelectedCards().get(1).setCardbackup();
+                    this.getSelectedCards().get(0).setCardToBackUp();
+                    this.getSelectedCards().get(1).setCardToBackUp();
                     this.increaseCounter();
                 }
                 this.clearSelectedCards();
@@ -85,6 +84,15 @@ public class GameViewModel {
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayOverviewScene(this.gameController, event);
+    }
+    public void flipAllCardsForHelp(GridPane currentGameGride){
+        ObservableList<Node> gridPaneChildrens = currentGameGride.getChildren();
+        for ( Node node : gridPaneChildrens) {
+            CardViewModel cardViewModel = ((CardViewModel) node);
+            cardViewModel.setCardToFaceUp(() -> {
+                cardViewModel.setCardToBackUp();
+            });
+        }
     }
 
     public GridPane createGrid(Double gridSize ){

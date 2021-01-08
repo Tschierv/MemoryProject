@@ -14,7 +14,7 @@ import javafx.util.Duration;
 public class CardViewModel extends StackPane {
     private ImageView cardImageView;
     private ImageView cardBackView;
-    private Text text = new Text();
+    private Text animalNameAsText = new Text();
     private Card card;
 
     public CardViewModel(Card card)  {
@@ -24,9 +24,9 @@ public class CardViewModel extends StackPane {
         this.cardImageView = new ImageView(cardImage);
         this.card = card;
 
-        this.text.setText(FilenameUtils.getBaseName(card.getCardImage().getPath()));
+        this.animalNameAsText.setText(FilenameUtils.getBaseName(card.getCardImage().getPath()));
         getChildren().addAll(cardBackView, cardImageView);
-        this.setCardbackup();
+        this.setCardToBackUp();
     }
 
     public void setCardImageSize(Double cardImageSize) {
@@ -44,18 +44,18 @@ public class CardViewModel extends StackPane {
         return animalName;
     }
 
-    public void setCardfaceup(Runnable action){
-        FadeTransition fadetran = new FadeTransition(Duration.seconds(1.5), cardImageView);
-        fadetran.setToValue(1);
-        fadetran.setOnFinished(e -> action.run());
-        fadetran.play();
+    public void setCardToFaceUp(Runnable action){
+        FadeTransition fadeToFaceUp = new FadeTransition(Duration.seconds(2), cardImageView);
+        fadeToFaceUp.setToValue(1);
+        fadeToFaceUp.setOnFinished(e -> action.run());
+        fadeToFaceUp.play();
         this.card.setCardFaceSideUp(true);
     }
 
-    public void setCardbackup(){
-        FadeTransition fadetran = new FadeTransition(Duration.seconds(1), cardImageView);
-        fadetran.setToValue(0);
-        fadetran.play();
+    public void setCardToBackUp(){
+        FadeTransition fadeToBackUp = new FadeTransition(Duration.seconds(1), cardImageView);
+        fadeToBackUp.setToValue(0);
+        fadeToBackUp.play();
         this.card.setCardFaceSideUp(false);
     }
 

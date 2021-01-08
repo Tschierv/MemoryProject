@@ -33,6 +33,9 @@ public class LevelController4x4 implements Initializable {
         sceneController.displayMainScene(this.gameController, event);
     }
 
+    @FXML public void Level4x4buttonHelpPushed(ActionEvent event){
+        this.gameViewModel.flipAllCardsForHelp(LevelGridPane);
+    }
 
     public LevelController4x4(GameController gameController){
         this.gameController = gameController;
