@@ -83,7 +83,7 @@ public class GameViewModel {
         this.gameController.setNewPlayerScore();
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        sceneController.displayOverviewScene(this.gameController, event);
+        sceneController.displayLevelScene(this.gameController, event);
     }
     public void flipAllCardsForHelp(GridPane currentGameGride){
         ObservableList<Node> gridPaneChildrens = currentGameGride.getChildren();
