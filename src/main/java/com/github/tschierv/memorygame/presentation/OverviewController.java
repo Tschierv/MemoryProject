@@ -37,6 +37,8 @@ public class OverviewController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.initializeData();
         this.createTableViewfromObservableList();
+        this.OverviewbuttonSelect.disableProperty().bind(playerOverviewTable.getSelectionModel().selectedItemProperty().isNull());
+        this.OverviewbuttonRemove.disableProperty().bind(playerOverviewTable.getSelectionModel().selectedItemProperty().isNull());
     }
 
     public void initializeData(){
