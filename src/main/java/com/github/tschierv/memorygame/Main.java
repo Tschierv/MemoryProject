@@ -36,7 +36,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("presentation/MainView.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("com/github/tschierv/memorygame/presentation/MainView.fxml"));
 		MainController mainController = new MainController(this.createGameController());
 		fxmlLoader.setController(mainController);
 		Parent MainViewParent = null;
@@ -46,7 +46,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		Scene MainViewScene = new Scene(MainViewParent);
-		MainViewScene.getStylesheets().add(Main.class.getResource("application/application.css").toExternalForm());
+		MainViewScene.getStylesheets().add(Main.class.getClassLoader().getResource("com/github/tschierv/memorygame/application/application.css").toExternalForm());
 		primaryStage.setResizable(false);
 		primaryStage.setScene(MainViewScene);
 		primaryStage.setTitle("Animal Memory");
