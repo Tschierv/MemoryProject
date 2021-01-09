@@ -14,14 +14,14 @@
                 <Image url="@menue/Level10x10.jpeg" />
             </image>
         </ImageView>
-        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="135.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="672.0">
+        <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="135.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="672.0">
         </GridPane>
-        <Text fx:id="Username" layoutX="1018.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" wrappingWidth="139.13671875" />
-        <Text fx:id="Counter" layoutX="1018.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" wrappingWidth="139.13671875" />
-        <Button fx:id="Level10x10buttonExit" layoutX="444.0" layoutY="844.0" mnemonicParsing="false" onAction="#Level10x10buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Exit" />
-        <Button fx:id="Level10x10buttonHelp" layoutX="560.0" layoutY="844.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Help" />
-      <Text fx:id="Level6x6textTitle" layoutX="400.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Animal Memory Hard" wrappingWidth="295.5247383117676" />
-      <Text layoutX="1018.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Username" wrappingWidth="139.1367062838981" />
-      <Text fx:id="tries" layoutX="1018.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Tries" wrappingWidth="51.732421875" />
+        <Text fx:id="Username" layoutX="917.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+        <Text fx:id="Counter" layoutX="917.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+        <Button fx:id="Level10x10buttonExit" layoutX="433.0" layoutY="844.0" mnemonicParsing="false" onAction="#Level10x10buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Exit" />
+        <Button fx:id="Level10x10buttonHelp" layoutX="568.0" layoutY="844.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level10x10button" text="Help" />
+      <Text fx:id="Level6x6textTitle" layoutX="400.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Animal Memory Hard" wrappingWidth="295.5247383117676" />
+      <Text layoutX="917.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Username" wrappingWidth="139.1367062838981" />
+      <Text fx:id="tries" layoutX="917.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level10x10text" text="Tries" wrappingWidth="51.732421875" />
     </children>
 </AnchorPane>

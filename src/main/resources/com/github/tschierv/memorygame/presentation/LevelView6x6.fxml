@@ -14,14 +14,14 @@
             <Image url="@menue/Level6x6.jpeg" />
         </image>
     </ImageView>
-    <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="196.0" layoutY="99.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="672.0">
+    <GridPane id="LevelGridPane" fx:id="LevelGridPane" layoutX="196.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="672.0" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="103.0">
     </GridPane>
-    <Text fx:id="Username" layoutX="995.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
-    <Text fx:id="Counter" layoutX="999.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+    <Text fx:id="Username" layoutX="922.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
+    <Text fx:id="Counter" layoutX="927.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.13671875" />
     <Button fx:id="Level6x6buttonExit" layoutX="453.0" layoutY="839.0" mnemonicParsing="false" onAction="#Level6x6buttonExitPushed" prefHeight="32.0" prefWidth="90.0" styleClass="Level6x6button" text="Exit" />
     <Button fx:id="Level6x6buttonHelp" layoutX="568.0" layoutY="839.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" styleClass="Level6x6button" text="Help" />
       <Text fx:id="Level6x6textTitle" layoutX="391.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory Normal" wrappingWidth="295.5247383117676" />
-      <Text layoutX="994.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Username" wrappingWidth="139.1367062838981" />
-      <Text fx:id="tries" layoutX="997.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Tries" wrappingWidth="51.732421875" />
+      <Text layoutX="921.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Username" wrappingWidth="139.1367062838981" />
+      <Text fx:id="tries" layoutX="924.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Level6x6text" text="Tries" wrappingWidth="51.732421875" />
 </children>
 </AnchorPane>

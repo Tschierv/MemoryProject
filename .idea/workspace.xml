@@ -31,18 +31,9 @@
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController10x10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController10x10.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/application/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/DeleteConfView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/DeleteConfView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView10x10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView10x10.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView4x4.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView6x6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/LevelView6x6.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/OverviewView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/OverviewView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/RegView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/RegView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +162,7 @@
       <workItem from="1609927783782" duration="154000" />
       <workItem from="1609927952474" duration="4195000" />
       <workItem from="1610092164601" duration="3998000" />
-      <workItem from="1610100640816" duration="16493000" />
+      <workItem from="1610100640816" duration="20041000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -352,7 +343,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -391,26 +394,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="712" y="329" key="#Images/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610117541592" />
-    <state width="1877" height="156" key="GridCell.Tab.0.bottom" timestamp="1610120732383">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610183277724">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610120732383" />
-    <state width="1877" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610120617447" />
-    <state width="1877" height="156" key="GridCell.Tab.0.center" timestamp="1610120732382">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183277724" />
+    <state width="1877" height="156" key="GridCell.Tab.0.bottom" timestamp="1610183467811">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="156" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610120732382" />
-    <state width="1877" height="156" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610120617447" />
-    <state width="1877" height="156" key="GridCell.Tab.0.left" timestamp="1610120732382">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610182390740" />
+    <state width="1877" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183467811" />
+    <state width="1877" height="156" key="GridCell.Tab.0.center" timestamp="1610183467811">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="156" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610120732382" />
-    <state width="1877" height="156" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610120617447" />
-    <state width="1877" height="156" key="GridCell.Tab.0.right" timestamp="1610120732382">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="156" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610182390739" />
+    <state width="1877" height="156" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183467811" />
+    <state width="1877" height="156" key="GridCell.Tab.0.left" timestamp="1610183467811">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610120732382" />
-    <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610120617447" />
+    <state width="1877" height="156" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610182390739" />
+    <state width="1877" height="156" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183467811" />
+    <state width="1877" height="156" key="GridCell.Tab.0.right" timestamp="1610183467811">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610182390739" />
+    <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610183467811" />
     <state x="1920" y="0" width="1191" height="844" key="dock-window-1" timestamp="1610100505631">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
