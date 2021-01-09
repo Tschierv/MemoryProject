@@ -113,7 +113,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                com.github.tschierv.memorygame.application.Main
+                                com.github.tschierv.memorygame.Main
                             </mainClass>
                         </manifest>
                     </archive>

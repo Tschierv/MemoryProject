@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.application;
+package com.github.tschierv.memorygame;
 
 import com.github.tschierv.memorygame.domain.Board.BoardController;
 import com.github.tschierv.memorygame.domain.card.CardController;
@@ -9,15 +9,23 @@ import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerJSONRepository;
-import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 import com.github.tschierv.memorygame.presentation.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.commons.io.IOUtils;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -28,7 +36,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../presentation/MainView.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("presentation/MainView.fxml"));
 		MainController mainController = new MainController(this.createGameController());
 		fxmlLoader.setController(mainController);
 		Parent MainViewParent = null;
@@ -38,7 +46,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		Scene MainViewScene = new Scene(MainViewParent);
-		MainViewScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+		MainViewScene.getStylesheets().add(Main.class.getResource("application/application.css").toExternalForm());
 		primaryStage.setResizable(false);
 		primaryStage.setScene(MainViewScene);
 		primaryStage.setTitle("Animal Memory");
@@ -46,7 +54,8 @@ public class Main extends Application {
 	}
     private GameController createGameController(){
 		PlayerController playerController = this.createPlayerController();
-		CardController cardController = new CardController(new ImageRepository("src/main/resources/com/github/tschierv/memorygame/presentation/picture"));
+		CardController cardController = null;
+		cardController = new CardController(new ImageRepository("com/github/tschierv/memorygame/presentation/picture"));
 		BoardController boardController = new BoardController(cardController);
 		return new GameController(playerController, boardController);
 	}
