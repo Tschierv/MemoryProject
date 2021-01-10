@@ -7,6 +7,7 @@ import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -80,6 +81,12 @@ public class GameViewModel {
         if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)) {
             return;
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Game completed");
+        alert.setHeaderText(null);
+        alert.setContentText("You won the game, you are great!");
+        alert.showAndWait();
+
         this.gameController.setNewPlayerScore();
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
