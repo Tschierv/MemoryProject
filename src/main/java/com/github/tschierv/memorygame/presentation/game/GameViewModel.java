@@ -71,12 +71,16 @@ public class GameViewModel {
     /**
      * Handles all the actions behind a card selection
      * Always returns void
-     * @param event
-     * @param cardViewModel
+     * @param event MouseEvent mouse clicked
+     * @param cardViewModel passing in the cardViewModel of the selected card
      */
     public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
-        if (this.remainingClickCount == 0)
+        if (this.remainingClickCount == 0) {
             return;
+        }
+        if (cardViewModel.isCardfaceup() == true){
+            return;
+        }
 
         this.remainingClickCount--;
 
@@ -95,8 +99,7 @@ public class GameViewModel {
                 this.remainingClickCount = 2;
             });
         }
-
-        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)) {
+        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true)) {
             return;
         }
 
@@ -106,6 +109,12 @@ public class GameViewModel {
         SceneController sceneController = new SceneController(scene);
         sceneController.displayLevelScene(this.gameController, event);
     }
+
+    /**
+     * Method shows all pictures on the grid to help the player
+     *
+     * @param currentGameGride GridPanel of the current Game
+     */
     public void flipAllCardsForHelp(GridPane currentGameGride){
         ObservableList<Node> gridPaneChildrens = currentGameGride.getChildren();
         for ( Node node : gridPaneChildrens) {

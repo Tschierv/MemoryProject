@@ -37,7 +37,9 @@ public class Card {
     public UUID getCardId() {
         return this.CardId;
     }
-
+    public UUID getCardObjectId(){
+        return this.cardObjectId;
+    }
     public void setCardId(UUID cardId) {
         CardId = cardId;
     }

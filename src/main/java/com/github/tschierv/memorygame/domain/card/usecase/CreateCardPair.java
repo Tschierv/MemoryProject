@@ -18,9 +18,10 @@ public class CreateCardPair implements ICreateCardPair {
         UUID card_id = UUID.randomUUID();
         ArrayList<Card> cards = new ArrayList<>();;
         URL card_image = this.imageRepository.getRandomImage();
-        Card card = new Card(card_image, card_id);
-        cards.add(card);
-        cards.add(card);
+        Card card1 = new Card(card_image, card_id);
+        Card card2 = new Card(card_image, card_id);
+        cards.add(card1);
+        cards.add(card2);
         return  cards;
     }
 }
