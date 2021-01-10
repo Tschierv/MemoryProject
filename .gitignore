@@ -12,3 +12,7 @@ target/*
 !.vscode/launch.json
 !.vscode/extensions.json
 _site/
+player.json
+workspace.xml
+*/player.json
+*/workspace.xml
