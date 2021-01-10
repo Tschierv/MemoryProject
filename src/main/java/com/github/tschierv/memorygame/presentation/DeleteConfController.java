@@ -27,14 +27,14 @@ public class DeleteConfController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) { }
 
-    @FXML public void DeleteConfbuttonNoPushed(ActionEvent event) throws IOException {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+    @FXML public void DeleteConfbuttonNoPushed(ActionEvent event) {
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayOverviewScene(this.gameController, event);
     }
 
-    @FXML public void DeleteConfbuttonYesPushed(ActionEvent event) throws IOException {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+    @FXML public void DeleteConfbuttonYesPushed(ActionEvent event) {
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         this.gameController.removePlayer(this.gameController.getCurrentPlayer().getAccountName());
         sceneController.displayOverviewScene(this.gameController, event);

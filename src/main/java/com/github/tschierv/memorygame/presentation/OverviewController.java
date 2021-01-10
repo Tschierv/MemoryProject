@@ -13,7 +13,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -22,7 +21,7 @@ public class OverviewController implements Initializable {
     @FXML private Button OverviewbuttonRemove;
     @FXML private Button OverviewbuttonAddUser;
     @FXML private Button OverviewbuttonSelect;
-    @FXML private TableView playerOverviewTable;
+    @FXML private TableView<Player> playerOverviewTable;
     @FXML private Text OverviewtextTitle;
 
     private final GameController gameController;
@@ -56,21 +55,21 @@ public class OverviewController implements Initializable {
         this.playerOverviewTable.getSortOrder().addAll(playerScore, playerName);
     }
     @FXML public void OverviewbuttonAddUserPushed(ActionEvent event) {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayRegScene(this.gameController, event);
     }
 
     @FXML public void OverviewbuttonRemovePushed(ActionEvent event) {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
+        Player playerName = playerOverviewTable.getSelectionModel().getSelectedItem();
         this.gameController.setCurrentPlayer(playerName.getAccountName());
         sceneController.displayDeleteConfScene(this.gameController, event);
     }
     @FXML public void OverviewbuttonSelectPushed(ActionEvent event) {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
-        Player playerName = (Player) playerOverviewTable.getSelectionModel().getSelectedItem();
+        Scene scene =  ((Node)event.getSource()).getScene();
+        Player playerName = playerOverviewTable.getSelectionModel().getSelectedItem();
         SceneController sceneController = new SceneController(scene);
         if (playerName != null) {
             this.gameController.setCurrentPlayer(playerName.getAccountName());

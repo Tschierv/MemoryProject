@@ -15,17 +15,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.apache.commons.io.IOUtils;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.UUID;
 
 
@@ -54,8 +45,7 @@ public class Main extends Application {
 	}
     private GameController createGameController(){
 		PlayerController playerController = this.createPlayerController();
-		CardController cardController = null;
-		cardController = new CardController(new ImageRepository("com/github/tschierv/memorygame/presentation/picture"));
+		CardController cardController = new CardController(new ImageRepository("com/github/tschierv/memorygame/presentation/picture"));
 		BoardController boardController = new BoardController(cardController);
 		return new GameController(playerController, boardController);
 	}

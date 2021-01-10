@@ -6,6 +6,12 @@ import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The PlayerRepository class implements a in-Memory version of the PlayerRepository Interface.
+ * It allows for quick testing without worrying about filesystem and IO related issues.
+ * <p></p>
+ * All the Players get stored in an HashMap, this makes this implementation volatile.
+ */
 public class PlayerRepository implements PlayerRepositoryService {
     Map<String, Player> players = new HashMap<>();
 

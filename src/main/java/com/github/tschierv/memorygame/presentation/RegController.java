@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,14 +26,14 @@ public class RegController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) { }
 
-    @FXML public void RegbuttonAddPushed(ActionEvent event) throws IOException {
+    @FXML public void RegbuttonAddPushed(ActionEvent event) {
         this.gameController.addPlayer(RegtextUsername.getText());
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayOverviewScene(this.gameController, event);
     }
-    @FXML public void RegbuttonCancelPushed(ActionEvent event) throws IOException {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+    @FXML public void RegbuttonCancelPushed(ActionEvent event) {
+        Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayOverviewScene(this.gameController, event);
     }

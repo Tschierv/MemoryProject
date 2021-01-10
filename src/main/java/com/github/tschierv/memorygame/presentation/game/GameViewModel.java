@@ -29,7 +29,7 @@ public class GameViewModel {
     /**
      * Constructor for GameViewModel class
      *
-     * @param gameController
+     * @param gameController Constructor takes the current instance of a gameController
      */
     public GameViewModel(GameController gameController){
         this.gameController = gameController;
@@ -78,7 +78,7 @@ public class GameViewModel {
         if (this.remainingClickCount == 0) {
             return;
         }
-        if (cardViewModel.isCardfaceup() == true){
+        if (cardViewModel.isCardfaceup()){
             return;
         }
 
@@ -99,7 +99,7 @@ public class GameViewModel {
                 this.remainingClickCount = 2;
             });
         }
-        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true)) {
+        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(Card::isCardFaceSideUp)) {
             return;
         }
 
@@ -119,9 +119,7 @@ public class GameViewModel {
         ObservableList<Node> gridPaneChildrens = currentGameGride.getChildren();
         for ( Node node : gridPaneChildrens) {
             CardViewModel cardViewModel = ((CardViewModel) node);
-            cardViewModel.setCardToFaceUp(() -> {
-                cardViewModel.setCardToBackUp();
-            });
+            cardViewModel.setCardToFaceUp(cardViewModel::setCardToBackUp);
         }
     }
 

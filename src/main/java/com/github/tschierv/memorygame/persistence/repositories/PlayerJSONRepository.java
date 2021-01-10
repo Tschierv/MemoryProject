@@ -4,21 +4,20 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import org.json.simple.JSONObject;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The PlayerJSONRepository class implements a JSON file based version of the PlayerRepository Interface.
+ * It allows the game to persist player details and scores between game sessions as they get stored on the filesystem.
+ */
 public class PlayerJSONRepository implements PlayerRepositoryService {
     @Override
     public Map<String, Player> getAllPlayers() {
@@ -31,7 +30,6 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
         }
 
         try {
-            HashMap<String, Player> map = new HashMap<String, Player>();
             players = objectreaderMapper.readValue(jsonFile, new TypeReference<Map<String, Player>>(){});
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,7 +49,6 @@ public class PlayerJSONRepository implements PlayerRepositoryService {
     }
 
     private void createNewFile(File jsonFile){
-        FileWriter fileWriter = null;
         JSONObject jsonObject = new JSONObject();
         try {
             jsonFile.createNewFile();

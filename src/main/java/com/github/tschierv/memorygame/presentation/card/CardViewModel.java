@@ -12,10 +12,9 @@ import javafx.util.Duration;
 
 
 public class CardViewModel extends StackPane {
-    private ImageView cardImageView;
-    private ImageView cardBackView;
-    private Text animalNameAsText = new Text();
-    private Card card;
+    private final ImageView cardImageView;
+    private final ImageView cardBackView;
+    private final Card card;
 
     public CardViewModel(Card card)  {
         Image cardImage = new Image(card.CardImage.toString());
@@ -24,7 +23,8 @@ public class CardViewModel extends StackPane {
         this.cardImageView = new ImageView(cardImage);
         this.card = card;
 
-        this.animalNameAsText.setText(FilenameUtils.getBaseName(card.getCardImage().getPath()));
+        Text animalNameAsText = new Text();
+        animalNameAsText.setText(FilenameUtils.getBaseName(card.getCardImage().getPath()));
         getChildren().addAll(cardBackView, cardImageView);
         this.setCardToBackUp();
     }

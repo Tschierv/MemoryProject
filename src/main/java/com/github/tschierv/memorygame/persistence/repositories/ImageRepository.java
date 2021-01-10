@@ -1,28 +1,31 @@
 package com.github.tschierv.memorygame.persistence.repositories;
-import com.github.tschierv.memorygame.Main;
 import com.github.tschierv.memorygame.domain.card.IImageRepositoryService;
-import com.github.tschierv.memorygame.domain.player.Player;
-import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import org.apache.commons.io.IOUtils;
 
-import javax.imageio.ImageIO;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
+/**
+ * Class implements the IImageRepsoitory Interface
+ * Allows for loading images either located in a resource folder or in a jar file.
+ *
+ * Storing new Images is not supported by this class
+ */
 public class ImageRepository implements IImageRepositoryService {
     Map<UUID, URL> images = new HashMap<>();
 
+    /**
+     * Constructor method loads all file URLs of the found image files in the ImageDirPath into a ArrayList
+     *
+     * @param ImageDirPath String representation of the image directory path use full path.
+     *                     example: com/github/tschierv/memorygame/presenation/picture
+     */
     public ImageRepository(String ImageDirPath)  {
-        List<URL> ImageFiles = new ArrayList<URL>();
+        List<URL> ImageFiles = new ArrayList<>();
+        // getResource API doesn't support Directory listing, therefore using getResourceAsStream
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(ImageDirPath)) {
             List<String> result = IOUtils.readLines(inputStream, StandardCharsets.UTF_8);
             for (String file : result) {

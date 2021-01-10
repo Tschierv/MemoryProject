@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,8 +25,8 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
 
-    @FXML public void MainbuttonStartPushed(ActionEvent event) throws IOException {
-        Scene scene = (Scene) ((Node)event.getSource()).getScene();
+    @FXML public void MainbuttonStartPushed(ActionEvent event) {
+        Scene scene =  ((Node)event.getSource()).getScene();
         sceneController = new SceneController(scene);
         sceneController.displayOverviewScene(gameController, event);
     }

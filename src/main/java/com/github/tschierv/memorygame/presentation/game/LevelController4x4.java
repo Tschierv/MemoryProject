@@ -17,7 +17,7 @@ import java.util.*;
 
 public class LevelController4x4 implements Initializable {
 
-    @FXML private Double Grid4x4Size;
+    @FXML private final Double Grid4x4Size;
     @FXML private GridPane LevelGridPane;
     @FXML private Text  Username;
     @FXML private Text Counter;
