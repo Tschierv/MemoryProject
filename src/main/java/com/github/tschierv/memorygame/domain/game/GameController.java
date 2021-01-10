@@ -12,17 +12,33 @@ import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistExce
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * The GameController Class manges/handles all the UseCases related to the game mechanics.
+ */
 public class GameController {
     private final PlayerController playerController;
     private final BoardController boardController;
     private Player selectedPlayer = null;
     private Game currentGame;
 
+    /**
+     * Constructor for GameController, receives the needed controllers for handling
+     * game related state.
+     *
+     * @param playerController  handles Player state (CRUD)
+     * @param boardController   handles Board state
+     */
     public GameController(PlayerController playerController, BoardController boardController){
         this.playerController = playerController;
         this.boardController = boardController;
 
     }
+
+    /**
+     * Create a new Game in the correct size for the defined player
+     * @param player_name  name of the current player
+     * @param GameSize     size of the gameboard, amount of cards wanted
+     */
     public void createGameforPlayer(String player_name, Integer GameSize){
         Board board = boardController.createBoard(GameSize);
         Player player = null;
@@ -126,6 +142,7 @@ public class GameController {
 
     }*/
         private boolean isGameCompleted(){
+            System.out.println(this.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true));
             return this.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true);
         }
 }

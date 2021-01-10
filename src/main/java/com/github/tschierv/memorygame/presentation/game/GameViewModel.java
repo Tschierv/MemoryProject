@@ -13,11 +13,27 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Handles all the UI logic related to the Gameboard like the creation of a game-grid,
+ * or the selection of cards, mouse-clicks.
+ * <p>
+ * This Class can be re-used for all the different board sizes (4x4, 6x6, 10x10) therefore
+ * reducing duplicated code-
+ *
+ */
 public class GameViewModel {
     private final GameController gameController;
     public Text counter = new Text();
     public int remainingClickCount = 2;
+
+    /**
+     * Constructor for GameViewModel class
+     *
+     * @param gameController
+     */
+    public GameViewModel(GameController gameController){
+        this.gameController = gameController;
+    }
 
     public List<CardViewModel> getSelectedCards() {
         return selectedCards;
@@ -37,10 +53,6 @@ public class GameViewModel {
 
     private List<CardViewModel> selectedCards = new ArrayList<>();
 
-    public GameViewModel(GameController gameController){
-        this.gameController = gameController;
-    }
-
     public Text getCounter(){
         return this.counter;
     }
@@ -56,6 +68,12 @@ public class GameViewModel {
         return this.gameController.ismatchingCardPair(checkMatching);
     }
 
+    /**
+     * Handles all the actions behind a card selection
+     * Always returns void
+     * @param event
+     * @param cardViewModel
+     */
     public void handleMouseSelection(MouseEvent event, CardViewModel cardViewModel){
         if (this.remainingClickCount == 0)
             return;
@@ -81,13 +99,9 @@ public class GameViewModel {
         if (!this.gameController.getCurrentGame().getCards().stream().allMatch(x -> x.CardFaceSideUp == true)) {
             return;
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Game completed");
-        alert.setHeaderText(null);
-        alert.setContentText("You won the game, you are great!");
-        alert.showAndWait();
 
         this.gameController.setNewPlayerScore();
+        this.displayCelebrationDialog();
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         sceneController.displayLevelScene(this.gameController, event);
@@ -102,6 +116,21 @@ public class GameViewModel {
         }
     }
 
+    private void displayCelebrationDialog(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Game completed");
+        alert.setHeaderText(null);
+        alert.setContentText("You won the game, you are great!");
+        alert.showAndWait();
+    }
+
+    /**
+     * Class method responsible for creating a squared grid and populating it with CardviewModels.
+     * Every CardviewModel get equipped with a Mouse Clicked events.
+     *
+     * @param gridSize  Size used for width and length of every node in grid
+     * @return gameGrid
+     */
     public GridPane createGrid(Double gridSize ){
         List<Card> currentCarddeck = this.gameController.getCurrentGame().getCards();
         int cardIndex = 0;
