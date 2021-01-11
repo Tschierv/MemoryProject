@@ -13,9 +13,9 @@
             <Image url="@menue/Level.jpeg" />
          </image>
       </ImageView>
-      <Text fx:id="Leveltext" layoutX="287.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="140.0000022687018" />
-      <Button fx:id="LevelbuttonEasy" layoutX="205.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonEasyPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Easy" />
-      <Button fx:id="LevelbuttonNormal" layoutX="306.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonNormalPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Normal" />
-      <Button fx:id="LevelbuttonHard" layoutX="407.0" layoutY="286.0" mnemonicParsing="false" onAction="#LevelbuttonHardPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Hard" />
+      <Text fx:id="Leveltext" layoutX="241.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Your Level" wrappingWidth="204.0000022687018" />
+      <Button fx:id="LevelbuttonEasy" layoutX="205.0" layoutY="274.0" mnemonicParsing="false" onAction="#LevelbuttonEasyPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Easy" />
+      <Button fx:id="LevelbuttonNormal" layoutX="306.0" layoutY="274.0" mnemonicParsing="false" onAction="#LevelbuttonNormalPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Normal" />
+      <Button fx:id="LevelbuttonHard" layoutX="407.0" layoutY="274.0" mnemonicParsing="false" onAction="#LevelbuttonHardPushed" prefHeight="25.0" prefWidth="90.0" styleClass="Levelbutton" text="Hard" />
    </children>
 </AnchorPane>
