@@ -12,5 +12,5 @@
    </ImageView>
    <Button fx:id="MainbuttonStart" layoutX="283.0" layoutY="220.0" mnemonicParsing="false" onAction="#MainbuttonStartPushed" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Start" />
    <Button fx:id="MainbuttonExit" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" onAction="#MainbuttonExitPushed" prefHeight="47.0" prefWidth="98.0" styleClass="Mainbutton" text="Exit" />
-   <Text fx:id="MaintextTitle" layoutX="252.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory" wrappingWidth="197.52473831176758" />
+   <Text fx:id="MaintextTitle" layoutX="252.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Memory" wrappingWidth="197.52473831176758" />
 </AnchorPane>
