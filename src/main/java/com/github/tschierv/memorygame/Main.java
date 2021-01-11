@@ -11,13 +11,19 @@ import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerJSONRepository;
 import com.github.tschierv.memorygame.presentation.MainController;
 import javafx.application.Application;
+import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.*;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.UUID;
+
+import static javafx.scene.media.MediaPlayer.INDEFINITE;
 
 
 public class Main extends Application {
@@ -42,6 +48,17 @@ public class Main extends Application {
 		primaryStage.setScene(MainViewScene);
 		primaryStage.setTitle("Animal Memory");
 		primaryStage.show();
+		final Task task = new Task() {
+
+			@Override
+			protected Object call() throws Exception {
+				MediaPlayer mediaPlayer = getMediaPlayer();
+				mediaPlayer.play();
+				return null;
+			}
+		};
+		Thread thread = new Thread(task);
+		thread.start();
 	}
     private GameController createGameController(){
 		PlayerController playerController = this.createPlayerController();
@@ -63,5 +80,27 @@ public class Main extends Application {
 		return playerController;
 	}
 
+	private MediaPlayer getMediaPlayer() {
+		URL mediaUrl = getClass().getClassLoader().getResource("com/github/tschierv/memorygame/sound/safari_loop.mp3");
+		String mediaStringUrl = mediaUrl.toExternalForm();
+		Media media = new Media(mediaStringUrl);
+		MediaPlayer player = null;
+		try {
+			player = new MediaPlayer(media);
+		} catch (MediaException e) {
+			System.out.println("Can't Play sound!");
+		}
+		if (player != null) {
+			MediaPlayer finalPlayer = player;
+			player.setOnEndOfMedia(new Runnable() {
+				public void run() {
+					finalPlayer.seek(Duration.ZERO);
+				}
+			});
+			player = finalPlayer;
+		}
+
+		return player;
+	}
 }
 
