@@ -30,12 +30,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/GameCompletedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/GameCompletedView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
@@ -77,7 +75,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -85,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
       <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -106,6 +105,7 @@
       <recent name="com.github.tschierv.memorygame.domain.game" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.tschierv.memorygame.presentation" />
       <recent name="com.github.tschierv.memorygame.domain.player.usecase" />
       <recent name="com.github.tschierv.memorygame.persistence.repositories" />
       <recent name="com.github.tschierv.memorygame.domain.card.usecase" />
@@ -202,7 +202,7 @@
       <workItem from="1610293395202" duration="13691000" />
       <workItem from="1610350183357" duration="821000" />
       <workItem from="1610401330351" duration="8865000" />
-      <workItem from="1610484961656" duration="2156000" />
+      <workItem from="1610484961656" duration="5172000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -442,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610436243803</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Improvement: Go to no user selected screen if no user has been selected.">
+      <created>1610566922755</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610566922755</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +480,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improvement: Move gameboard related controllers to game package" />
     <MESSAGE value="Fix: Fix issue with more than two cards being selected by introducing a remaining click counter" />
     <MESSAGE value="Improvement: Moving more logic out of the different LevelControllers into the GameViewModel allowing for better code re-use" />
     <MESSAGE value="Improvment: Small code clean ups" />
@@ -498,7 +504,8 @@
     <MESSAGE value="Improvements: Adding more DocStrings and performing some code clean up" />
     <MESSAGE value="Improvement: Adding first attempts for playing sound" />
     <MESSAGE value="Improvement: Go to no user selected screen if no user has been selected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Go to no user selected screen if no user has been selected" />
+    <MESSAGE value="Improvement: Go to no user selected screen if no user has been selected." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Go to no user selected screen if no user has been selected." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -110,6 +110,14 @@ public class SceneController {
         window.show();
     }
 
+    public void displayGameCompletedScene(GameController gameController, Event event) {
+        FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/GameCompletedView.fxml");
+        GameCompletedController gameCompletedController = new GameCompletedController(gameController);
+        Scene levelScene = this.getScene(fxmlLoader, gameCompletedController);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(levelScene);
+        window.show();
+    }
 
     public void displayLevel4x4Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/LevelView4x4.fxml");

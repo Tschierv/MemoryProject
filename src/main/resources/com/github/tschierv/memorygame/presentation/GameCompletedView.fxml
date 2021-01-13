@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menue/NoUser.jpeg" />
+         </image>
+      </ImageView>
+      <Text fx:id="GameCompletedtextTitle" layoutX="266.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="congratulations you won" wrappingWidth="192.13671875" />
+      <Button fx:id="GameCompletedbuttonOk" onAction="#GameCompletedbuttonOkPushed" layoutX="294.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
+   </children>
+</AnchorPane>

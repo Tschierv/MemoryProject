@@ -104,9 +104,9 @@ public class GameViewModel {
         }
 
         this.gameController.setNewPlayerScore();
-        this.displayCelebrationDialog();
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
+        sceneController.displayGameCompletedScene(this.gameController, event);
         sceneController.displayLevelScene(this.gameController, event);
     }
 
