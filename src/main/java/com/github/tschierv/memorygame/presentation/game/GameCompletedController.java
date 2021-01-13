@@ -1,6 +1,7 @@
-package com.github.tschierv.memorygame.presentation;
+package com.github.tschierv.memorygame.presentation.game;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.presentation.SceneController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
