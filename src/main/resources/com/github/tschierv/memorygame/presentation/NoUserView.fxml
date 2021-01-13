@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.tschierv.memorygame.presentation.NoUserController">
+<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -14,6 +14,6 @@
          </image>
       </ImageView>
       <Text fx:id="NoUsertextTitle" layoutX="264.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" wrappingWidth="192.13671875" />
-      <Button fx:id="NoUserbuttonOk" layoutX="294.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
+      <Button fx:id="NoUserbuttonOk" onAction="#NoUserbuttonOkPushed" layoutX="294.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
    </children>
 </AnchorPane>

@@ -36,8 +36,6 @@ public class OverviewController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.initializeData();
         this.createTableViewfromObservableList();
-        this.OverviewbuttonSelect.disableProperty().bind(playerOverviewTable.getSelectionModel().selectedItemProperty().isNull());
-        this.OverviewbuttonRemove.disableProperty().bind(playerOverviewTable.getSelectionModel().selectedItemProperty().isNull());
     }
 
     public void initializeData(){
@@ -64,8 +62,12 @@ public class OverviewController implements Initializable {
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
         Player playerName = playerOverviewTable.getSelectionModel().getSelectedItem();
-        this.gameController.setCurrentPlayer(playerName.getAccountName());
-        sceneController.displayDeleteConfScene(this.gameController, event);
+        if (playerName != null) {
+            this.gameController.setCurrentPlayer(playerName.getAccountName());
+            sceneController.displayDeleteConfScene(this.gameController, event);
+        } else {
+            sceneController.displayNoUserScene(this.gameController, event);
+        }
     }
     @FXML public void OverviewbuttonSelectPushed(ActionEvent event) {
         Scene scene =  ((Node)event.getSource()).getScene();

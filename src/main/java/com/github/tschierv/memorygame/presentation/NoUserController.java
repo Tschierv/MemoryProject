@@ -1,8 +1,12 @@
 package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.domain.game.GameController;
+import com.github.tschierv.memorygame.domain.player.Player;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
@@ -21,7 +25,9 @@ public class NoUserController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
 
-    @FXML public void NoUserbuttonOkPushed(){
-
+    @FXML public void NoUserbuttonOkPushed(ActionEvent event){
+        Scene scene =  ((Node)event.getSource()).getScene();
+        SceneController sceneController = new SceneController(scene);
+        sceneController.displayOverviewScene(this.gameController, event);
     }
 }

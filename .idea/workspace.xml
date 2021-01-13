@@ -30,9 +30,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/domain/game/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.json" beforeDir="false" afterPath="$PROJECT_DIR$/player.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/NoUserView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,9 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1mBpNHJ23Vjt6X16Ly4bIYgfJrS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,6 +75,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -84,6 +91,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\sound" />
       <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation\menue" />
       <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame" />
       <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
@@ -94,6 +102,7 @@
       <recent name="com.github.tschierv.memorygame.presentation" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.tschierv.memorygame" />
       <recent name="com.github.tschierv.memorygame.domain.game" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -109,7 +118,7 @@
       <module name="MemoryProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.tschierv.memorygame.presentation.game.*" />
+          <option name="PATTERN" value="com.github.tschierv.memorygame.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,15 +126,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.getPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MemoryProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.tschierv.memorygame.domain.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.tschierv.memorygame.domain.game" />
+      <option name="MAIN_CLASS_NAME" value="com.github.tschierv.memorygame.domain.game.GameTest" />
+      <option name="METHOD_NAME" value="getPlayer" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,10 +161,6 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar (4)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <method v="2" />
-    </configuration>
     <configuration name="MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <method v="2" />
@@ -149,8 +168,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GameTest.getPlayer" />
         <item itemvalue="JAR Application.MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-        <item itemvalue="JAR Application.MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar (4)" />
         <item itemvalue="JAR Application.MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar (3)" />
         <item itemvalue="JAR Application.MemoryProject-1.0-SNAPSHOT-jar-with-dependencies.jar (2)" />
       </list>
@@ -180,7 +199,10 @@
       <workItem from="1610190595876" duration="31000" />
       <workItem from="1610190674393" duration="6134000" />
       <workItem from="1610226393148" duration="17685000" />
-      <workItem from="1610293395202" duration="12497000" />
+      <workItem from="1610293395202" duration="13691000" />
+      <workItem from="1610350183357" duration="821000" />
+      <workItem from="1610401330351" duration="8865000" />
+      <workItem from="1610484961656" duration="2156000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -406,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610314680967</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Improvements: Adding more DocStrings and performing some code clean up">
+      <created>1610348140647</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1610348140647</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Improvement: Adding first attempts for playing sound">
+      <created>1610436243803</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1610436243803</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,9 +473,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: Implementing working counter and card matching for all board sizes" />
-    <MESSAGE value="Improvement: Moving files around to get a more cleaner code" />
-    <MESSAGE value="Improvement: Moving game controllers to game package to get a more cleaner code" />
     <MESSAGE value="Improvement: Move gameboard related controllers to game package" />
     <MESSAGE value="Fix: Fix issue with more than two cards being selected by introducing a remaining click counter" />
     <MESSAGE value="Improvement: Moving more logic out of the different LevelControllers into the GameViewModel allowing for better code re-use" />
@@ -462,7 +495,10 @@
     <MESSAGE value="Improvement: Adding simple &quot;you won&quot; dialog at the end of a game" />
     <MESSAGE value="Documentation: Adding first comments to most important classes" />
     <MESSAGE value="Fix: Pair is no longer populated with the same object, now two card with the same id and image get used. this fixes issues with card selection and games ending before all cards have been found." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Pair is no longer populated with the same object, now two card with the same id and image get used. this fixes issues with card selection and games ending before all cards have been found." />
+    <MESSAGE value="Improvements: Adding more DocStrings and performing some code clean up" />
+    <MESSAGE value="Improvement: Adding first attempts for playing sound" />
+    <MESSAGE value="Improvement: Go to no user selected screen if no user has been selected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Go to no user selected screen if no user has been selected" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
