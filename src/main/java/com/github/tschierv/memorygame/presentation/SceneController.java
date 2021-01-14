@@ -64,88 +64,68 @@ public class SceneController {
     public void displayMainScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/MainView.fxml");
         MainController mainController = new MainController(gameController);
-        Scene mainScene = this.getScene(fxmlLoader, mainController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(mainScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, mainController));
     }
     public void displayOverviewScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/OverviewView.fxml");
         OverviewController overviewController = new OverviewController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, overviewController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, overviewController));
     }
     public void displayLevelScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/LevelView.fxml");
         LevelController levelController = new LevelController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, levelController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, levelController));
     }
     public void displayRegScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/RegView.fxml");
         RegController regController = new RegController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, regController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, regController));
     }
 
     public void displayDeleteConfScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/DeleteConfView.fxml");
         DeleteConfController deleteConfController = new DeleteConfController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader,deleteConfController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader,deleteConfController));
     }
 
     public void displayNoUserScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/NoUserView.fxml");
         NoUserController noUserController = new NoUserController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, noUserController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        displayScene(event, this.getScene(fxmlLoader, noUserController));
+    }
+
+    private void displayScene(Event event, Scene scene) {
+        Scene levelScene = scene;
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(levelScene);
         window.show();
     }
 
+    public void displayAnimalPairScene(GameController gameController, Event event){
+
+    }
     public void displayGameCompletedScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/GameCompletedView.fxml");
         GameCompletedController gameCompletedController = new GameCompletedController(gameController);
-        Scene levelScene = this.getScene(fxmlLoader, gameCompletedController);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, gameCompletedController));
     }
 
     public void displayLevel4x4Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/LevelView4x4.fxml");
         LevelController4x4 levelController4x4 = new LevelController4x4(gameController);
-        Scene leveleasyScene = this.getScene(fxmlLoader, levelController4x4);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(leveleasyScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, levelController4x4));
     }
 
     public void displayLevel6x6Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/LevelView6x6.fxml");
         LevelController6x6 levelController6x6 = new LevelController6x6(gameController);
-        Scene leveleasyScene = this.getScene(fxmlLoader, levelController6x6);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(leveleasyScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, levelController6x6));
     }
 
     public void displayLevel10x10Scene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/LevelView10x10.fxml");
         LevelController10x10 levelController10x10 = new LevelController10x10(gameController);
-        Scene levelhardScene = this.getScene(fxmlLoader, levelController10x10);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(levelhardScene);
-        window.show();
+        displayScene(event, this.getScene(fxmlLoader, levelController10x10));
     }
 
 }
