@@ -11,6 +11,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -25,7 +27,6 @@ public class GameViewModel {
     private final GameController gameController;
     public Text counter = new Text();
     public int remainingClickCount = 2;
-
     /**
      * Constructor for GameViewModel class
      *
@@ -95,8 +96,14 @@ public class GameViewModel {
                     this.getSelectedCards().get(1).setCardToBackUp();
                     this.increaseCounter();
                 }
+                if (this.isMatchedPair()) {
+                    Scene scene = ((Node)event.getSource()).getScene();
+                    SceneController sceneController = new SceneController(scene);
+                    sceneController.displayAnimalPairScene(this.gameController,cardViewModel, event);
+                }
                 this.clearSelectedCards();
                 this.remainingClickCount = 2;
+
             });
         }
         if (!this.gameController.getCurrentGame().getCards().stream().allMatch(Card::isCardFaceSideUp)) {

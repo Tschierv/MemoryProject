@@ -2,16 +2,16 @@ package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.Main;
 import com.github.tschierv.memorygame.domain.game.GameController;
-import com.github.tschierv.memorygame.presentation.game.GameCompletedController;
-import com.github.tschierv.memorygame.presentation.game.LevelController10x10;
-import com.github.tschierv.memorygame.presentation.game.LevelController4x4;
-import com.github.tschierv.memorygame.presentation.game.LevelController6x6;
+import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import com.github.tschierv.memorygame.presentation.game.*;
 import com.github.tschierv.memorygame.presentation.menu.*;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -95,15 +95,22 @@ public class SceneController {
     }
 
     private void displayScene(Event event, Scene scene) {
-        Scene levelScene = scene;
+        Scene wantedScene = scene;
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(levelScene);
+        window.setScene(wantedScene);
         window.show();
     }
 
-    public void displayAnimalPairScene(GameController gameController, Event event){
-
+    public void displayAnimalPairScene(GameController gameController, CardViewModel cardViewModel, Event event){
+        FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/AnimalPairView.fxml");
+        Stage stage = new Stage();
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.setTitle("You have a Match!");
+        Initializable ViewController = new AnimalPairController(gameController, cardViewModel);
+        stage.setScene(getScene(fxmlLoader, ViewController));
+        stage.show();
     }
+
     public void displayGameCompletedScene(GameController gameController, Event event) {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/GameCompletedView.fxml");
         GameCompletedController gameCompletedController = new GameCompletedController(gameController);

@@ -67,4 +67,8 @@ public class CardViewModel extends StackPane {
         return this.card;
     }
 
+    public ImageView getCardImageView(){
+        return this.cardImageView;
+    }
+
 }
