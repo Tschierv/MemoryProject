@@ -14,6 +14,6 @@
          </image>
       </ImageView>
       <Text fx:id="NoUsertextTitle" layoutX="230.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No User selected" textAlignment="CENTER" wrappingWidth="192.13671875" />
-      <Button fx:id="NoUserbuttonOk" layoutX="293.0" layoutY="256.0" mnemonicParsing="false" onAction="#NoUserbuttonOkPushed" prefHeight="25.0" prefWidth="65.0" styleClass="NoUserbutton" text="Ok" />
+      <Button fx:id="NoUserbuttonOk" layoutX="293.0" layoutY="256.0" mnemonicParsing="false" onAction="#NoUserbuttonOkPushed" prefHeight="30.0" prefWidth="82.0" styleClass="NoUserbutton" text="Ok" />
    </children>
 </AnchorPane>

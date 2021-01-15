@@ -77,15 +77,33 @@
 #NoUsertextTitle
 {
 	-fx-alignment: center;
-	-fx-font:15 "Courier";
+	-fx-font:25 "Courier";
 	-fx-font-style: italic;
 }
 
 .NoUserbutton
 {
 	-fx-alignment: center;
-	-fx-font:10 "Courier"
-		
+	-fx-font:15 "Courier"
+}
+
+.NoUserbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+
+.NoUserbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font: 18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color: rgb(135, 206, 235);
+	-fx-text-fill: rgb(34, 139, 34);
 }
 
 /*DeleteCon*/
