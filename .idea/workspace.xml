@@ -30,14 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/AnimalPairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/AnimalPairView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.json" beforeDir="false" afterPath="$PROJECT_DIR$/player.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/DeleteConfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/menu/DeleteConfController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/menu/LevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/NoUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/menu/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/RegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/menu/RegController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/card/CardViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/GameViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tschierv/memorygame/presentation/game/LevelController4x4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +78,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -99,9 +100,9 @@
       <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.github.tschierv.memorygame.presentation.game" />
       <recent name="com.github.tschierv.memorygame.presentation.menu" />
       <recent name="com.github.tschierv.memorygame" />
-      <recent name="com.github.tschierv.memorygame.presentation.game" />
       <recent name="com.github.tschierv.memorygame.presentation" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -109,11 +110,11 @@
       <recent name="com.github.tschierv.memorygame.domain.game" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.tschierv.memorygame.presentation.game" />
       <recent name="com.github.tschierv.memorygame.presentation" />
       <recent name="com.github.tschierv.memorygame.domain.player.usecase" />
       <recent name="com.github.tschierv.memorygame.persistence.repositories" />
       <recent name="com.github.tschierv.memorygame.domain.card.usecase" />
-      <recent name="com.github.tschierv.memorygame.application" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -206,7 +207,9 @@
       <workItem from="1610293395202" duration="13691000" />
       <workItem from="1610350183357" duration="821000" />
       <workItem from="1610401330351" duration="8865000" />
-      <workItem from="1610484961656" duration="5747000" />
+      <workItem from="1610484961656" duration="6135000" />
+      <workItem from="1610572758545" duration="2983000" />
+      <workItem from="1610636811990" duration="10567000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -460,7 +463,42 @@
       <option name="project" value="LOCAL" />
       <updated>1610572047886</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Improvement: Moving files to menu package to make the code cleaner">
+      <created>1610572606590</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610572606590</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Improvement: Moving files to menu package to make the code cleaner">
+      <created>1610572715761</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1610572715761</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Improvement: Moving files to menu package to make the code cleaner">
+      <created>1610572921855</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1610572921855</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Improvement: Moving often duplicated code into separated methode for better re-use of functionality">
+      <created>1610693657091</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610693657091</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Improvement: Removing test user set from being created, this functionality is not required/wanted">
+      <created>1610695352115</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610695352115</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,9 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improvement: Moving more logic out of the different LevelControllers into the GameViewModel allowing for better code re-use" />
-    <MESSAGE value="Improvment: Small code clean ups" />
-    <MESSAGE value="Feature: Implementing game completion (wining)" />
     <MESSAGE value="Feature: Implementing displaying score for a player" />
     <MESSAGE value="Improvement: Implementing new TableView to display players and there scores" />
     <MESSAGE value="Feature: Implementing first working version of jsonfile backend" />
@@ -516,7 +551,10 @@
     <MESSAGE value="Improvement: Go to no user selected screen if no user has been selected" />
     <MESSAGE value="Improvement: Go to no user selected screen if no user has been selected." />
     <MESSAGE value="Feature: Implementing game completed screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Implementing game completed screen" />
+    <MESSAGE value="Improvement: Moving files to menu package to make the code cleaner" />
+    <MESSAGE value="Improvement: Moving often duplicated code into separated methode for better re-use of functionality" />
+    <MESSAGE value="Improvement: Removing test user set from being created, this functionality is not required/wanted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement: Removing test user set from being created, this functionality is not required/wanted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

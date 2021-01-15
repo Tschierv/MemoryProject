@@ -67,16 +67,8 @@ public class Main extends Application {
 		return new GameController(playerController, boardController);
 	}
 	private PlayerController createPlayerController()  {
-		Player player_d = new Player("Root", UUID.randomUUID());
-		Player player_b = new Player("Rolf", UUID.randomUUID());
 		PlayerRepositoryService player_repo = new PlayerJSONRepository();
 		PlayerController playerController = new PlayerController(player_repo);
-		try {
-			playerController.createPlayer(player_d);
-			playerController.createPlayer(player_b);
-		} catch (PlayerAlreadyExistException e) {
-			e.printStackTrace();
-		}
 		return playerController;
 	}
 
