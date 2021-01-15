@@ -30,4 +30,10 @@ public class GameCompletedController implements Initializable {
         SceneController sceneController = new SceneController(scene);
         sceneController.displayLevelScene(this.gameController, event);
     }
+    @FXML
+    void GameCompletedbuttonExitPushed(ActionEvent event) {
+        System.exit(1);
+    }
+
+
 }

@@ -331,3 +331,36 @@
 	-fx-background-color:rgb(135,206,235);
 	-fx-text-fill:rgb(34,139,34);
 }
+
+/*GameCompleted*/
+
+#GameCompletedtext{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+
+
+.GameCompletedbutton
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier"
+
+}
+.GameCompletedbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+.GameCompletedbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
