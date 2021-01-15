@@ -6,15 +6,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="482.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="742.0" fitWidth="683.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="744.0" fitWidth="991.0" layoutX="-221.0" layoutY="-362.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@menue/NoUser.jpeg" />
+            <Image url="@menue/AnimalPairView.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="AnimalPairbuttonOk" layoutX="298.0" layoutY="333.0" mnemonicParsing="false" onAction="#AnimalPairbuttonOkPushed" prefHeight="25.0" prefWidth="48.0" styleClass="NoUserbutton" text="Ok" />
-      <ImageView fx:id="AnimalPairImageView" fitHeight="150.0" fitWidth="200.0" layoutX="246.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="AnimalPairLabel" layoutX="308.0" layoutY="285.0" text="Label" />
+      <Button fx:id="AnimalPairbuttonOk" layoutX="214.0" layoutY="280.0" mnemonicParsing="false" onAction="#AnimalPairbuttonOkPushed" prefHeight="25.0" prefWidth="55.0" styleClass="AnimalPairbutton" text="Ok" />
+      <ImageView fx:id="AnimalPairImageView" fitHeight="150.0" fitWidth="200.0" layoutX="164.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="AnimalPairLabel" layoutX="128.0" layoutY="246.0" prefHeight="17.0" prefWidth="228.0" styleClass="AnimalPairtext" text="Label" />
+      <Label fx:id="AnimalPairTitle" layoutX="154.0" layoutY="27.0" prefHeight="31.0" prefWidth="188.0" text="Couple Found" />
    </children>
 </AnchorPane>

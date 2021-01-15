@@ -332,6 +332,44 @@
 	-fx-text-fill:rgb(34,139,34);
 }
 
+/*AnimalPairView*/
+
+#AnimalPairTitle{
+	-fx-alignment: center;
+	-fx-font:25 "Courier";
+	-fx-font-style: italic;
+}
+.AnimalPairtext{
+	-fx-alignment: center;
+	-fx-font:20 "Courier";
+	-fx-font-style: italic;
+}
+
+.AnimalPairbutton
+{
+	-fx-alignment: center;
+	-fx-font:15 "Courier"
+
+}
+.AnimalPairbutton:hover
+{
+	-fx-alignment: center;
+	-fx-font:17 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(211,211,211);
+	-fx-text-fill:rgb(0,0,0);
+}
+
+.AnimalPairbutton:pressed
+{
+	-fx-alignment: center;
+	-fx-font:18 "Courier";
+	-fx-font-style: italic;
+	-fx-background-color:rgb(135,206,235);
+	-fx-text-fill:rgb(34,139,34);
+}
+
+
 /*GameCompleted*/
 
 #GameCompletedtext{
