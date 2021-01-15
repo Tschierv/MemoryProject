@@ -31,7 +31,7 @@ public class LevelController4x4 implements Initializable {
     public void Level4x4buttonExitPushed(ActionEvent event) {
         Scene scene = ((Node)event.getSource()).getScene();
         SceneController sceneController = new SceneController(scene);
-        sceneController.displayOverviewScene(this.gameController, event);
+        sceneController.displayMainScene(this.gameController, event);
     }
 
     @FXML public void Level4x4buttonHelpPushed(ActionEvent event){
