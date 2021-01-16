@@ -4,40 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <expand />
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="379ad235-ac50-4b42-9269-4fca91f91e2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/braunmantel-scherenschnabel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/braunmantel-scherenschnabel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/helmperlhuehner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/helmperlhuehner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/malachit eisvogel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/malachit eisvogel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/nilgaense.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/schmalschnabellöffler.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/schmalschnabellöffler.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/weissbrust kormorane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/weissbrust kormorane.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/zwergenflamingos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/zwergenflamingos.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/AnimalPairView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/AnimalPairView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture/tige.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +53,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/menue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/github/tschierv/memorygame/presentation/picture" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -106,6 +80,7 @@
       <recent name="com.github.tschierv.memorygame.presentation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation\picture" />
       <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation\menue" />
       <recent name="C:\Users\tzhbadav\Google Drive\DAS Information and Communication Technology\AAA_Prüfungsvorbereitung\Fallstudie - Projekt\ProjectCode\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
       <recent name="\\wsl$\Ubuntu-20.04\home\taahopa6\projects\zhaw\git\MemoryProject\src\main\resources\com\github\tschierv\memorygame\presentation" />
@@ -133,15 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -214,6 +187,7 @@
       <workItem from="1610484961656" duration="6135000" />
       <workItem from="1610572758545" duration="2983000" />
       <workItem from="1610636811990" duration="10567000" />
+      <workItem from="1610783824074" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Add card switching for all levels">
       <created>1608995419975</created>
@@ -514,6 +488,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -561,26 +540,46 @@
     <option name="LAST_COMMIT_MESSAGE" value="Improvement: Removing test user set from being created, this functionality is not required/wanted" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1860" height="185" key="GridCell.Tab.0.bottom" timestamp="1610725759668">
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1610784125332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610784125332" />
+    <state width="1860" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610726066102" />
+    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1610784125332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610784125332" />
+    <state width="1860" height="185" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610726066102" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1610784125332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610784125332" />
+    <state width="1860" height="185" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610726066101" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1610784125332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610784125332" />
+    <state width="1860" height="185" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610726066102" />
+    <state width="929" height="344" key="GridCell.Tab.1.bottom" timestamp="1610731913843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="929" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610731913843" />
+    <state width="929" height="344" key="GridCell.Tab.1.center" timestamp="1610731913843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="929" height="344" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610731913843" />
+    <state width="929" height="344" key="GridCell.Tab.1.left" timestamp="1610731913843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="929" height="344" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610731913843" />
+    <state width="929" height="344" key="GridCell.Tab.1.right" timestamp="1610731913843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="929" height="344" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610731913843" />
+    <state x="1986" y="0" width="1276" height="813" maximized="true" key="dock-window-1" timestamp="1610784432538">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610709877366" />
-    <state width="1860" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610725759668" />
-    <state width="1860" height="185" key="GridCell.Tab.0.center" timestamp="1610725759667">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610709877366" />
-    <state width="1860" height="185" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610725759667" />
-    <state width="1860" height="185" key="GridCell.Tab.0.left" timestamp="1610725759667">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610709877365" />
-    <state width="1860" height="185" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610725759667" />
-    <state width="1860" height="185" key="GridCell.Tab.0.right" timestamp="1610725759667">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610709877366" />
-    <state width="1860" height="185" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610725759667" />
+    <state x="1986" y="0" width="1276" height="813" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610784432538" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
