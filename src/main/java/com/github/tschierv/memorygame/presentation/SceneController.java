@@ -98,6 +98,7 @@ public class SceneController {
         Scene wantedScene = scene;
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(wantedScene);
+        window.centerOnScreen();
         window.show();
     }
 
@@ -105,6 +106,7 @@ public class SceneController {
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/AnimalPairView.fxml");
         Stage stage = new Stage();
         stage.setResizable(false);
+        stage.centerOnScreen();
         stage.initModality(Modality.WINDOW_MODAL);
         stage.setTitle("You have a Match!");
         Initializable ViewController = new AnimalPairController(gameController, cardViewModel);

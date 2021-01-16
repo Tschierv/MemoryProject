@@ -19,7 +19,7 @@
          <viewport>
             <Rectangle2D />
          </viewport></ImageView>
-      <Label fx:id="AnimalPairLabel" layoutX="37.0" layoutY="246.0" prefHeight="17.0" prefWidth="435.0" styleClass="AnimalPairtext" text="Label" textAlignment="CENTER" />
-      <Label fx:id="AnimalPairTitle" layoutX="154.0" layoutY="27.0" prefHeight="31.0" prefWidth="188.0" text="Couple Found" />
+      <Label fx:id="AnimalPairLabel" layoutX="22.0" layoutY="241.0" prefHeight="17.0" prefWidth="435.0" styleClass="AnimalPairtext" text="Label" textAlignment="CENTER" />
+      <Label fx:id="AnimalPairTitle" layoutX="146.0" layoutY="27.0" prefHeight="31.0" prefWidth="188.0" text="Couple Found" />
    </children>
 </AnchorPane>
