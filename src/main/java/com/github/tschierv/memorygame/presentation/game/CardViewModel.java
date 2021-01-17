@@ -10,6 +10,10 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+
 
 public class CardViewModel extends StackPane {
     private final ImageView cardImageView;
@@ -39,7 +43,12 @@ public class CardViewModel extends StackPane {
     public Label getAnimalName() {
         Label animalName = new Label();
         animalName.setWrapText(true);
-        animalName.setText(FilenameUtils.getBaseName(this.card.getCardImage().toString()));
+        String encodedName = FilenameUtils.getBaseName(this.card.getCardImage().toString());
+        try {
+            animalName.setText(URLDecoder.decode(encodedName, StandardCharsets.UTF_8.name()));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         animalName.setPrefSize(this.cardImageView.getFitWidth(), this.cardBackView.getFitHeight());
         return animalName;
     }
