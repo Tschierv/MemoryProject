@@ -8,6 +8,7 @@ import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistException;
+import javafx.scene.input.MouseEvent;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,6 +21,7 @@ public class GameController {
     private final BoardController boardController;
     private Player selectedPlayer = null;
     private Game currentGame;
+    private volatile boolean gameEnded = false;
 
     /**
      * Constructor for GameController, receives the needed controllers for handling
@@ -85,7 +87,6 @@ public class GameController {
     }
 
     public Integer getcurrentCounter(){
-        System.out.println("get counter : " + this.currentGame.getCounter());
         return this.currentGame.getCounter();
     }
 
@@ -118,31 +119,10 @@ public class GameController {
         playerController.setPlayerScore(this.getCurrentPlayer().getAccountName(), currentPlayerScore+incrementScoreBy);
     }
 
-    /*public void selectCard(Card selectedCard) {
-        // Already face up
-        if (selectedCard.isCardFaceSideUp()) {
-            return;
+        public void setGameEnded(){
+            this.gameEnded = true;
         }
-        // Not allow selecting card twice
-        if (this.getCurrentGame().getSelectedCards().stream().anyMatch(x -> x.cardObjectId.equals(selectedCard.cardObjectId))) {
-            return;
-        }
-
-        this.getCurrentGame().setSelectedCard(selectedCard);
-        // Selected pair is not correct
-        if (this.getCurrentGame().getSelectedCards().size() == 2 && !ismatchingCardPair()) {
-            this.getCurrentGame().incrementCounterbyOne();
-            this.getCurrentGame().clearSelectedCards();
-        }
-        if (this.getCurrentGame().getSelectedCards().size() == 2 && ismatchingCardPair()) {
-            this.getCurrentGame().clearSelectedCards();
-            selectedCard.setCardFaceSideUp(true);
-            this.getCurrentGame().getCards().stream().filter(x -> x.getCardId().equals(selectedCard.getCardId())).forEach(x -> x.setCardFaceSideUp(true));
-        }
-
-    }*/
-        private boolean isGameCompleted(){
-            System.out.println(this.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true));
-            return this.getCurrentGame().getCards().stream().allMatch(x -> x.isCardFaceSideUp() == true);
+        public boolean isGameEnded(){
+            return this.gameEnded;
         }
 }

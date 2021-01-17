@@ -3,7 +3,6 @@ package com.github.tschierv.memorygame;
 import com.github.tschierv.memorygame.domain.Board.BoardController;
 import com.github.tschierv.memorygame.domain.card.CardController;
 import com.github.tschierv.memorygame.domain.game.GameController;
-import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
@@ -11,7 +10,6 @@ import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerJSONRepository;
 import com.github.tschierv.memorygame.presentation.MainController;
 import javafx.application.Application;
-import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,8 +19,6 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
-
-import static javafx.scene.media.MediaPlayer.INDEFINITE;
 
 
 public class Main extends Application {

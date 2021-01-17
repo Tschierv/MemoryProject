@@ -44,6 +44,9 @@ public class SceneController {
         }
         return scene;
     }
+    public void setScene(Scene scene){
+        this.scene = scene;
+    }
 
     private FXMLLoader getfxmlLoader(String fxmlFile) {
         return new FXMLLoader(Main.class.getClassLoader().getResource(fxmlFile));
@@ -102,14 +105,14 @@ public class SceneController {
         window.show();
     }
 
-    public void displayAnimalPairScene(GameController gameController, CardViewModel cardViewModel, Event event){
+    public void displayAnimalPairScene(GameController gameController, CardViewModel cardViewModel, GameViewModel gameViewModel){
         FXMLLoader fxmlLoader = this.getfxmlLoader("com/github/tschierv/memorygame/presentation/AnimalPairView.fxml");
         Stage stage = new Stage();
         stage.setResizable(false);
         stage.centerOnScreen();
         stage.initModality(Modality.WINDOW_MODAL);
         stage.setTitle("You have a Match!");
-        Initializable ViewController = new AnimalPairController(gameController, cardViewModel);
+        Initializable ViewController = new AnimalPairController(gameController, cardViewModel, gameViewModel);
         stage.setScene(getScene(fxmlLoader, ViewController));
         stage.show();
     }

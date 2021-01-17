@@ -4,17 +4,22 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.SceneController;
 import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import javafx.application.Platform;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 /**
  * Handles all the UI logic related to the Gameboard like the creation of a game-grid,
  * or the selection of cards, mouse-clicks.
@@ -27,6 +32,8 @@ public class GameViewModel {
     private final GameController gameController;
     public Text counter = new Text();
     public int remainingClickCount = 2;
+    private MouseEvent currentEvent;
+    SimpleBooleanProperty gameStatus = new SimpleBooleanProperty();
     /**
      * Constructor for GameViewModel class
      *
@@ -50,6 +57,7 @@ public class GameViewModel {
 
     public void clearSelectedCards(){
         this.selectedCards.clear();
+        this.currentEvent = null;
     }
 
     private List<CardViewModel> selectedCards = new ArrayList<>();
@@ -69,6 +77,12 @@ public class GameViewModel {
         return this.gameController.ismatchingCardPair(checkMatching);
     }
 
+    public void currentGameCompleted(MouseEvent event){
+        this.gameController.setNewPlayerScore();
+        Scene scene =  ((Node)event.getSource()).getScene();
+        SceneController sceneController = new SceneController(scene);
+        sceneController.displayGameCompletedScene(this.gameController, event);
+    }
     /**
      * Handles all the actions behind a card selection
      * Always returns void
@@ -90,6 +104,7 @@ public class GameViewModel {
             cardViewModel.setCardToFaceUp(() -> {});
         } else {
             this.setSelectedCard(cardViewModel);
+            this.currentEvent = event;
             cardViewModel.setCardToFaceUp(() -> {
                 if (!this.isMatchedPair()) {
                     this.getSelectedCards().get(0).setCardToBackUp();
@@ -99,22 +114,13 @@ public class GameViewModel {
                 if (this.isMatchedPair()) {
                     Scene scene = ((Node)event.getSource()).getScene();
                     SceneController sceneController = new SceneController(scene);
-                    sceneController.displayAnimalPairScene(this.gameController,cardViewModel, event);
+                    sceneController.displayAnimalPairScene(this.gameController,cardViewModel, this);
                 }
                 this.clearSelectedCards();
                 this.remainingClickCount = 2;
 
             });
         }
-        if (!this.gameController.getCurrentGame().getCards().stream().allMatch(Card::isCardFaceSideUp)) {
-            return;
-        }
-
-        this.gameController.setNewPlayerScore();
-        Scene scene = ((Node)event.getSource()).getScene();
-        SceneController sceneController = new SceneController(scene);
-        sceneController.displayGameCompletedScene(this.gameController, event);
-        sceneController.displayLevelScene(this.gameController, event);
     }
 
     /**
@@ -128,14 +134,6 @@ public class GameViewModel {
             CardViewModel cardViewModel = ((CardViewModel) node);
             cardViewModel.setCardToFaceUp(cardViewModel::setCardToBackUp);
         }
-    }
-
-    private void displayCelebrationDialog(){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Game completed");
-        alert.setHeaderText(null);
-        alert.setContentText("You won the game, you are great!");
-        alert.showAndWait();
     }
 
     /**
@@ -160,6 +158,9 @@ public class GameViewModel {
             }
         }
         return gameGrid;
+    }
+    public MouseEvent getCurrentEvent(){
+        return this.currentEvent;
     }
 
 }
