@@ -2,7 +2,7 @@ package com.github.tschierv.memorygame.presentation;
 
 import com.github.tschierv.memorygame.Main;
 import com.github.tschierv.memorygame.domain.game.GameController;
-import com.github.tschierv.memorygame.presentation.card.CardViewModel;
+import com.github.tschierv.memorygame.presentation.game.CardViewModel;
 import com.github.tschierv.memorygame.presentation.game.*;
 import com.github.tschierv.memorygame.presentation.menu.*;
 import javafx.event.Event;

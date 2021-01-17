@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.presentation.card;
+package com.github.tschierv.memorygame.presentation.game;
 
 import com.github.tschierv.memorygame.domain.card.Card;
 import javafx.scene.control.Label;

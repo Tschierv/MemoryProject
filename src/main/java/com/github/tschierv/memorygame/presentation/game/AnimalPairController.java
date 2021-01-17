@@ -3,7 +3,6 @@ package com.github.tschierv.memorygame.presentation.game;
 import com.github.tschierv.memorygame.domain.card.Card;
 import com.github.tschierv.memorygame.domain.game.GameController;
 import com.github.tschierv.memorygame.presentation.SceneController;
-import com.github.tschierv.memorygame.presentation.card.CardViewModel;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
