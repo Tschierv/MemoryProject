@@ -1,4 +1,4 @@
-package com.github.tschierv.memorygame.domain.game;
+package com.github.tschierv.memorygame.domain.Game;
 
 import static org.junit.jupiter.api.Assertions.*;
 

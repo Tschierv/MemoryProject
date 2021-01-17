@@ -1,5 +1,6 @@
-package com.github.tschierv.memorygame.domain.card;
+package com.github.tschierv.memorygame.domain.Card;
 
+import com.github.tschierv.memorygame.domain.card.Card;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.AfterEach;

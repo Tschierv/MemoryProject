@@ -9,6 +9,7 @@ public class Board {
     public UUID BoardId;
     public Integer CardSlots;
     public ArrayList<Card> CardDeck;
+
     public Board(Integer CardSlots, ArrayList<Card> CardDeck) {
         this.BoardId =  UUID.randomUUID();
         this.CardSlots = CardSlots;

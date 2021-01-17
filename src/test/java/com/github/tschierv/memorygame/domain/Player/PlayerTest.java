@@ -1,5 +1,6 @@
-package com.github.tschierv.memorygame.domain.player;
+package com.github.tschierv.memorygame.domain.Player;
 
+import com.github.tschierv.memorygame.domain.player.Player;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
