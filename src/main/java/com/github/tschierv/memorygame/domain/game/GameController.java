@@ -96,6 +96,12 @@ public class GameController {
     public void setCurrentCounter(){
         this.getCurrentGame().incrementCounterbyOne();
     }
+
+    /**
+     *
+     * @param selectedCards a list of the two selected Card objects
+     * @return boolean value
+     */
     public boolean ismatchingCardPair(List<Card> selectedCards){
         if(selectedCards.isEmpty()){
             return false;
