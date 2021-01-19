@@ -110,7 +110,11 @@ public class SceneController {
         Stage stage = new Stage();
         stage.setResizable(false);
         stage.centerOnScreen();
+
+        // Block board window until new window is closed
         stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner((Stage) ((Node) gameViewModel.getCurrentEvent().getSource()).getScene().getWindow());
+
         stage.setTitle("You have a Match!");
         Initializable ViewController = new AnimalPairController(gameController, cardViewModel, gameViewModel);
         stage.setScene(getScene(fxmlLoader, ViewController));
