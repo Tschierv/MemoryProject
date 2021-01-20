@@ -1,11 +1,10 @@
 package com.github.tschierv.memorygame.persistence.repositories;
 import com.github.tschierv.memorygame.domain.card.IImageRepositoryService;
-import org.apache.commons.io.IOUtils;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -23,22 +22,21 @@ public class ImageRepository implements IImageRepositoryService {
      * @param ImageDirPath String representation of the image directory path use full path.
      *                     example: com/github/tschierv/memorygame/presenation/picture
      */
-    public ImageRepository(String ImageDirPath)  {
+    public ImageRepository(String ImageDirPath) {
         List<URL> ImageFiles = new ArrayList<>();
-        // getResource API doesn't support Directory listing, therefore using getResourceAsStream
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(ImageDirPath)) {
-            List<String> result = IOUtils.readLines(inputStream, StandardCharsets.UTF_8);
-            for (String file : result) {
-                URL imageFileUrl = getClass().getClassLoader().getResource(ImageDirPath + "/" + file.toString());
-                ImageFiles.add(imageFileUrl);
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        try {
+            Resource[] resources = resolver.getResources(ImageDirPath);
+            for (Resource resource : resources) {
+                ImageFiles.add(resource.getURL());
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        for (URL file : ImageFiles){
-            this.images.put(UUID.randomUUID(), file);
+
+        for (URL filei : ImageFiles){
+            this.images.put(UUID.randomUUID(), filei);
         }
         }
     @Override

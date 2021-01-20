@@ -30,7 +30,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws PlayerAlreadyExistException {
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("com/github/tschierv/memorygame/presentation/MainView.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("com/github/tschierv/memorygame/presentation/MainView.fxml"));
 		MainController mainController = new MainController(this.createGameController());
 		fxmlLoader.setController(mainController);
 		Parent MainViewParent = null;
@@ -40,7 +40,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		Scene MainViewScene = new Scene(MainViewParent);
-		MainViewScene.getStylesheets().add(Main.class.getClassLoader().getResource("com/github/tschierv/memorygame/application/application.css").toExternalForm());
+		MainViewScene.getStylesheets().add(getClass().getClassLoader().getResource("com/github/tschierv/memorygame/application/application.css").toExternalForm());
 		primaryStage.setResizable(false);
 		primaryStage.setScene(MainViewScene);
 		primaryStage.setTitle("Animal Memory");
@@ -50,7 +50,7 @@ public class Main extends Application {
 	}
     private GameController createGameController(){
 		PlayerController playerController = this.createPlayerController();
-		CardController cardController = new CardController(new ImageRepository("com/github/tschierv/memorygame/presentation/picture"));
+		CardController cardController = new CardController(new ImageRepository("com/github/tschierv/memorygame/presentation/picture/**"));
 		BoardController boardController = new BoardController(cardController);
 		return new GameController(playerController, boardController);
 	}

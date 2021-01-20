@@ -49,7 +49,7 @@ public class SceneController {
     }
 
     private FXMLLoader getfxmlLoader(String fxmlFile) {
-        return new FXMLLoader(Main.class.getClassLoader().getResource(fxmlFile));
+        return new FXMLLoader(getClass().getClassLoader().getResource(fxmlFile));
     }
 
     private Scene getScene(FXMLLoader fxmlLoader, Object controllerCls) {
@@ -57,7 +57,7 @@ public class SceneController {
             fxmlLoader.setController(controllerCls);
             Parent MainViewParent = fxmlLoader.load();
             scene = new Scene(MainViewParent);
-            scene.getStylesheets().add(Main.class.getClassLoader().getResource("com/github/tschierv/memorygame/application/application.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getClassLoader().getResource("com/github/tschierv/memorygame/application/application.css").toExternalForm());
         } catch (IOException ex) {
             Logger.getLogger(SceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
