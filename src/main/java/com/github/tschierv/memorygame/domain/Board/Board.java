@@ -5,6 +5,9 @@ import com.github.tschierv.memorygame.domain.card.Card;
 import java.util.ArrayList;
 import java.util.UUID;
 
+/**
+ * Board Entity contain all the logic for a board of cards in this game.
+ */
 public class Board {
     public UUID BoardId;
     public Integer CardSlots;
