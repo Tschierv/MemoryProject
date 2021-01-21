@@ -8,7 +8,6 @@ import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerAlreadyExistException;
 import com.github.tschierv.memorygame.domain.player.exception.PlayerNotExistException;
-import javafx.scene.input.MouseEvent;
 
 import java.util.List;
 import java.util.UUID;
