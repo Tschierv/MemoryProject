@@ -14,7 +14,9 @@ The players must try to uncover two animals of the same species on a playing fie
 
 
 
+
 #### Getting starting 
+
 Get the newest version from the release section [here](https://github.com/Tschierv/MemoryProject/releases).
 
 The default Java version had to be switch to make jars “clickable”
@@ -23,6 +25,4 @@ The default Java version had to be switch to make jars “clickable”
 
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/holec)  
-
-
 
