@@ -10,7 +10,7 @@ Before starting the game, the players can choose between different game field si
 The players must try to uncover two animals of the same species on a playing field with face-down cards. If they succeed, the revealed animal appears with its name so that the children can learn the animals including their names.  
 
 
-![Coding project for OOP CAS at ZHAW](/banner.png)
+![Coding project for OOP CAS at ZHAW](/docs/banner.png)
 
 
 
@@ -19,7 +19,7 @@ Get the newest version from the release section [here](https://github.com/Tschie
 
 The default Java version had to be switch to make jars “clickable”
 
-![Regedit run jar](/regedit_run_jar.png)
+![Regedit run jar](/docs/regedit_run_jar.png)
 
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/holec)  
