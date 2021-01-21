@@ -7,7 +7,6 @@ import com.github.tschierv.memorygame.domain.player.Player;
 import com.github.tschierv.memorygame.domain.player.PlayerController;
 import com.github.tschierv.memorygame.domain.player.PlayerRepositoryService;
 import com.github.tschierv.memorygame.persistence.repositories.ImageRepository;
-import com.github.tschierv.memorygame.persistence.repositories.PlayerJSONRepository;
 import com.github.tschierv.memorygame.persistence.repositories.PlayerRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,6 +30,7 @@ class GameControllerTest {
         Player testPlayer = new Player(testPlayerName, testPlayerUuid);
         player_repo.savePlayer(testPlayer);
         testGameController = new GameController(testPlayerController, testBoardController);
+
     }
 
     @AfterEach
@@ -40,10 +40,16 @@ class GameControllerTest {
 
     @Test
     void createGameforPlayer() {
+        testGameController.createGameforPlayer("testplayer", 16);
+        testGameController.setCurrentPlayer("testplayer");
+        assertFalse(testGameController.getCurrentGame().equals(null));
+        assertTrue(testGameController.getCurrentPlayer().getAccountName() == "testplayer");
+        assertTrue(testGameController.getCurrentGame().getCards().size() == 16 );
     }
 
     @Test
     void getAllPlayers() {
+        assertTrue(testGameController.getAllPlayers().size() ==1);
     }
 
     @Test
@@ -54,35 +60,25 @@ class GameControllerTest {
 
     @Test
     void getCurrentPlayer() {
+        testGameController.setCurrentPlayer("testplayer");
+        assertTrue(testGameController.getCurrentPlayer().getAccountName().equals("testplayer"));
 
-    }
-
-    @Test
-    void unsetCurrentPlayer() {
-    }
-
-    @Test
-    void getAllPlayersName() {
     }
 
     @Test
     void addPlayer() {
+        assertFalse(testGameController.getAllPlayersName().contains("newtestplayer"));
+        testGameController.addPlayer("newtestplayer");
+        System.out.println(testGameController.getAllPlayersName());
+        assertTrue(testGameController.getAllPlayersName().stream().anyMatch(x -> x.getAccountName().equals("newtestplayer")));
     }
 
     @Test
     void removePlayer() {
-    }
-
-    @Test
-    void getcurrentCounter() {
-    }
-
-    @Test
-    void getCurrentGame() {
-    }
-
-    @Test
-    void setCurrentCounter() {
+        testGameController.addPlayer("newtestplayer");
+        assertTrue(testGameController.getAllPlayersName().stream().anyMatch(x -> x.getAccountName().equals("newtestplayer")));
+        testGameController.removePlayer("newtestplayer");
+        assertFalse(testGameController.getAllPlayersName().stream().anyMatch(x -> x.getAccountName().equals("newtestplayer")));
     }
 
     @Test

@@ -16,11 +16,15 @@ import javafx.scene.Scene;
 import javafx.scene.media.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
 import java.net.URL;
 
-
+/**
+ * Main Application Class is used to call void main, the entrypoint
+ *
+ * Responsible for creating most of the repositories and controllers
+ *
+ */
 public class Main extends Application {
 	MediaPlayer player = null;
 
